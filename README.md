@@ -1,31 +1,23 @@
 # Spacemacs-theme
 
-[![MELPA](http://melpa.org/packages/spacemacs-theme-badge.svg)](http://melpa.org/#/spacemacs-theme) ![Made with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nashamri/spacemacs-theme?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+Modiefied theme with completely diffferent colors.
 
-![spacemacs-theme](img/spacemacs-theme.png)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Spacemacs theme is an Emacs color theme that started as a theme for [spacemacs](https://github.com/syl20bnr/spacemacs).
 The theme comes with dark and light variants and it should work well with 256 color terminals.
 
 ## Screenshots
 
-![spacemacs-theme-preview](img/preview.png)
+_not yet_
 
 ## Highlights
 
 The theme has good support for org mode.
 
-![spacemacs-theme-org](img/org.png)
-
 ## Installation
 
-You can install it from MELPA by:
-
-```
-M-x package-install RET spacemacs-theme
-```
+_todo_
 
 ## Supported modes
 
@@ -151,14 +143,6 @@ There is also explicit colors variables that can be customized:
 The `green` and `red` colors have two background versions. The `green-bg` and  `red-bg` are normal light background colors.
 The `green-bg-s`, `red-bg-s`, and `blue-bg-s` are a stronger version and are used in `ediff` and places were text is added, deleted or changed.
 
-Here are some screenshots of the various variables:
-
-![spacemacs-theme-guide-generic](img/guide-generic.png)
-
-![spacemacs-theme-guide-org](img/guide-org.png)
-
-![spacemacs-theme-guide-extra](img/guide-extra.png)
-
 If you are using [spacemacs](https://github.com/syl20bnr/spacemacs), you can put this snippet in your `dotspacemacs/user-init` to override these colors:
 
 ```
@@ -169,7 +153,3 @@ If you are using [spacemacs](https://github.com/syl20bnr/spacemacs), you can put
 ```
 
 This will override `act1`, `act1` and `base` to use the specified colors.
-
-# Like the theme and want to use it in other places?
-
-Then check out this project [base16-builder](https://github.com/auduchinok/base16-builder).
