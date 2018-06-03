@@ -51,6 +51,11 @@
   :type 'boolean
   :group 'spacemacs-theme)
 
+(defcustom spacemacs-theme-keyword-italic nil
+  "Enable italics for keywords."
+  :type 'boolean
+  :group 'spacemacs-theme)
+
 (defcustom spacemacs-theme-org-agenda-height nil
   "If non-nil, use varying text heights for agenda items.
 
