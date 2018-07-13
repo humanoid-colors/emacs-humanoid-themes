@@ -70,6 +70,16 @@ to 'auto, tags may not be properly aligned. "
   :type 'boolean
   :group 'spacemacs-theme)
 
+(defcustom spacemacs-theme-org-bold t
+  "Inherit text bold for org headings"
+  :type 'boolean
+  :group 'spacemacs-theme)
+
+(defcustom spacemacs-theme-org-priority-bold t
+  "Inherit text bold for priority items in agenda view"
+  :type 'boolean
+  :group 'spacemacs-theme)
+
 (defcustom spacemacs-theme-org-highlight nil
   "Highlight org headings."
   :type 'boolean
