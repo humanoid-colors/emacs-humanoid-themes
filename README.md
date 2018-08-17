@@ -157,7 +157,7 @@ The `green-bg-s`, `red-bg-s`, and `blue-bg-s` are a stronger version and are use
 
 If you are using [spacemacs](https://github.com/syl20bnr/spacemacs), you can put this snippet in your `dotspacemacs/user-init` to override these colors:
 
-```
+```elisp
   (custom-set-variables '(spacemacs-theme-custom-colors
                           '((act1 . "#ff0000")
                             (act2 . "#0000ff")
