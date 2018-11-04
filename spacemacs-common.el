@@ -105,7 +105,7 @@ to 'auto, tags may not be properly aligned. "
     (green-bg-s    (if (eq variant 'dark) (if (true-color-p) "#29422d" "DarkOliveGreen")  (if (true-color-p) "#a8c89b" "DarkSeaGreen3")))
     (green-fg      (if (eq variant 'dark) (if (true-color-p) "#a8c89b" "DarkSeaGreen3")   (if (true-color-p) "#29422d" "DarkOliveGreen")))
     (green-fg-s    (if (eq variant 'dark) (if (true-color-p) "#edf2e9" "honeydew")        (if (true-color-p) "#293235" "DarkSlateGray")))
-    (yellow        (if (eq variant 'dark) (if (true-color-p) "#fec601" "gold1")           (if (true-color-p) "#fb6107" "DarkOrange2")))
+    (yellow        (if (eq variant 'dark) (if (true-color-p) "#fec31d" "gold2")           (if (true-color-p) "#fb6107" "DarkOrange2")))
     (yellow-bg     (if (eq variant 'dark) (if (true-color-p) "#32322c" "sienna4")         (if (true-color-p) "#f6f1e0" "linen")))
     (orange        (if (eq variant 'dark) (if (true-color-p) "#ff9505" "DarkOrange")      (if (true-color-p) "#ff9505" "DarkOrange")))
     (blue          (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#0487c9" "DodgerBlue3")))
@@ -113,7 +113,7 @@ to 'auto, tags may not be properly aligned. "
     (blue-bg-s     (if (eq variant 'dark) (if (true-color-p) "#2d4252" "DodgerBlue4")     (if (true-color-p) "#a0d2f3" "LightSkyBlue")))
     (blue-fg       (if (eq variant 'dark) (if (true-color-p) "#a0d2f3" "LightSkyBlue")    (if (true-color-p) "#2d4252" "DodgerBlue4")))
     (blue-fg-s     (if (eq variant 'dark) (if (true-color-p) "#edf1fb" "LightBlue")       (if (true-color-p) "#293239" "RoyalBlue4")))
-    (magenta       (if (eq variant 'dark) (if (true-color-p) "#c41fc4" "DarkOrchid1")     (if (true-color-p) "#ad00ad" "purple")))
+    (magenta       (if (eq variant 'dark) (if (true-color-p) "#c05ce8" "DarkOrchid1")     (if (true-color-p) "#a540cd" "purple")))
     (aqua          (if (eq variant 'dark) (if (true-color-p) "#09b7b7" "cyan3")           (if (true-color-p) "#008e8e" "cyan4")))
     (aqua-bg       (if (eq variant 'dark) (if (true-color-p) "#061413" "SteelBlue4")      (if (true-color-p) "#ebf9f9" "LightCyan")))
     (cyan          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "turquoise2")      (if (true-color-p) "#004e64" "DeepSkyBlue4")))
@@ -133,7 +133,7 @@ to 'auto, tags may not be properly aligned. "
     (cblk-ln       (if (eq variant 'dark) (if (true-color-p) "#abb2bf" "gray71")          (if (true-color-p) "#31363b" "gray20")))
     (cblk-ln-bg    (if (eq variant 'dark) (if (true-color-p) "#292c30" "gray17")          (if (true-color-p) "#efeae9" "gray89")))
     (cursor        (if (eq variant 'dark) (if (true-color-p) "#e3dedd" "gray85")          (if (true-color-p) "#100a14" "gray7")))
-    (const         (if (eq variant 'dark) (if (true-color-p) "#c41fc4" "DarkOrchid1")     (if (true-color-p) "#ad00ad" "purple")))
+    (const         (if (eq variant 'dark) (if (true-color-p) "#c05ce8" "DarkOrchid1")     (if (true-color-p) "#a540cd" "purple")))
     (comment       (if (eq variant 'dark) (if (true-color-p) "#82865f" "LemonChiffon4")   (if (true-color-p) "#82865f" "LemonChiffon4")))
     (comment-light (if (eq variant 'dark) (if (true-color-p) "#727553" "LightGoldenrod4") (if (true-color-p) "#94996c" "DarkKhaki")))
     (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
@@ -161,7 +161,7 @@ to 'auto, tags may not be properly aligned. "
     (ttip-bg       (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#e7e5eb" "gray88")))
     (type          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "turquoise2")      (if (true-color-p) "#004e64" "DeepSkyBlue4")))
     (var           (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#0487c9" "DodgerBlue2")))
-    (war           (if (eq variant 'dark) (if (true-color-p) "#fec601" "gold1")           (if (true-color-p) "#fb6107" "DarkOrange2"))))
+    (war           (if (eq variant 'dark) (if (true-color-p) "#fec31d" "gold2")           (if (true-color-p) "#fb6107" "DarkOrange2"))))
 
 
    custom-colors-override
