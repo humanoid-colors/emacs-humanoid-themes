@@ -189,7 +189,7 @@ to 'auto, tags may not be properly aligned. "
     `(error                               ((,class (:foreground ,err))))
     `(eval-sexp-fu-flash                  ((,class (:background ,suc :foreground ,bg1))))
     `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,bg1))))
-    `(font-lock-builtin-face              ((,class (:foreground ,keyword))))
+    `(font-lock-builtin-face              ((,class (:foreground ,meta))))
     `(font-lock-comment-face              ((,class (:foreground ,
                                                     (if spacemacs-theme-comment-italic comment-light comment) :background ,
                                                     (when spacemacs-theme-comment-bg comment-bg) :slant ,
@@ -690,7 +690,7 @@ to 'auto, tags may not be properly aligned. "
     `(mu4e-replied-face ((,class (:foreground ,green))))
     `(mu4e-modeline-face ((,class (:foreground ,base))))
     `(mu4e-special-header-value-face ((,class (:foreground ,mat))))
-    `(mu4e-unread-face ((,class (:foreground ,comp :inherit bold))))
+    `(mu4e-unread-face ((,class (:foreground ,orange :inherit bold))))
     `(mu4e-view-url-number-face ((,class (:foreground ,comment))))
 
 ;;;;; mu4e-maildirs
