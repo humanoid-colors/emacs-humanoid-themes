@@ -402,6 +402,26 @@ to 'auto, tags may not be properly aligned. "
     `(evil-ex-substitute-matches ((,class (:background ,red-bg :foreground ,red))))
     `(evil-ex-substitute-replacement ((,class (:background ,green-bg :foreground ,green))))
 
+;;;;; evil-goggles
+    `(evil-goggles--pulse-face ((,class (:background ,yellow-bg :foreground ,yellow))))
+    `(evil-goggles-change-face ((,class (:background ,blue-bg-s :foreground ,blue))))
+    `(evil-goggles-commentary-face ((,class (:background ,aqua-bg :foreground ,aqua))))
+    `(evil-goggles-delete-face ((,class (:background ,red-bg-s :foreground ,red))))
+    `(evil-goggles-fill-and-move-face ((,class (:background ,green-bg-s :foreground ,green))))
+    `(evil-goggles-indent-face ((,class (:background ,green-bg-s :foreground ,green))))
+    `(evil-goggles-join-face ((,class (:background ,green-bg-s :foreground ,green))))
+    `(evil-goggles-nerd-commenter-face ((,class (:background ,aqua-bg :foreground ,aqua))))
+    `(evil-goggles-paste-face ((,class (:background ,green-bg-s :foreground ,green))))
+    `(evil-goggles-record-macro-face ((,class (:background ,blue-bg-s :foreground ,blue))))
+    `(evil-goggles-replace-with-register-face ((,class (:background ,yellow-bg :foreground ,yellow))))
+    `(evil-goggles-set-marker-face ((,class (:background ,blue-bg-s :foreground ,blue))))
+    `(evil-goggles-shift-face ((,class (:background ,blue-bg-s :foreground ,blue))))
+    `(evil-goggles-surround-face ((,class (:background ,blue-bg-s :foreground ,blue))))
+    `(evil-goggles-yank-face ((,class (:background ,blue-bg-s :foreground ,blue))))
+    `(evil-goggles-undo-redo-add-face ((,class (:background ,green-bg-s :foreground ,green))))
+    `(evil-goggles-undo-redo-change-face ((,class (:background ,blue-bg-s :foreground ,blue))))
+    `(evil-goggles-undo-redo-remove-face ((,class (:background ,red-bg-s :foreground ,red))))
+
 ;;;;; flycheck
     `(flycheck-error
       ((,(append '((supports :underline (:style line))) class)
@@ -762,6 +782,16 @@ to 'auto, tags may not be properly aligned. "
     `(org-verse ((,class (:inherit org-block :slant italic))))
     `(org-warning ((,class (:foreground ,err :inherit org-priority))))
 
+;;;;; outline
+    `(outline-1 ((,class (:inherit org-level-1))))
+    `(outline-2 ((,class (:inherit org-level-2))))
+    `(outline-3 ((,class (:inherit org-level-3))))
+    `(outline-4 ((,class (:inherit org-level-4))))
+    `(outline-5 ((,class (:inherit org-level-5))))
+    `(outline-6 ((,class (:inherit org-level-6))))
+    `(outline-7 ((,class (:inherit org-level-7))))
+    `(outline-8 ((,class (:inherit org-level-8))))
+
 ;;;;; perspective
     `(persp-selected-face ((,class (:inherit bold :foreground ,func))))
 
@@ -877,6 +907,7 @@ to 'auto, tags may not be properly aligned. "
     `(web-mode-builtin-face ((,class (:inherit ,font-lock-builtin-face))))
     `(web-mode-comment-face ((,class (:inherit ,font-lock-comment-face))))
     `(web-mode-constant-face ((,class (:inherit ,font-lock-constant-face))))
+    `(web-mode-current-element-highlight-face ((,class (:background ,bg3))))
     `(web-mode-doctype-face ((,class (:inherit ,font-lock-comment-face))))
     `(web-mode-function-name-face ((,class (:inherit ,font-lock-function-name-face))))
     `(web-mode-html-attr-name-face ((,class (:foreground ,func))))
@@ -938,8 +969,30 @@ to 'auto, tags may not be properly aligned. "
 
    (custom-theme-set-variables
     theme-name
-    `(ansi-color-names-vector [,bg4 ,red ,green ,yellow ,blue ,magenta ,cyan ,base]))))
 
+;;;;; ansi-color-names
+    `(ansi-color-names-vector [,bg4 ,red ,green ,yellow ,blue ,magenta ,cyan ,base])
+
+;;;;; hl-todo
+    `(hl-todo-keyword-faces '(("TODO"   . ,comp)
+                              ("NEXT"   . ,comp)
+                              ("THEM"   . ,aqua)
+                              ("PROG"   . ,blue)
+                              ("OKAY"   . ,blue)
+                              ("DONT"   . ,red)
+                              ("FAIL"   . ,red)
+                              ("DONE"   . ,suc)
+                              ("NOTE"   . ,yellow)
+                              ("KLUDGE" . ,yellow)
+                              ("HACK"   . ,yellow)
+                              ("TEMP"   . ,yellow)
+                              ("FIXME"  . ,comp)
+                              ("XXX"    . ,var)
+                              ("XXXX"   . ,var)
+                              ("???"    . ,var)))
+
+;;;;; pdf-tools
+    `(pdf-view-midnight-colors '(,base . ,bg1)))))
 
 
 
