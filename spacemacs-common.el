@@ -832,6 +832,7 @@ to 'auto, tags may not be properly aligned. "
     `(rainbow-blocks-depth-8-face ((,class (:foreground ,magenta))))
     `(rainbow-blocks-depth-9-face ((,class (:foreground ,green))))
     `(rainbow-blocks-unmatched-face ((,class (:foreground ,red))))
+
 ;;;;; rainbow-delimiters
     `(rainbow-delimiters-depth-1-face ((,class (:foreground ,cyan))))
     `(rainbow-delimiters-depth-2-face ((,class (:foreground ,yellow))))
