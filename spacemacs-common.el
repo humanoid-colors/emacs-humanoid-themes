@@ -137,7 +137,7 @@ to 'auto, tags may not be properly aligned. "
     (bg2           (if (eq variant 'dark) (if (true-color-p) "#292c30" "gray17")          (if (true-color-p) "#f5f3ef" "gray93")))
     (bg3           (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#efeae9" "gray89")))
     (bg4           (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#e7e5eb" "gray85")))
-    (builtin       (if (eq variant 'dark) (if (true-color-p) "#4fc3f7" "DeepSkyBlue2")    (if (true-color-p) "#0069c0" "DeepSkyBlue3")))
+    (builtin       (if (eq variant 'dark) (if (true-color-p) "#4fc3f7" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
     (border        (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#e3dedd" "gray81")))
     (cblk          (if (eq variant 'dark) (if (true-color-p) "#efeae9" "gray89")          (if (true-color-p) "#282C34" "gray16")))
     (cblk-bg       (if (eq variant 'dark) (if (true-color-p) "#282c34" "gray16")          (if (true-color-p) "#fffafa" "gray93")))
@@ -146,11 +146,11 @@ to 'auto, tags may not be properly aligned. "
     (comment       (if (eq variant 'dark) (if (true-color-p) "#82865f" "LemonChiffon4")   (if (true-color-p) "#82865f" "LemonChiffon4")))
     (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
     (comment-light (if (eq variant 'dark) (if (true-color-p) "#727553" "LightGoldenrod4") (if (true-color-p) "#94996c" "DarkKhaki")))
-    (comp          (if (eq variant 'dark) (if (true-color-p) "#26c6da" "cyan3")           (if (true-color-p) "#0288d1" "cyan4")))
+    (comp          (if (eq variant 'dark) (if (true-color-p) "#00bcd4" "cyan3")           (if (true-color-p) "#4527a0" "DeepSkyBlue2")))
     (const         (if (eq variant 'dark) (if (true-color-p) "#e040fb" "DarkOrchid1")     (if (true-color-p) "#aa00ff" "purple")))
     (cursor        (if (eq variant 'dark) (if (true-color-p) "#64dd17" "LimeGreen")       (if (true-color-p) "#64dd17" "LimeGreen")))
     (err           (if (eq variant 'dark) (if (true-color-p) "#e91e63" "red2")            (if (true-color-p) "#d32f2f" "firebrick3")))
-    (func          (if (eq variant 'dark) (if (true-color-p) "#f44336" "LightSkyBlue1")   (if (true-color-p) "#880e4f" "DodgerBlue4")))
+    (func          (if (eq variant 'dark) (if (true-color-p) "#c6ff00" "LightSkyBlue1")   (if (true-color-p) "#ff3d00" "DarkOrange2")))
     (head1         (if (eq variant 'dark) (if (true-color-p) "#42a5f5" "DeepSkyBlue1")    (if (true-color-p) "#2376ad" "DodgerBlue4")))
     (head1-bg      (if (eq variant 'dark) (if (true-color-p) "#293239" "gray17")          (if (true-color-p) "#f8f8f2" "gray97")))
     (head2         (if (eq variant 'dark) (if (true-color-p) "#29b6f6" "DeepSkyBlue2")    (if (true-color-p) "#2b6590" "DodgerBlue3")))
@@ -163,7 +163,7 @@ to 'auto, tags may not be properly aligned. "
     (head5-bg      (if (eq variant 'dark) (if (true-color-p) "#32322c" "gray20")          (if (true-color-p) "#f8f8f2" "gray97")))
     (highlight     (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray89")))
     (highlight-dim (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray24")          (if (true-color-p) "#d6d7d9" "gray85")))
-    (keyword       (if (eq variant 'dark) (if (true-color-p) "#b085f5" "DeepSkyBlue3")    (if (true-color-p) "#4527a0" "DeepSkyBlue2")))
+    (keyword       (if (eq variant 'dark) (if (true-color-p) "#448aff" "DeepSkyBlue3")    (if (true-color-p) "#0069c0" "DeepSkyBlue3")))
     (lnum          (if (eq variant 'dark) (if (true-color-p) "#44505c" "gray29")          (if (true-color-p) "#abb2bf" "gray71")))
     (mat           (if (eq variant 'dark) (if (true-color-p) "#dce775" "honeydew2")       (if (true-color-p) "#29422d" "DarkOliveGreen")))
     (meta          (if (eq variant 'dark) (if (true-color-p) "#727553" "LightGoldenrod4") (if (true-color-p) "#94996c" "DarkKhaki")))
@@ -174,13 +174,26 @@ to 'auto, tags may not be properly aligned. "
     (ttip-sl       (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray84")))
     (type          (if (eq variant 'dark) (if (true-color-p) "#0097a7" "cyan4")           (if (true-color-p) "#007c91" "cyan3")))
     (var           (if (eq variant 'dark) (if (true-color-p) "#64b5f6" "turquoise2")      (if (true-color-p) "#0d47a1" "DeepSkyBlue4")))
-    (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#ff3d00" "DarkOrange2"))))
+    (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#880e4f" "DodgerBlue4"))))
 
 
    custom-colors-override
 
    (custom-theme-set-faces
     theme-name
+
+;;;;; basics
+    `(custom-black                        ((,class (:foreground ,black))))
+    `(custom-red                          ((,class (:foreground ,red))))
+    `(custom-green                        ((,class (:foreground ,green))))
+    `(custom-yellow                       ((,class (:foreground ,yellow))))
+    `(custom-orange                       ((,class (:foreground ,orange))))
+    `(custom-blue                         ((,class (:foreground ,blue))))
+    `(custom-magenta                      ((,class (:foreground ,magenta))))
+    `(custom-aqua                         ((,class (:foreground ,aqua))))
+    `(custom-cyan                         ((,class (:foreground ,cyan))))
+    `(custom-white                        ((,class (:foreground ,white))))
+    `(custom-gray                         ((,class (:foreground ,base-dim))))
 
 ;;;;; basics
     `(cursor                              ((,class (:background ,cursor))))
@@ -500,11 +513,18 @@ to 'auto, tags may not be properly aligned. "
     `(gnus-cite-6 ((,class (:foreground ,orange :background ,bg2))))
     `(gnus-cite-7 ((,class (:foreground ,aqua :background ,bg2))))
     `(gnus-emphasis-highlight-words ((,class (:background ,suc :foreground ,bg1))))
-    `(gnus-header-content ((,class (:foreground ,keyword))))
+    `(gnus-header-content ((,class (:foreground ,str))))
     `(gnus-header-from ((,class (:foreground ,var))))
     `(gnus-header-name ((,class (:foreground ,comp))))
-    `(gnus-header-subject ((,class (:foreground ,func :inherit bold))))
+    `(gnus-header-subject ((,class (:foreground ,base :inherit bold))))
     `(gnus-summary-cancelled ((,class (:background ,war :foreground ,bg1))))
+    `(message-header-content ((,class (:foreground ,str))))
+    `(message-header-from ((,class (:foreground ,var))))
+    `(message-header-to ((,class (:foreground ,var))))
+    `(message-header-name ((,class (:foreground ,comp))))
+    `(message-header-subject ((,class (:foreground ,base :inherit bold))))
+    `(message-summary-cancelled ((,class (:background ,war :foreground ,bg1))))
+    `(message-cited-text ((,class (:foreground ,green :background ,bg2))))
 
 ;;;;; guide-key
     `(guide-key/highlight-command-face ((,class (:foreground ,base))))
@@ -728,12 +748,22 @@ to 'auto, tags may not be properly aligned. "
     `(mu4e-maildirs-extension-maildir-hl-face ((,class (:foreground ,head1 :inherit bold))))
 
 ;;;;; notmuch
-    `(notmuch-search-date ((,class (:foreground ,func))))
-    `(notmuch-search-flagged-face ((,class (:weight extra-bold))))
-    `(notmuch-search-non-matching-authors ((,class (:foreground ,base-dim))))
-    `(notmuch-search-unread-face ((,class (:background ,highlight-dim :box ,border))))
-    `(notmuch-tag-face ((,class (:foreground ,keyword))))
+    `(notmuch-hello-logo-background ((,class (:background ,bg1))))
+    `(notmuch-search-date ((,class (:foreground ,str))))
+    `(notmuch-search-flagged-face ((,class (:foreground unspecified :underline t))))
+    `(notmuch-search-unread-face ((,class (:background ,cblk-bg :inherit bold))))
+    `(notmuch-tag-face    ((,class (:foreground ,comment))))
     `(notmuch-tag-flagged ((,class (:foreground ,war))))
+    `(notmuch-tag-unread  ((,class (:foreground ,func))))
+    `(notmuch-tag-red     ((,class (:foreground ,red))))
+    `(notmuch-tag-green   ((,class (:foreground ,green))))
+    `(notmuch-tag-yellow  ((,class (:foreground ,yellow))))
+    `(notmuch-tag-orange  ((,class (:foreground ,orange))))
+    `(notmuch-tag-blue    ((,class (:foreground ,blue))))
+    `(notmuch-tag-magenta ((,class (:foreground ,magenta))))
+    `(notmuch-tag-aqua    ((,class (:foreground ,aqua))))
+    `(notmuch-tag-cyan    ((,class (:foreground ,cyan))))
+    `(notmuch-tag-gray    ((,class (:foreground ,base-dim))))
 
 ;;;;; neotree
     `(neo-dir-link-face ((,class (:foreground ,var :inherit bold))))
