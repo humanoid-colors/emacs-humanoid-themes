@@ -119,11 +119,11 @@ to 'auto, tags may not be properly aligned. "
     (yellow        (if (eq variant 'dark) (if (true-color-p) "#ffc107" "goldenrod1")      (if (true-color-p) "#ffc107" "DarkOrange2")))
     (yellow-bg     (if (eq variant 'dark) (if (true-color-p) "#32322c" "sienna4")         (if (true-color-p) "#f6f1e0" "linen")))
     (orange        (if (eq variant 'dark) (if (true-color-p) "#ff9800" "DarkOrange")      (if (true-color-p) "#ff3d00" "DarkOrange")))
-    (blue          (if (eq variant 'dark) (if (true-color-p) "#42a5f5" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
+    (blue          (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
     (blue-bg       (if (eq variant 'dark) (if (true-color-p) "#445566" "RoyalBlue4")      (if (true-color-p) "#b5e6ff" "LightSkyBlue1")))
     (blue-bg-s     (if (eq variant 'dark) (if (true-color-p) "#2d4252" "DodgerBlue4")     (if (true-color-p) "#ddeeff" "LightBlue1")))
-    (magenta       (if (eq variant 'dark) (if (true-color-p) "#e040fb" "DarkOrchid1")     (if (true-color-p) "#aa00ff" "purple")))
-    (aqua          (if (eq variant 'dark) (if (true-color-p) "#00bcd4" "DeepSkyBlue4")    (if (true-color-p) "#0097a7" "cyan4")))
+    (magenta       (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
+    (aqua          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "DeepSkyBlue4")    (if (true-color-p) "#0097a7" "cyan4")))
     (aqua-bg       (if (eq variant 'dark) (if (true-color-p) "#061413" "SteelBlue4")      (if (true-color-p) "#ebf9f9" "azure1")))
     (cyan          (if (eq variant 'dark) (if (true-color-p) "#1de9b6" "cyan3")           (if (true-color-p) "#00bfa5" "DeepSkyBlue4")))
     (white         (if (eq variant 'dark) (if (true-color-p) "#fcfcfc" "grey99")          (if (true-color-p) "#fcfcfc" "gray99")))
@@ -136,18 +136,18 @@ to 'auto, tags may not be properly aligned. "
     (bg1           (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
     (bg2           (if (eq variant 'dark) (if (true-color-p) "#292c30" "gray17")          (if (true-color-p) "#f5f3ef" "gray93")))
     (bg3           (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#efeae9" "gray89")))
-    (bg4           (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#e7e5eb" "gray85")))
-    (builtin       (if (eq variant 'dark) (if (true-color-p) "#4fc3f7" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
+    (bg4           (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#eae7e3" "gray85")))
+    (builtin       (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
     (border        (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#e3dedd" "gray81")))
     (cblk          (if (eq variant 'dark) (if (true-color-p) "#efeae9" "gray89")          (if (true-color-p) "#282C34" "gray16")))
     (cblk-bg       (if (eq variant 'dark) (if (true-color-p) "#282c34" "gray16")          (if (true-color-p) "#fffafa" "gray93")))
     (cblk-ln       (if (eq variant 'dark) (if (true-color-p) "#abb2bf" "gray71")          (if (true-color-p) "#31363b" "gray20")))
     (cblk-ln-bg    (if (eq variant 'dark) (if (true-color-p) "#292c30" "gray17")          (if (true-color-p) "#efeae9" "gray89")))
-    (comment       (if (eq variant 'dark) (if (true-color-p) "#82865f" "LemonChiffon4")   (if (true-color-p) "#82865f" "LemonChiffon4")))
+    (comment       (if (eq variant 'dark) (if (true-color-p) "#6b7566" "LemonChiffon4")   (if (true-color-p) "#8b9985" "LemonChiffon4")))
     (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (comment-light (if (eq variant 'dark) (if (true-color-p) "#727553" "LightGoldenrod4") (if (true-color-p) "#94996c" "DarkKhaki")))
-    (comp          (if (eq variant 'dark) (if (true-color-p) "#00bcd4" "cyan3")           (if (true-color-p) "#4527a0" "DeepSkyBlue2")))
-    (const         (if (eq variant 'dark) (if (true-color-p) "#e040fb" "DarkOrchid1")     (if (true-color-p) "#aa00ff" "purple")))
+    (comment-light (if (eq variant 'dark) (if (true-color-p) "#5d6658" "LightGoldenrod4") (if (true-color-p) "#98a890" "DarkKhaki")))
+    (comp          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "cyan3")           (if (true-color-p) "#4527a0" "DeepSkyBlue2")))
+    (const         (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
     (cursor        (if (eq variant 'dark) (if (true-color-p) "#64dd17" "LimeGreen")       (if (true-color-p) "#64dd17" "LimeGreen")))
     (err           (if (eq variant 'dark) (if (true-color-p) "#e91e63" "red2")            (if (true-color-p) "#d32f2f" "firebrick3")))
     (func          (if (eq variant 'dark) (if (true-color-p) "#c6ff00" "LightSkyBlue1")   (if (true-color-p) "#ff3d00" "DarkOrange2")))
@@ -163,17 +163,17 @@ to 'auto, tags may not be properly aligned. "
     (head5-bg      (if (eq variant 'dark) (if (true-color-p) "#32322c" "gray20")          (if (true-color-p) "#f8f8f2" "gray97")))
     (highlight     (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray89")))
     (highlight-dim (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray24")          (if (true-color-p) "#d6d7d9" "gray85")))
-    (keyword       (if (eq variant 'dark) (if (true-color-p) "#448aff" "DeepSkyBlue3")    (if (true-color-p) "#0069c0" "DeepSkyBlue3")))
-    (lnum          (if (eq variant 'dark) (if (true-color-p) "#44505c" "gray29")          (if (true-color-p) "#abb2bf" "gray71")))
+    (keyword       (if (eq variant 'dark) (if (true-color-p) "#72ccf9" "DeepSkyBlue3")    (if (true-color-p) "#0069c0" "DeepSkyBlue3")))
+    (lnum          (if (eq variant 'dark) (if (true-color-p) "#5d6658" "gray29")          (if (true-color-p) "#98a890" "gray71")))
     (mat           (if (eq variant 'dark) (if (true-color-p) "#dce775" "honeydew2")       (if (true-color-p) "#29422d" "DarkOliveGreen")))
-    (meta          (if (eq variant 'dark) (if (true-color-p) "#727553" "LightGoldenrod4") (if (true-color-p) "#94996c" "DarkKhaki")))
+    (meta          (if (eq variant 'dark) (if (true-color-p) "#5d6658" "LightGoldenrod4") (if (true-color-p) "#98a890" "DarkKhaki")))
     (str           (if (eq variant 'dark) (if (true-color-p) "#7ecb20" "DarkOrange")      (if (true-color-p) "#388e3c" "DarkOrange")))
     (suc           (if (eq variant 'dark) (if (true-color-p) "#4caf50" "green3")          (if (true-color-p) "#5a9216" "SpringGreen4")))
     (ttip          (if (eq variant 'dark) (if (true-color-p) "#75715e" "wheat4")          (if (true-color-p) "#232629" "gray15")))
-    (ttip-bg       (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#e7e5eb" "gray88")))
+    (ttip-bg       (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#eae7e3" "gray88")))
     (ttip-sl       (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray84")))
     (type          (if (eq variant 'dark) (if (true-color-p) "#0097a7" "cyan4")           (if (true-color-p) "#007c91" "cyan3")))
-    (var           (if (eq variant 'dark) (if (true-color-p) "#64b5f6" "turquoise2")      (if (true-color-p) "#0d47a1" "DeepSkyBlue4")))
+    (var           (if (eq variant 'dark) (if (true-color-p) "#0487c9" "turquoise2")      (if (true-color-p) "#0d47a1" "DeepSkyBlue4")))
     (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#880e4f" "DodgerBlue4"))))
 
 
@@ -641,7 +641,7 @@ to 'auto, tags may not be properly aligned. "
 
 ;;;;; line-numbers
     `(line-number ((,class (:foreground ,lnum :background ,bg2 :inherit default))))
-    `(line-number-current-line ((,class (:foreground ,base-dim :background ,bg3 :inherit line-number))))
+    `(line-number-current-line ((,class (:foreground ,comment :background ,bg0 :inherit line-number))))
 
 ;;;;; linum-relative
     `(linum-relative-current-face ((,class (:foreground ,base))))
@@ -1060,6 +1060,8 @@ to 'auto, tags may not be properly aligned. "
 (provide 'spacemacs-common)
 
 ;; Local Variables:
+;; mode: emacs-lisp
+;; eval: (rainbow-mode t)
 ;; no-byte-compile: t
 ;; End:
 
