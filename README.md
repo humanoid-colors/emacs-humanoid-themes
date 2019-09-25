@@ -9,7 +9,9 @@ The theme comes with dark and light variants and it should work well with 256 co
 
 ## Screenshots
 
-_not yet_
+[![light theme](screenshots/Screenshot_2019-09-25_11-46-40.png)](screenshots/Screenshot_2019-09-25_11-46-40.png)
+
+[![dark theme](screenshots/Screenshot_2019-09-25_11-47-14.png)](screenshots/Screenshot_2019-09-25_11-47-14.png)
 
 ## Highlights
 
@@ -37,7 +39,8 @@ Some of the supported modes are:
 * mu4e
 * neotree
 * org
-* and others :) more are coming!
+* rainbow
+* and others
 
 ## Customizations
 
