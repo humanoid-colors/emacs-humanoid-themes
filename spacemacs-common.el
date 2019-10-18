@@ -714,10 +714,19 @@ to 'auto, tags may not be properly aligned. "
     `(mmm-default-submode-face ((,class (:background ,bg2))))
 
 ;;;;; mode-line
-    `(mode-line           ((,class (:foreground ,base :background ,act1 :box nil :underline ,act2 :overline ,act2))))
-    `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box nil :underline ,act2 :overline ,act2))))
+    ;; `(mode-line           ((,class (:foreground ,base :background ,act1 :box nil :underline ,act2 :overline ,act2))))
+    ;; `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box nil :underline ,act2 :overline ,act2))))
+    ;; `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
+    ;; `(mode-line-highlight ((,class (:foreground ,base :background ,act1 :box nil))))
+
+    `(mode-line           ((,class (:foreground ,base :background ,bg1 :box nil :underline nil))))
+    `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box nil :underline nil))))
     `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
-    `(mode-line-highlight ((,class (:foreground ,base :background ,act1 :box nil))))
+    `(mode-line-highlight ((,class (:foreground ,base :background ,bg1 :box nil :underline nil))))
+
+    ;; `(mode-line           ((,class (:foreground ,base :background ,act1 :box (:color ,border :line-width 1)))))
+    ;; `(mode-line-buffer-id ((,class (:inherit bold :foreground ,func))))
+    ;; `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box (:color ,border :line-width 1)))))
 
 ;;;;; mu4e
     `(mu4e-attach-number-face ((,class (:foreground ,var))))
@@ -847,10 +856,12 @@ to 'auto, tags may not be properly aligned. "
     `(popup-tip-face ((,class (:background ,ttip-sl :foreground ,base :bold nil :italic nil :underline nil))))
 
 ;;;;; powerline
-    `(powerline-active1 ((,class (:background ,act2 :foreground ,base))))
-    `(powerline-active2 ((,class (:background ,act2 :foreground ,base))))
-    `(powerline-inactive1 ((,class (:background ,bg2 :foreground ,base))))
-    `(powerline-inactive2 ((,class (:background ,bg2 :foreground ,base))))
+    `(powerline-active0 ((,class (:background ,bg1 :foreground ,base))))
+    `(powerline-active1 ((,class (:background ,bg3 :foreground ,base))))
+    `(powerline-active2 ((,class (:background ,bg2 :foreground ,base))))
+    `(powerline-inactive0 ((,class (:background ,bg1 :foreground ,base-dim))))
+    `(powerline-inactive1 ((,class (:background ,bg2 :foreground ,base-dim))))
+    `(powerline-inactive2 ((,class (:background ,bg2 :foreground ,base-dim))))
 
 ;;;;; rainbow-blocks
     `(rainbow-blocks-depth-1-face ((,class (:foreground ,cyan))))
@@ -915,10 +926,29 @@ to 'auto, tags may not be properly aligned. "
     `(smerge-refined-removed ((,class (:background ,red-bg-s :foreground ,red))))
 
 ;;;;; spaceline
+    `(spaceline-evil-emacs ((,class (:background ,blue))))
+    `(spaceline-evil-insert ((,class (:background ,green))))
+    `(spaceline-evil-motion ((,class (:background ,purple))))
+    `(spaceline-evil-normal ((,class (:foreground ,black :background ,yellow))))
+    `(spaceline-evil-replace ((,class (:background ,orange))))
+    `(spaceline-evil-visual ((,class (:background ,base-dim))))
     `(spaceline-flycheck-error  ((,class (:foreground ,err))))
     `(spaceline-flycheck-info   ((,class (:foreground ,keyword))))
     `(spaceline-flycheck-warning((,class (:foreground ,war))))
+    `(spaceline-highlight-face ((,class (:foreground ,black :background ,yellow))))
+    `(spaceline-modified ((,class (:foreground ,bg1 :background ,keyword))))
     `(spaceline-python-venv ((,class (:foreground ,comp))))
+    `(spaceline-read-only ((,class (:background ,aqua))))
+    `(spaceline-unmodified ((,class (:foreground ,base :background ,lnum))))
+    `(spacemacs-emacs-face ((,class (:foreground ,bg1 :background ,blue))))
+    `(spacemacs-evilified-face ((,class (:foreground ,bg1 :background ,type))))
+    `(spacemacs-hybrid-face ((,class (:foreground ,bg1 :background ,cyan))))
+    `(spacemacs-insert-face ((,class (:foreground ,bg1 :background ,green))))
+    `(spacemacs-lisp-face ((,class (:foreground ,bg1 :background ,magenta))))
+    `(spacemacs-motion-face ((,class (:foreground ,bg1 :background ,purple))))
+    `(spacemacs-normal-face ((,class (:foreground ,black :background ,yellow))))
+    `(spacemacs-replace-face ((,class (:foreground ,bg1 :background ,orange))))
+    `(spacemacs-visual-face ((,class (:foreground ,bg1 :background ,base-dim))))
 
 ;;;;; spacemacs-specific
     `(spacemacs-transient-state-title-face ((,class (:background nil :foreground ,comp :box nil :inherit bold))))
