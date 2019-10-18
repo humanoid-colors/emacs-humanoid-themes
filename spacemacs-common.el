@@ -760,8 +760,8 @@ to 'auto, tags may not be properly aligned. "
 ;;;;; notmuch
     `(notmuch-hello-logo-background ((,class (:background ,bg1))))
     `(notmuch-search-date ((,class (:foreground ,str))))
-    `(notmuch-search-flagged-face ((,class (:foreground unspecified :underline t))))
-    `(notmuch-search-unread-face ((,class (:background ,cblk-bg :inherit bold))))
+    `(notmuch-search-flagged-face ((,class (:foreground unspecified :underline nil))))
+    `(notmuch-search-unread-face ((,class (:background ,cblk-bg :inherit bold :underline t))))
     `(notmuch-tag-face    ((,class (:foreground ,comment))))
     `(notmuch-tag-flagged ((,class (:foreground ,war))))
     `(notmuch-tag-unread  ((,class (:foreground ,func))))
