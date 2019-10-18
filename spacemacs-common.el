@@ -704,13 +704,13 @@ to 'auto, tags may not be properly aligned. "
     `(Man-underline ((,class (:foreground ,comp :underline t))))
 
 ;;;;; markdown
-    `(markdown-header-face-1 ((,class (:inherit bold :foreground ,head1 :height ,(if spacemacs-theme-org-height 1.4 1.0) :background ,(when spacemacs-theme-org-highlight head1-bg)))))
-    `(markdown-header-face-2 ((,class (:inherit bold :foreground ,head2 :height ,(if spacemacs-theme-org-height 1.3 1.0) :background ,(when spacemacs-theme-org-highlight head2-bg)))))
-    `(markdown-header-face-3 ((,class (:bold nil :foreground ,head3 :height ,(if spacemacs-theme-org-height 1.2 1.0) :background ,(when spacemacs-theme-org-highlight head3-bg)))))
-    `(markdown-header-face-4 ((,class (:bold nil :foreground ,head4 :height ,(if spacemacs-theme-org-height 1.1 1.0) :background ,(when spacemacs-theme-org-highlight head4-bg)))))
-    `(markdown-header-face-5 ((,class (:bold nil :foreground ,head5))))
-    `(markdown-header-face-6 ((,class (:bold nil :foreground ,head1))))
-    `(markdown-table-face ((,class (:foreground ,base :background ,head1-bg))))
+    `(markdown-header-face-1 ((,class (:inherit org-level-1))))
+    `(markdown-header-face-2 ((,class (:inherit org-level-2))))
+    `(markdown-header-face-3 ((,class (:inherit org-level-3))))
+    `(markdown-header-face-4 ((,class (:inherit org-level-4))))
+    `(markdown-header-face-5 ((,class (:inherit org-level-5))))
+    `(markdown-header-face-6 ((,class (:inherit org-level-6))))
+    `(markdown-table-face ((,class (:inherit org-table))))
     `(mmm-default-submode-face ((,class (:background ,bg2))))
 
 ;;;;; mode-line
