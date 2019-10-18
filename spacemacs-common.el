@@ -123,6 +123,7 @@ to 'auto, tags may not be properly aligned. "
     (blue-bg       (if (eq variant 'dark) (if (true-color-p) "#445566" "RoyalBlue4")      (if (true-color-p) "#b5e6ff" "LightSkyBlue1")))
     (blue-bg-s     (if (eq variant 'dark) (if (true-color-p) "#2d4252" "DodgerBlue4")     (if (true-color-p) "#ddeeff" "LightBlue1")))
     (magenta       (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
+    (purple        (if (eq variant 'dark) (if (true-color-p) "#802edd" "purple")          (if (true-color-p) "#ff60ee" "DarkOrchid1")))
     (aqua          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "DeepSkyBlue4")    (if (true-color-p) "#0097a7" "cyan4")))
     (aqua-bg       (if (eq variant 'dark) (if (true-color-p) "#061413" "SteelBlue4")      (if (true-color-p) "#ebf9f9" "azure1")))
     (cyan          (if (eq variant 'dark) (if (true-color-p) "#1de9b6" "cyan3")           (if (true-color-p) "#00bfa5" "DeepSkyBlue4")))
