@@ -1,10 +1,10 @@
-# Spacemacs-theme
+# Humanoid-theme
 
 Modiefied theme with completely diffferent colors.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Spacemacs theme is an Emacs color theme that started as a theme for [spacemacs](https://github.com/syl20bnr/spacemacs).
+Humanoid theme is an Emacs color theme that started as a theme for [spacemacs](https://github.com/syl20bnr/humanoid).
 The theme comes with dark and light variants and it should work well with 256 color terminals.
 
 ## Screenshots
@@ -46,49 +46,49 @@ Some of the supported modes are:
 
 The theme has some options that can be tweaked via `M-x customize`:
 
-* `spacemacs-theme-comment-bg`:
+* `humanoid-theme-comment-bg`:
 
 This toggles a background color for the comment lines.
 
-* `spacemacs-theme-comment-italic`:
+* `humanoid-theme-comment-italic`:
 
-This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `spacemacs-theme-comment-bg` if you turn this option on for better contrast.
+This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `humanoid-theme-comment-bg` if you turn this option on for better contrast.
 
-* `spacemacs-theme-keyword-italic`:
+* `humanoid-theme-keyword-italic`:
 
 This toggles italics for keywords.
 
-* `spacemacs-theme-org-agenda-height`:
+* `humanoid-theme-org-agenda-height`:
 
 This toggles the use of varying org agenda heights.
 
-* `spacemacs-theme-org-bold`:
+* `humanoid-theme-org-bold`:
 
 This toggles bold text for org headings.
 
-* `spacemacs-theme-org-height`:
+* `humanoid-theme-org-height`:
 
 This toggles the use of varying org headings heights.
 
-* `spacemacs-theme-org-highlight`:
+* `humanoid-theme-org-highlight`:
 
 This toggles highlighting of org headings.
 
-* `spacemacs-theme-org-priority-bold`:
+* `humanoid-theme-org-priority-bold`:
 
 This toggles bold text for priority items in agenda view.
 
-* `spacemacs-theme-custom-colors`:
+* `humanoid-theme-custom-colors`:
 
-This allows for specifying a list of custom colors to override spacemacs theme colors. More details in the next section.
+This allows for specifying a list of custom colors to override humanoid theme colors. More details in the next section.
 
-* `spacemacs-theme-underline-parens`:
+* `humanoid-theme-underline-parens`:
 
 This toggles the underline of matching parens when using `show-paren-mode` or similar.
 
 ### Override theme's colors
 
-The theme can be customized by overriding one of the theme local variables by setting a list in the `spacemacs-theme-custom-colors` variable.
+The theme can be customized by overriding one of the theme local variables by setting a list in the `humanoid-theme-custom-colors` variable.
 Here's a list of all the local variables and roles:
 
 | var           | role                                                                                              |
@@ -109,12 +109,12 @@ Here's a list of all the local variables and roles:
 | cursor        | The cursor/point color.                                                                           |
 | const         | A constant.                                                                                       |
 | comment       | A comment.                                                                                        |
-| comment-bg    | The background color of a comment. To disable this, `customize` `spacemacs-theme-comment-bg`.     |
+| comment-bg    | The background color of a comment. To disable this, `customize` `humanoid-theme-comment-bg`.     |
 | comp          | A complementary color.                                                                            |
 | err           | errors.                                                                                           |
 | func          | functions.                                                                                        |
 | head1         | Level 1 of a heading. Used in org's headings.                                                     |
-| head1-bg      | The background of level 2 headings. To disable this, `customize` `spacemacs-theme-org-highlight`. |
+| head1-bg      | The background of level 2 headings. To disable this, `customize` `humanoid-theme-org-highlight`. |
 | head2         | Level 2 headings.                                                                                 |
 | head2-bg      | Level 2 headings background.                                                                      |
 | head3         | Level 3 headings.                                                                                 |
@@ -158,10 +158,10 @@ There is also explicit colors variables that can be customized:
 The `green` and `red` colors have two background versions. The `green-bg` and  `red-bg` are normal light background colors.
 The `green-bg-s`, `red-bg-s`, and `blue-bg-s` are a stronger version and are used in `ediff` and places were text is added, deleted or changed.
 
-If you are using [spacemacs](https://github.com/syl20bnr/spacemacs), you can put this snippet in your `dotspacemacs/user-init` to override these colors:
+If you are using [humanoid](https://github.com/syl20bnr/humanoid), you can put this snippet in your `dothumanoid/user-init` to override these colors:
 
 ```elisp
-  (custom-set-variables '(spacemacs-theme-custom-colors
+  (custom-set-variables '(humanoid-theme-custom-colors
                           '((act1 . "#ff0000")
                             (act2 . "#0000ff")
                             (base . "#ffffff"))))
