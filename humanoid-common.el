@@ -3,7 +3,7 @@
 ;; Copyright (C) 2015-2018 Nasser Alshammari
 
 ;; Author: Nasser Alshammari
-;; URL: <https://github.com/nashamri/humanoid-theme>
+;; URL: <https://github.com/nashamri/spacemacs-theme>
 ;;
 ;; Version: 0.1_tasmo
 ;; Keywords: color, theme
@@ -28,7 +28,7 @@
 
 ;;; Commentary:
 
-;; This is a color theme for humanoid <https://github.com/syl20bnr/humanoid>.
+;; This is a color theme for humanoid <https://github.com/syl20bnr/spacemacs>.
 ;; It comes with two versions, dark and light and should work well in
 ;; a 256 color terminal.
 
