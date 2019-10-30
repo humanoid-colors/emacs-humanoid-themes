@@ -41,7 +41,7 @@
   "Humanoid-theme options."
   :group 'faces)
 
-(defcustom humanoid-theme-comment-bg t
+(defcustom humanoid-theme-comment-bg nil
   "Use a background for comment lines."
   :type 'boolean
   :group 'humanoid-theme)
@@ -338,6 +338,20 @@ to 'auto, tags may not be properly aligned. "
     `(dired-perm-write ((,class (:foreground ,base :underline t))))
     `(dired-symlink    ((,class (:foreground ,var :background ,bg1 :inherit bold))))
     `(dired-warning    ((,class (:foreground ,war))))
+
+;;;;; doome-modeline
+    `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
+    `(doom-modeline-buffer-modified    ((,class (:inherit error))))
+    `(doom-modeline-buffer-path        ((,class (:inherit font-lock-builtin-face))))
+    `(doom-modeline-evil-emacs-state   ((,class (:foreground ,blue))))
+    `(doom-modeline-evil-insert-state  ((,class (:foreground ,green))))
+    `(doom-modeline-evil-motion-state  ((,class (:foreground ,purple))))
+    `(doom-modeline-evil-normal-state  ((,class (:foreground ,yellow))))
+    `(doom-modeline-evil-replace-state ((,class (:foreground ,orange))))
+    `(doom-modeline-evil-visual-state  ((,class (:foreground ,base-dim))))
+    `(doom-modeline-info               ((,class (:inherit success))))
+    `(doom-modeline-project-dir        ((,class (:inherit font-lock-builtin-face))))
+    `(doom-modeline-warning            ((,class (:inherit warning))))
 
 ;;;;; ediff
     `(ediff-current-diff-A        ((,class (:background ,red-bg-s :foreground ,red))))
@@ -714,19 +728,10 @@ to 'auto, tags may not be properly aligned. "
     `(mmm-default-submode-face ((,class (:background ,bg2))))
 
 ;;;;; mode-line
-    ;; `(mode-line           ((,class (:foreground ,base :background ,act1 :box nil :underline ,act2 :overline ,act2))))
-    ;; `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box nil :underline ,act2 :overline ,act2))))
-    ;; `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
-    ;; `(mode-line-highlight ((,class (:foreground ,base :background ,act1 :box nil))))
-
-    `(mode-line           ((,class (:foreground ,base :background ,bg1 :box nil :underline nil))))
-    `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box nil :underline nil))))
+    `(mode-line           ((,class (:foreground ,base :background ,bg2 :box nil :underline nil))))
+    `(mode-line-inactive  ((,class (:foreground ,base-dim :background ,bg2  :box nil :underline nil))))
     `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
-    `(mode-line-highlight ((,class (:foreground ,base :background ,bg1 :box nil :underline nil))))
-
-    ;; `(mode-line           ((,class (:foreground ,base :background ,act1 :box (:color ,border :line-width 1)))))
-    ;; `(mode-line-buffer-id ((,class (:inherit bold :foreground ,func))))
-    ;; `(mode-line-inactive  ((,class (:foreground ,base :background ,bg1  :box (:color ,border :line-width 1)))))
+    `(mode-line-highlight ((,class (:foreground ,base :background ,bg3 :box nil :underline nil))))
 
 ;;;;; mu4e
     `(mu4e-attach-number-face ((,class (:foreground ,var))))
@@ -926,9 +931,9 @@ to 'auto, tags may not be properly aligned. "
     `(smerge-refined-removed ((,class (:background ,red-bg-s :foreground ,red))))
 
 ;;;;; solaire-mode
-    `(solaire-default-face  ((,class (:inherit 'default :background bg3))))
-    `(solaire-hl-line-face  ((,class (:inherit 'hl-line :background bg1))))
-    `(solaire-org-hide-face ((,class (:foreground bg3))))
+    `(solaire-default-face  ((,class (:inherit 'default :background ,bg3))))
+    `(solaire-hl-line-face  ((,class (:inherit 'hl-line :background ,bg1))))
+    `(solaire-org-hide-face ((,class (:foreground ,bg3))))
 
 ;;;;; spaceline
     `(spaceline-evil-emacs ((,class (:background ,blue))))
@@ -1097,8 +1102,6 @@ to 'auto, tags may not be properly aligned. "
 
 ;; Local Variables:
 ;; mode: emacs-lisp
-;; eval: (rainbow-mode t)
-;; no-byte-compile: t
 ;; End:
 
 ;;; humanoid-common.el ends here
