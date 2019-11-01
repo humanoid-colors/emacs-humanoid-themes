@@ -937,6 +937,7 @@ to 'auto, tags may not be properly aligned."
 ;;;;; solaire-mode
     `(solaire-default-face  ((,class (:inherit 'default :background ,bg1))))
     `(solaire-hl-line-face  ((,class (:inherit 'hl-line :background ,bg3))))
+    `(solaire-minibuffer-face ((,class (:inherit solaire-default-face :background ,bg3))))
     `(solaire-org-hide-face ((,class (:foreground ,bg1))))
 
 ;;;;; spaceline
