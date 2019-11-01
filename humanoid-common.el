@@ -33,10 +33,6 @@
 
 ;;; Code:
 
-(defmacro dyn-let (varlist fn setfaces setvars)
-  "Append variable to list VARLIST FN SETFACES SETVARS."
-  (list 'let (append varlist (funcall fn)) setfaces setvars))
-
 (defgroup humanoid-theme nil
   "Humanoid-theme options."
   :group 'faces)
@@ -101,87 +97,82 @@ to 'auto, tags may not be properly aligned."
    (display-graphic-p)
    (= (tty-display-color-cells) 16777216)))
 
-(defun custom-colors-override ()
-  "Overrwrite with custom colors."
-  (mapcar (lambda (x) (list (car x) (cdr x)))
-          humanoid-theme-custom-colors))
-
 (defun create-humanoid-theme (variant theme-name)
   "Define colors with VARIANT and THEME-NAME."
-  (dyn-let
-   ((class '((class color) (min-colors 89))) ;;                ~~ Dark ~~                                      ~~ Light ~~
-;;;;;                                                        GUI       TER                                   GUI       TER
-;;;;; colors
-    (black         (if (eq variant 'dark) (if (true-color-p) "#1f2021" "gray12")          (if (true-color-p) "#1f2021" "gray12")))
-    (red           (if (eq variant 'dark) (if (true-color-p) "#f44336" "red2")            (if (true-color-p) "#d32f2f" "firebrick3")))
-    (red-bg        (if (eq variant 'dark) (if (true-color-p) "#5e1818" "firebrick4")      (if (true-color-p) "#ffc9c9" "MistyRose2")))
-    (red-bg-s      (if (eq variant 'dark) (if (true-color-p) "#490d0d" "red4")            (if (true-color-p) "#ffdddd" "seashell")))
-    (green         (if (eq variant 'dark) (if (true-color-p) "#4caf50" "green3")          (if (true-color-p) "#388e3c" "SpringGreen4")))
-    (green-bg      (if (eq variant 'dark) (if (true-color-p) "#0d5124" "DarkSlateGray")   (if (true-color-p) "#c8f4c8" "honeydew2")))
-    (green-bg-s    (if (eq variant 'dark) (if (true-color-p) "#29422d" "DarkOliveGreen")  (if (true-color-p) "#ddffdd" "honeydew")))
-    (yellow        (if (eq variant 'dark) (if (true-color-p) "#ffc107" "goldenrod1")      (if (true-color-p) "#ffc107" "DarkOrange2")))
-    (yellow-bg     (if (eq variant 'dark) (if (true-color-p) "#32322c" "sienna4")         (if (true-color-p) "#f6f1e0" "linen")))
-    (orange        (if (eq variant 'dark) (if (true-color-p) "#ff9800" "DarkOrange")      (if (true-color-p) "#ff3d00" "DarkOrange")))
-    (blue          (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
-    (blue-bg       (if (eq variant 'dark) (if (true-color-p) "#445566" "RoyalBlue4")      (if (true-color-p) "#b5e6ff" "LightSkyBlue1")))
-    (blue-bg-s     (if (eq variant 'dark) (if (true-color-p) "#2d4252" "DodgerBlue4")     (if (true-color-p) "#ddeeff" "LightBlue1")))
-    (magenta       (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
-    (purple        (if (eq variant 'dark) (if (true-color-p) "#802edd" "purple")          (if (true-color-p) "#ff60ee" "DarkOrchid1")))
-    (aqua          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "DeepSkyBlue4")    (if (true-color-p) "#0097a7" "cyan4")))
-    (aqua-bg       (if (eq variant 'dark) (if (true-color-p) "#061413" "SteelBlue4")      (if (true-color-p) "#ebf9f9" "azure1")))
-    (cyan          (if (eq variant 'dark) (if (true-color-p) "#1de9b6" "cyan3")           (if (true-color-p) "#00bfa5" "DeepSkyBlue4")))
-    (white         (if (eq variant 'dark) (if (true-color-p) "#fcfcfc" "grey99")          (if (true-color-p) "#fcfcfc" "gray99")))
-    (gray          (if (eq variant 'dark) (if (true-color-p) "#a49da4" "gray71")          (if (true-color-p) "#686868" "gray20")))
-;;;;; generic
-    (act1          (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#efeae9" "gray89")))
-    (act2          (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#e3dedd" "gray83")))
-    (base          (if (eq variant 'dark) (if (true-color-p) "#f8f8f2" "gray97")          (if (true-color-p) "#232629" "gray15")))
-    (base-dim      (if (eq variant 'dark) (if (true-color-p) "#686868" "gray41")          (if (true-color-p) "#a49da5" "gray64")))
-    (bg0           (if (eq variant 'dark) (if (true-color-p) "#1f2021" "gray12")          (if (true-color-p) "#fcfcfc" "gray99")))
-    (bg1           (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (bg2           (if (eq variant 'dark) (if (true-color-p) "#292c30" "gray17")          (if (true-color-p) "#f5f3ef" "gray93")))
-    (bg3           (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#efeae9" "gray89")))
-    (bg4           (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#eae7e3" "gray85")))
-    (builtin       (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
-    (border        (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#e3dedd" "gray81")))
-    (cblk          (if (eq variant 'dark) (if (true-color-p) "#f5f3ef" "gray89")          (if (true-color-p) "#292c2f" "gray16")))
-    (cblk-bg       (if (eq variant 'dark) (if (true-color-p) "#1f2225" "gray16")          (if (true-color-p) "#fcfcf6" "gray93")))
-    (cblk-ln       (if (eq variant 'dark) (if (true-color-p) "#5d6658" "LightGoldenrod4") (if (true-color-p) "#98a890" "DarkKhaki")))
-    (cblk-ln-bg    (if (eq variant 'dark) (if (true-color-p) "#292c2f" "gray17")          (if (true-color-p) "#f5f3ef" "gray89")))
-    (comment       (if (eq variant 'dark) (if (true-color-p) "#6b7566" "LemonChiffon4")   (if (true-color-p) "#8b9985" "LemonChiffon4")))
-    (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (comment-light (if (eq variant 'dark) (if (true-color-p) "#75715e" "LightGoldenrod4") (if (true-color-p) "#6b7566" "DarkKhaki")))
-    (comp          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "cyan3")           (if (true-color-p) "#4527a0" "DeepSkyBlue2")))
-    (const         (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
-    (cursor        (if (eq variant 'dark) (if (true-color-p) "#64dd17" "LimeGreen")       (if (true-color-p) "#64dd17" "LimeGreen")))
-    (err           (if (eq variant 'dark) (if (true-color-p) "#e91e63" "red2")            (if (true-color-p) "#d32f2f" "firebrick3")))
-    (func          (if (eq variant 'dark) (if (true-color-p) "#c6ff00" "LightSkyBlue1")   (if (true-color-p) "#ff3d00" "DarkOrange2")))
-    (head1         (if (eq variant 'dark) (if (true-color-p) "#42a5f5" "DeepSkyBlue1")    (if (true-color-p) "#2376ad" "DodgerBlue4")))
-    (head1-bg      (if (eq variant 'dark) (if (true-color-p) "#293239" "gray17")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (head2         (if (eq variant 'dark) (if (true-color-p) "#29b6f6" "DeepSkyBlue2")    (if (true-color-p) "#2b6590" "DodgerBlue3")))
-    (head2-bg      (if (eq variant 'dark) (if (true-color-p) "#293235" "gray18")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (head3         (if (eq variant 'dark) (if (true-color-p) "#26c6da" "DeepSkyBlue3")    (if (true-color-p) "#2d5475" "DeepSkyBlue3")))
-    (head3-bg      (if (eq variant 'dark) (if (true-color-p) "#293235" "gray19")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (head4         (if (eq variant 'dark) (if (true-color-p) "#26a69a" "DodgerBlue3")     (if (true-color-p) "#2c445b" "DeepSkyBlue2")))
-    (head4-bg      (if (eq variant 'dark) (if (true-color-p) "#32322c" "gray20")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (head5         (if (eq variant 'dark) (if (true-color-p) "#66bb6a" "DodgerBlue4")     (if (true-color-p) "#293542" "DeepSkyBlue1")))
-    (head5-bg      (if (eq variant 'dark) (if (true-color-p) "#32322c" "gray20")          (if (true-color-p) "#f8f8f2" "gray97")))
-    (highlight     (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray89")))
-    (highlight-dim (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray24")          (if (true-color-p) "#d6d7d9" "gray85")))
-    (keyword       (if (eq variant 'dark) (if (true-color-p) "#72ccf9" "DeepSkyBlue3")    (if (true-color-p) "#0069c0" "DeepSkyBlue3")))
-    (lnum          (if (eq variant 'dark) (if (true-color-p) "#5d6658" "gray29")          (if (true-color-p) "#98a890" "gray71")))
-    (mat           (if (eq variant 'dark) (if (true-color-p) "#dce775" "honeydew2")       (if (true-color-p) "#29422d" "DarkOliveGreen")))
-    (meta          (if (eq variant 'dark) (if (true-color-p) "#a49da4" "gray71")          (if (true-color-p) "#686868" "gray20")))
-    (str           (if (eq variant 'dark) (if (true-color-p) "#7ecb20" "DarkOrange")      (if (true-color-p) "#388e3c" "DarkOrange")))
-    (suc           (if (eq variant 'dark) (if (true-color-p) "#4caf50" "green3")          (if (true-color-p) "#5a9216" "SpringGreen4")))
-    (ttip          (if (eq variant 'dark) (if (true-color-p) "#75715e" "wheat4")          (if (true-color-p) "#232629" "gray15")))
-    (ttip-bg       (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#eae7e3" "gray88")))
-    (ttip-sl       (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray84")))
-    (type          (if (eq variant 'dark) (if (true-color-p) "#0097a7" "cyan4")           (if (true-color-p) "#007c91" "cyan3")))
-    (var           (if (eq variant 'dark) (if (true-color-p) "#0487c9" "turquoise2")      (if (true-color-p) "#0d47a1" "DeepSkyBlue4")))
-    (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#880e4f" "DodgerBlue4"))))
+  (let ((class '((class color) (min-colors 89))) ;;         ~~ Dark ~~                                      ~~ Light ~~
+        ;;                                                     GUI       TER                                   GUI       TER
+        ;; colors
+        (black         (if (eq variant 'dark) (if (true-color-p) "#1f2021" "gray12")          (if (true-color-p) "#1f2021" "gray12")))
+        (red           (if (eq variant 'dark) (if (true-color-p) "#f44336" "red2")            (if (true-color-p) "#d32f2f" "firebrick3")))
+        (red-bg        (if (eq variant 'dark) (if (true-color-p) "#5e1818" "firebrick4")      (if (true-color-p) "#ffc9c9" "MistyRose2")))
+        (red-bg-s      (if (eq variant 'dark) (if (true-color-p) "#490d0d" "red4")            (if (true-color-p) "#ffdddd" "seashell")))
+        (green         (if (eq variant 'dark) (if (true-color-p) "#4caf50" "green3")          (if (true-color-p) "#388e3c" "SpringGreen4")))
+        (green-bg      (if (eq variant 'dark) (if (true-color-p) "#0d5124" "DarkSlateGray")   (if (true-color-p) "#c8f4c8" "honeydew2")))
+        (green-bg-s    (if (eq variant 'dark) (if (true-color-p) "#29422d" "DarkOliveGreen")  (if (true-color-p) "#ddffdd" "honeydew")))
+        (yellow        (if (eq variant 'dark) (if (true-color-p) "#ffc107" "goldenrod1")      (if (true-color-p) "#ffc107" "DarkOrange2")))
+        (yellow-bg     (if (eq variant 'dark) (if (true-color-p) "#32322c" "sienna4")         (if (true-color-p) "#f6f1e0" "linen")))
+        (orange        (if (eq variant 'dark) (if (true-color-p) "#ff9800" "DarkOrange")      (if (true-color-p) "#ff3d00" "DarkOrange")))
+        (blue          (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
+        (blue-bg       (if (eq variant 'dark) (if (true-color-p) "#445566" "RoyalBlue4")      (if (true-color-p) "#b5e6ff" "LightSkyBlue1")))
+        (blue-bg-s     (if (eq variant 'dark) (if (true-color-p) "#2d4252" "DodgerBlue4")     (if (true-color-p) "#ddeeff" "LightBlue1")))
+        (magenta       (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
+        (purple        (if (eq variant 'dark) (if (true-color-p) "#802edd" "purple")          (if (true-color-p) "#ff60ee" "DarkOrchid1")))
+        (aqua          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "DeepSkyBlue4")    (if (true-color-p) "#0097a7" "cyan4")))
+        (aqua-bg       (if (eq variant 'dark) (if (true-color-p) "#061413" "SteelBlue4")      (if (true-color-p) "#ebf9f9" "azure1")))
+        (cyan          (if (eq variant 'dark) (if (true-color-p) "#1de9b6" "cyan3")           (if (true-color-p) "#00bfa5" "DeepSkyBlue4")))
+        (white         (if (eq variant 'dark) (if (true-color-p) "#fcfcfc" "grey99")          (if (true-color-p) "#fcfcfc" "gray99")))
+        (gray          (if (eq variant 'dark) (if (true-color-p) "#a49da4" "gray71")          (if (true-color-p) "#686868" "gray20    ")))
+        ;; generic
+        (act1          (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#efeae9" "gray89")))
+        (act2          (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#e3dedd" "gray83")))
+        (base          (if (eq variant 'dark) (if (true-color-p) "#f8f8f2" "gray97")          (if (true-color-p) "#232629" "gray15")))
+        (base-dim      (if (eq variant 'dark) (if (true-color-p) "#686868" "gray41")          (if (true-color-p) "#a49da5" "gray64")))
+        (bg0           (if (eq variant 'dark) (if (true-color-p) "#1f2021" "gray12")          (if (true-color-p) "#fcfcfc" "gray99")))
+        (bg1           (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
+        (bg2           (if (eq variant 'dark) (if (true-color-p) "#292c30" "gray17")          (if (true-color-p) "#f5f3ef" "gray93")))
+        (bg3           (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#efeae9" "gray89")))
+        (bg4           (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#eae7e3" "gray85")))
+        (builtin       (if (eq variant 'dark) (if (true-color-p) "#00a6fb" "DeepSkyBlue2")    (if (true-color-p) "#2196f3" "DeepSkyBlue3")))
+        (border        (if (eq variant 'dark) (if (true-color-p) "#31363b" "gray20")          (if (true-color-p) "#e3dedd" "gray81")))
+        (cblk          (if (eq variant 'dark) (if (true-color-p) "#f5f3ef" "gray89")          (if (true-color-p) "#292c2f" "gray16")))
+        (cblk-bg       (if (eq variant 'dark) (if (true-color-p) "#1f2225" "gray16")          (if (true-color-p) "#fcfcf6" "gray93")))
+        (cblk-ln       (if (eq variant 'dark) (if (true-color-p) "#5d6658" "LightGoldenrod4") (if (true-color-p) "#98a890" "DarkKhaki")))
+        (cblk-ln-bg    (if (eq variant 'dark) (if (true-color-p) "#292c2f" "gray17")          (if (true-color-p) "#f5f3ef" "gray89")))
+        (comment       (if (eq variant 'dark) (if (true-color-p) "#6b7566" "LemonChiffon4")   (if (true-color-p) "#8b9985" "LemonChiffon4")))
+        (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
+        (comment-light (if (eq variant 'dark) (if (true-color-p) "#75715e" "LightGoldenrod4") (if (true-color-p) "#6b7566" "DarkKhaki")))
+        (comp          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "cyan3")           (if (true-color-p) "#4527a0" "DeepSkyBlue2")))
+        (const         (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
+        (cursor        (if (eq variant 'dark) (if (true-color-p) "#64dd17" "LimeGreen")       (if (true-color-p) "#64dd17" "LimeGreen")))
+        (err           (if (eq variant 'dark) (if (true-color-p) "#e91e63" "red2")            (if (true-color-p) "#d32f2f" "firebrick3")))
+        (func          (if (eq variant 'dark) (if (true-color-p) "#c6ff00" "LightSkyBlue1")   (if (true-color-p) "#ff3d00" "DarkOrange2")))
+        (head1         (if (eq variant 'dark) (if (true-color-p) "#42a5f5" "DeepSkyBlue1")    (if (true-color-p) "#2376ad" "DodgerBlue4")))
+        (head1-bg      (if (eq variant 'dark) (if (true-color-p) "#293239" "gray17")          (if (true-color-p) "#f8f8f2" "gray97")))
+        (head2         (if (eq variant 'dark) (if (true-color-p) "#29b6f6" "DeepSkyBlue2")    (if (true-color-p) "#2b6590" "DodgerBlue3")))
+        (head2-bg      (if (eq variant 'dark) (if (true-color-p) "#293235" "gray18")          (if (true-color-p) "#f8f8f2" "gray97")))
+        (head3         (if (eq variant 'dark) (if (true-color-p) "#26c6da" "DeepSkyBlue3")    (if (true-color-p) "#2d5475" "DeepSkyBlue3")))
+        (head3-bg      (if (eq variant 'dark) (if (true-color-p) "#293235" "gray19")          (if (true-color-p) "#f8f8f2" "gray97")))
+        (head4         (if (eq variant 'dark) (if (true-color-p) "#26a69a" "DodgerBlue3")     (if (true-color-p) "#2c445b" "DeepSkyBlue2")))
+        (head4-bg      (if (eq variant 'dark) (if (true-color-p) "#32322c" "gray20")          (if (true-color-p) "#f8f8f2" "gray97")))
+        (head5         (if (eq variant 'dark) (if (true-color-p) "#66bb6a" "DodgerBlue4")     (if (true-color-p) "#293542" "DeepSkyBlue1")))
+        (head5-bg      (if (eq variant 'dark) (if (true-color-p) "#32322c" "gray20")          (if (true-color-p) "#f8f8f2" "gray97")))
+        (highlight     (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray89")))
+        (highlight-dim (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray24")          (if (true-color-p) "#d6d7d9" "gray85")))
+        (keyword       (if (eq variant 'dark) (if (true-color-p) "#72ccf9" "DeepSkyBlue3")    (if (true-color-p) "#0069c0" "DeepSkyBlue3")))
+        (lnum          (if (eq variant 'dark) (if (true-color-p) "#5d6658" "gray29")          (if (true-color-p) "#98a890" "gray71")))
+        (mat           (if (eq variant 'dark) (if (true-color-p) "#dce775" "honeydew2")       (if (true-color-p) "#29422d" "DarkOliveGreen")))
+        (meta          (if (eq variant 'dark) (if (true-color-p) "#a49da4" "gray71")          (if (true-color-p) "#686868" "gray20")))
+        (str           (if (eq variant 'dark) (if (true-color-p) "#7ecb20" "DarkOrange")      (if (true-color-p) "#388e3c" "DarkOrange")))
+        (suc           (if (eq variant 'dark) (if (true-color-p) "#4caf50" "green3")          (if (true-color-p) "#5a9216" "SpringGreen4")))
+        (ttip          (if (eq variant 'dark) (if (true-color-p) "#75715e" "wheat4")          (if (true-color-p) "#232629" "gray15")))
+        (ttip-bg       (if (eq variant 'dark) (if (true-color-p) "#3b4045" "gray25")          (if (true-color-p) "#eae7e3" "gray88")))
+        (ttip-sl       (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray84")))
+        (type          (if (eq variant 'dark) (if (true-color-p) "#0097a7" "cyan4")           (if (true-color-p) "#007c91" "cyan3")))
+        (var           (if (eq variant 'dark) (if (true-color-p) "#0487c9" "turquoise2")      (if (true-color-p) "#0d47a1" "DeepSkyBlue4")))
+        (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#880e4f" "DodgerBlue4"))))
 
-   custom-colors-override
+   (cl-loop for (var . val) in humanoid-theme-custom-colors
+            do (set var val))
 
    (custom-theme-set-faces
     theme-name
@@ -287,6 +278,18 @@ to 'auto, tags may not be properly aligned."
     `(cfw:face-toolbar-button-off  ((,class (:foreground ,base :weight bold))))
     `(cfw:face-toolbar-button-on   ((,class (:foreground ,base :weight bold))))
 
+;;;;; centaur-tabs
+    `(centaur-tabs-default ((,class (:background ,bg1 :foreground ,bg1))))
+    `(centaur-tabs-selected ((,class (:background ,bg1 :foreground ,base :weight bold))))
+    `(centaur-tabs-unselected ((,class (:background ,bg2 :foreground ,base-dim :weight light))))
+    `(centaur-tabs-selected-modified ((,class (:background ,bg1
+                                                           :foreground ,blue :weight bold))))
+    `(centaur-tabs-unselected-modified ((,class (:background ,bg2 :weight light
+                                                             :foreground ,blue))))
+    `(centaur-tabs-active-bar-face ((,class (:background ,keyword))))
+    `(centaur-tabs-modified-marker-selected ((,class (:inherit 'centaur-tabs-selected :foreground,keyword))))
+    `(centaur-tabs-modified-marker-unselected ((,class (:inherit 'centaur-tabs-unselected :foreground,keyword))))
+
 ;;;;; cider
     `(cider-enlightened         ((,class      (:background nil :box (:color ,yellow :line-width -1 :style nil) :foreground ,yellow))))
     `(cider-enlightened-local   ((,class      (:foreground ,yellow))))
@@ -343,6 +346,7 @@ to 'auto, tags may not be properly aligned."
     `(dired-warning    ((,class (:foreground ,war))))
 
 ;;;;; doom-modeline
+    `(doom-modeline-bar                ((,class (:background ,bg2))))
     `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
     `(doom-modeline-buffer-modified    ((,class (:inherit error))))
     `(doom-modeline-buffer-path        ((,class (:inherit font-lock-builtin-face))))
@@ -433,6 +437,7 @@ to 'auto, tags may not be properly aligned."
     `(ess-r-signal-keyword-face ((,class (:foreground ,war))))
 
 ;;;;; evil
+    `(evil-ex-lazy-highlight ((,class (:background ,mat :foreground ,bg1))))
     `(evil-ex-substitute-matches ((,class (:background ,red-bg :foreground ,red))))
     `(evil-ex-substitute-replacement ((,class (:background ,green-bg :foreground ,green))))
 
@@ -455,6 +460,12 @@ to 'auto, tags may not be properly aligned."
     `(evil-goggles-undo-redo-add-face ((,class (:background ,green-bg-s :foreground ,green))))
     `(evil-goggles-undo-redo-change-face ((,class (:background ,blue-bg-s :foreground ,blue))))
     `(evil-goggles-undo-redo-remove-face ((,class (:background ,red-bg-s :foreground ,red))))
+
+;;;;; evil-mc
+    `(evil-mc-cursor-bar-face ((,class (:foreground ,aqua))))
+    `(evil-mc-cursor-default-face ((,class (:background ,aqua :foreground ,bg4))))
+    `(evil-mc-cursor-hbar-face ((,class (:foreground ,aqua))))
+    `(evil-mc-region-face ((,class (:inherit highlight))))
 
 ;;;;; flycheck
     `(flycheck-error
@@ -980,8 +991,10 @@ to 'auto, tags may not be properly aligned."
     `(tabbar-default ((,class (:background ,bg1 :foreground ,head1 :height 0.9))))
     `(tabbar-highlight ((,class (:underline t))))
     `(tabbar-selected ((,class (:inherit tabbar-default :foreground ,func :weight bold))))
+    `(tabbar-selected-modified ((,class (:inherit tabbar-default :foreground ,red :weight bold))))
     `(tabbar-separator ((,class (:inherit tabbar-default))))
     `(tabbar-unselected ((,class (:inherit tabbar-default :background ,bg1 :slant italic :weight light))))
+    `(tabbar-unselected-modified ((,class (:inherit tabbar-unselected :background ,bg1 :foreground ,red))))
 
 ;;;;; term
     `(term ((,class (:foreground ,base :background ,bg1))))
@@ -1075,22 +1088,22 @@ to 'auto, tags may not be properly aligned."
     `(ansi-color-names-vector [,bg4 ,red ,green ,yellow ,blue ,magenta ,cyan ,base])
 
 ;;;;; hl-todo
-    `(hl-todo-keyword-faces '(("TODO"   . ,purple)
-                              ("NEXT"   . ,purple)
-                              ("THEM"   . ,aqua)
-                              ("PROG"   . ,cyan)
-                              ("OKAY"   . ,blue)
-                              ("DONT"   . ,war)
-                              ("FAIL"   . ,err)
-                              ("DONE"   . ,suc)
-                              ("NOTE"   . ,yellow)
-                              ("KLUDGE" . ,orange)
-                              ("HACK"   . ,magenta)
-                              ("TEMP"   . ,gray)
-                              ("FIXME"  . ,purple)
-                              ("XXX"    . ,var)
-                              ("XXXX"   . ,var)
-                              ("???"    . ,var)))
+    `(hl-todo-keyword-faces '(("TODO"       . ,purple)
+                              ("NEXT"       . ,purple)
+                              ("THEM"       . ,aqua)
+                              ("PROG"       . ,cyan)
+                              ("OKAY"       . ,blue)
+                              ("DONT"       . ,war)
+                              ("FAIL"       . ,err)
+                              ("DONE"       . ,suc)
+                              ("NOTE"       . ,yellow)
+                              ("KLUDGE"     . ,orange)
+                              ("HACK"       . ,magenta)
+                              ("TEMP"       . ,gray)
+                              ("FIXME"      . ,purple)
+                              ("XXX"        . ,var)
+                              ("XXXX"       . ,var)
+                              ("\\?\\?\\?+" . ,var)))
 
 ;;;;; pdf-tools
     `(pdf-view-midnight-colors '(,base . ,bg1)))))
