@@ -7,7 +7,7 @@
 ;;
 ;; Version: 0.1
 ;; Keywords: faces, color, theme
-;; Package-Requires: ((emacs "24"))
+;; Package-Requires: ((emacs "24.3"))
 
 ;; Initially forked from Spacemacs Theme <https://github.com/nashamri/spacemacs-theme>.
 
@@ -186,7 +186,7 @@ to 'auto, tags may not be properly aligned."
    (custom-theme-set-faces
     theme-name
 
-;;;;; basics
+;;;;; custom colors
     `(custom-black                        ((,class (:foreground ,black))))
     `(custom-red                          ((,class (:foreground ,red))))
     `(custom-green                        ((,class (:foreground ,green))))
@@ -231,7 +231,7 @@ to 'auto, tags may not be properly aligned."
     `(hl-line                             ((,class (:background ,bg3))))
     `(isearch                             ((,class (:foreground ,bg1 :background ,mat))))
     `(lazy-highlight                      ((,class (:background ,highlight-dim :weight normal))))
-    `(link                                ((,class (:foreground ,base :underline t))))
+    `(link                                ((,class (:foreground unspecified :underline t))))
     `(link-visited                        ((,class (:inherit link))))
     `(match                               ((,class (:background ,highlight :foreground ,mat))))
     `(minibuffer-prompt                   ((,class (:inherit bold :foreground ,keyword))))
@@ -342,7 +342,7 @@ to 'auto, tags may not be properly aligned."
     `(dired-symlink    ((,class (:foreground ,var :background ,bg1 :inherit bold))))
     `(dired-warning    ((,class (:foreground ,war))))
 
-;;;;; doome-modeline
+;;;;; doom-modeline
     `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
     `(doom-modeline-buffer-modified    ((,class (:inherit error))))
     `(doom-modeline-buffer-path        ((,class (:inherit font-lock-builtin-face))))
@@ -1096,8 +1096,7 @@ to 'auto, tags may not be properly aligned."
     `(pdf-view-midnight-colors '(,base . ,bg1)))))
 
 
-
-;;;;; autoload
+;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
@@ -1105,7 +1104,7 @@ to 'auto, tags may not be properly aligned."
 (provide 'humanoid-common)
 
 ;; Local Variables:
-;; mode: emacs-lisp
+;; no-byte-compile: t
 ;; End:
 
 ;;; humanoid-common.el ends here
