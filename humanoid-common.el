@@ -931,9 +931,9 @@ to 'auto, tags may not be properly aligned. "
     `(smerge-refined-removed ((,class (:background ,red-bg-s :foreground ,red))))
 
 ;;;;; solaire-mode
-    `(solaire-default-face  ((,class (:inherit 'default :background ,bg3))))
-    `(solaire-hl-line-face  ((,class (:inherit 'hl-line :background ,bg1))))
-    `(solaire-org-hide-face ((,class (:foreground ,bg3))))
+    `(solaire-default-face  ((,class (:inherit 'default :background ,bg1))))
+    `(solaire-hl-line-face  ((,class (:inherit 'hl-line :background ,bg3))))
+    `(solaire-org-hide-face ((,class (:foreground ,bg1))))
 
 ;;;;; spaceline
     `(spaceline-evil-emacs ((,class (:background ,blue))))
