@@ -35,6 +35,7 @@
 ;;; Code:
 
 (defmacro dyn-let (varlist fn setfaces setvars)
+  "Append variable to list VARLIST FN SETFACES SETVARS."
   (list 'let (append varlist (funcall fn)) setfaces setvars))
 
 (defgroup humanoid-theme nil
@@ -61,7 +62,7 @@
 
 Note that if you change this to a non-nil value, you may want to
 also adjust the value of `org-agenda-tags-column'. If that is set
-to 'auto, tags may not be properly aligned. "
+to 'auto, tags may not be properly aligned."
   :type 'boolean
   :group 'humanoid-theme)
 
@@ -71,12 +72,12 @@ to 'auto, tags may not be properly aligned. "
   :group 'humanoid-theme)
 
 (defcustom humanoid-theme-org-bold t
-  "Inherit text bold for org headings"
+  "Inherit text bold for org headings."
   :type 'boolean
   :group 'humanoid-theme)
 
 (defcustom humanoid-theme-org-priority-bold t
-  "Inherit text bold for priority items in agenda view"
+  "Inherit text bold for priority items in agenda view."
   :type 'boolean
   :group 'humanoid-theme)
 
@@ -91,20 +92,23 @@ to 'auto, tags may not be properly aligned. "
   :group 'humanoid-theme)
 
 (defcustom humanoid-theme-underline-parens t
-  "If non-nil, underline matching parens when using `show-paren-mode' or similar."
+  "If non-nil, underline matching parens when using command `show-paren-mode' or similar."
   :type 'boolean
   :group 'humanoid-theme)
 
 (defun true-color-p ()
+  "Ask if true colors."
   (or
    (display-graphic-p)
    (= (tty-display-color-cells) 16777216)))
 
 (defun custom-colors-override ()
+  "Overrwrite with custom colors."
   (mapcar (lambda (x) (list (car x) (cdr x)))
           humanoid-theme-custom-colors))
 
 (defun create-humanoid-theme (variant theme-name)
+  "Define colors with VARIANT and THEME-NAME."
   (dyn-let
    ((class '((class color) (min-colors 89))) ;;                ~~ Dark ~~                                      ~~ Light ~~
 ;;;;;                                                        GUI       TER                                   GUI       TER
@@ -177,7 +181,6 @@ to 'auto, tags may not be properly aligned. "
     (type          (if (eq variant 'dark) (if (true-color-p) "#0097a7" "cyan4")           (if (true-color-p) "#007c91" "cyan3")))
     (var           (if (eq variant 'dark) (if (true-color-p) "#0487c9" "turquoise2")      (if (true-color-p) "#0d47a1" "DeepSkyBlue4")))
     (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#880e4f" "DodgerBlue4"))))
-
 
    custom-colors-override
 
