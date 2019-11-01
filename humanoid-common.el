@@ -1,15 +1,15 @@
 ;;; humanoid-common.el --- Color theme with a dark and light versions.
 
-;; Copyright (C) 2015-2018 Nasser Alshammari
+;; Copyright (C) 2018-2019 Thomas Friese
 
-;; Author: Nasser Alshammari
-;; URL: <https://github.com/nashamri/spacemacs-theme>
+;; Author: Thomas Friese
+;; URL: https://github.com/tasmo/humanoid-theme
 ;;
-;; Version: 0.1_tasmo
-;; Keywords: color, theme
+;; Version: 0.1
+;; Keywords: faces, color, theme
 ;; Package-Requires: ((emacs "24"))
 
-;; Initially created with the help of emacs-theme-generator, <https://github.com/mswift42/theme-creator>.
+;; Initially forked from Spacemacs Theme <https://github.com/nashamri/spacemacs-theme>.
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -28,9 +28,8 @@
 
 ;;; Commentary:
 
-;; This is a color theme for humanoid <https://github.com/syl20bnr/spacemacs>.
-;; It comes with two versions, dark and light and should work well in
-;; a 256 color terminal.
+;; This is a color comes with two versions, dark and light and should work well
+;; in a 256 color terminal.
 
 ;;; Code:
 
