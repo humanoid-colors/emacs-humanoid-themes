@@ -141,8 +141,8 @@ to 'auto, tags may not be properly aligned."
         (comment       (if (eq variant 'dark) (if (true-color-p) "#6b7566" "LemonChiffon4")   (if (true-color-p) "#8b9985" "LemonChiffon4")))
         (comment-bg    (if (eq variant 'dark) (if (true-color-p) "#232629" "gray15")          (if (true-color-p) "#f8f8f2" "gray97")))
         (comment-light (if (eq variant 'dark) (if (true-color-p) "#75715e" "LightGoldenrod4") (if (true-color-p) "#6b7566" "DarkKhaki")))
-        (comp          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "cyan3")           (if (true-color-p) "#4527a0" "DeepSkyBlue2")))
-        (const         (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#5f23a3" "purple")))
+        (comp          (if (eq variant 'dark) (if (true-color-p) "#0ed1d1" "cyan3")           (if (true-color-p) "#5f23a3" "DeepSkyBlue2")))
+        (const         (if (eq variant 'dark) (if (true-color-p) "#ff60ee" "DarkOrchid1")     (if (true-color-p) "#880e4f" "purple")))
         (cursor        (if (eq variant 'dark) (if (true-color-p) "#64dd17" "LimeGreen")       (if (true-color-p) "#64dd17" "LimeGreen")))
         (err           (if (eq variant 'dark) (if (true-color-p) "#e91e63" "red2")            (if (true-color-p) "#d32f2f" "firebrick3")))
         (func          (if (eq variant 'dark) (if (true-color-p) "#c6ff00" "LightSkyBlue1")   (if (true-color-p) "#ff3d00" "DarkOrange2")))
@@ -169,7 +169,7 @@ to 'auto, tags may not be properly aligned."
         (ttip-sl       (if (eq variant 'dark) (if (true-color-p) "#49483e" "gray28")          (if (true-color-p) "#e3dedd" "gray84")))
         (type          (if (eq variant 'dark) (if (true-color-p) "#0097a7" "cyan4")           (if (true-color-p) "#007c91" "cyan3")))
         (var           (if (eq variant 'dark) (if (true-color-p) "#0487c9" "turquoise2")      (if (true-color-p) "#0d47a1" "DeepSkyBlue4")))
-        (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#880e4f" "DodgerBlue4"))))
+        (war           (if (eq variant 'dark) (if (true-color-p) "#ff9800" "goldenrod1")      (if (true-color-p) "#f86d14" "DodgerBlue4"))))
 
    (cl-loop for (var . val) in humanoid-theme-custom-colors
             do (set var val))
