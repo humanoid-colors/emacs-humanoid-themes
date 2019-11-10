@@ -9,9 +9,9 @@ The theme comes with dark and light variants and it should work well with 256 co
 
 ## Screenshots
 
-[![light theme](screenshots/Screenshot_2019-09-25_11-46-40.png)](screenshots/Screenshot_2019-09-25_11-46-40.png)
+[![light theme](screenshots/Screenshot_2019-11-10_15-56-41.png)](screenshots/Screenshot_2019-11-10_15-56-41.png)
 
-[![dark theme](screenshots/Screenshot_2019-09-25_11-47-14.png)](screenshots/Screenshot_2019-09-25_11-47-14.png)
+[![dark theme](screenshots/Screenshot_2019-11-10_15-58-39.png)](screenshots/Screenshot_2019-11-10_15-58-39.png)
 
 ## Highlights
 
