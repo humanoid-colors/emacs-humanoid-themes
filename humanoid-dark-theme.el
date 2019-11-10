@@ -1,4 +1,4 @@
-;;; humanoid-dark-theme.el --- the dark variant
+;;; humanoid-dark-theme.el --- the dark variant -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;;
 ;;; Code:
@@ -10,4 +10,5 @@
 (create-humanoid-theme 'dark 'humanoid-dark)
 
 (provide-theme 'humanoid-dark)
+
 ;;; humanoid-dark-theme.el ends here

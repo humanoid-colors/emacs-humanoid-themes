@@ -1,4 +1,4 @@
-;;; humanoid-light-theme.el --- the light variant
+;;; humanoid-light-theme.el --- the light variant -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;;
 ;;; Code:
@@ -10,4 +10,5 @@
 (create-humanoid-theme 'light 'humanoid-light)
 
 (provide 'humanoid-light-theme)
+
 ;;; humanoid-light-theme.el ends here
