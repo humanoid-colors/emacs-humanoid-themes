@@ -3,7 +3,7 @@
 ;; Copyright (C) 2018-2019 Thomas Friese
 
 ;; Author: Thomas Friese
-;; URL: https://github.com/tasmo/humanoid-theme
+;; URL: https://github.com/humanoid-colors/emacs-humanoid-theme
 ;;
 ;; Version: 0.1
 ;; Keywords: faces, color, theme
