@@ -217,7 +217,7 @@ to 'auto, tags may not be properly aligned."
     `(font-lock-variable-name-face        ((,class (:inherit bold :foreground ,var))))
     `(font-lock-warning-face              ((,class (:foreground ,war :background ,bg1))))
     `(fringe                              ((,class (:background ,bg1 :foreground ,lnum))))
-    `(header-line                         ((,class (:background ,bg4))))
+    `(header-line                         ((,class (:background ,bg2))))
     `(highlight                           ((,class (:foreground ,base :background ,highlight))))
     `(hl-line                             ((,class (:background ,bg3))))
     `(isearch                             ((,class (:foreground ,bg1 :background ,mat))))
@@ -281,13 +281,13 @@ to 'auto, tags may not be properly aligned."
 
 ;;;;; centaur-tabs
     `(centaur-tabs-default ((,class (:background ,bg1 :foreground ,bg1))))
-    `(centaur-tabs-selected ((,class (:background ,bg1 :foreground ,base :weight bold))))
+    `(centaur-tabs-selected ((,class (:background ,bg1 :foreground ,base :weight normal))))
     `(centaur-tabs-unselected ((,class (:background ,bg2 :foreground ,base-dim :weight light))))
     `(centaur-tabs-selected-modified ((,class (:background ,bg1
-                                                           :foreground ,blue :weight bold))))
+                                                           :foreground ,war :weight normal))))
     `(centaur-tabs-unselected-modified ((,class (:background ,bg2 :weight light
-                                                             :foreground ,blue))))
-    `(centaur-tabs-active-bar-face ((,class (:background ,keyword))))
+                                                             :foreground ,war))))
+    `(centaur-tabs-active-bar-face ((,class (:background ,blue))))
     `(centaur-tabs-modified-marker-selected ((,class (:inherit 'centaur-tabs-selected :foreground,keyword))))
     `(centaur-tabs-modified-marker-unselected ((,class (:inherit 'centaur-tabs-unselected :foreground,keyword))))
 
@@ -349,7 +349,7 @@ to 'auto, tags may not be properly aligned."
 ;;;;; doom-modeline
     `(doom-modeline-bar                ((,class (:background ,bg2))))
     `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
-    `(doom-modeline-buffer-modified    ((,class (:inherit error))))
+    `(doom-modeline-buffer-modified    ((,class (:inherit war))))
     `(doom-modeline-buffer-path        ((,class (:inherit font-lock-builtin-face))))
     `(doom-modeline-evil-emacs-state   ((,class (:foreground ,blue))))
     `(doom-modeline-evil-insert-state  ((,class (:foreground ,green))))
