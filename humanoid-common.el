@@ -349,7 +349,7 @@ to 'auto, tags may not be properly aligned."
 ;;;;; doom-modeline
     `(doom-modeline-bar                ((,class (:background ,bg2))))
     `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
-    `(doom-modeline-buffer-modified    ((,class (:inherit war))))
+    `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
     `(doom-modeline-buffer-path        ((,class (:inherit font-lock-builtin-face))))
     `(doom-modeline-evil-emacs-state   ((,class (:foreground ,blue))))
     `(doom-modeline-evil-insert-state  ((,class (:foreground ,green))))
