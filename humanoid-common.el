@@ -1,4 +1,4 @@
-;;; humanoid-common.el --- Color theme with a dark and light versions. -*- lexical-binding: t; -*-
+;;; humanoid-common.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018-2019 Thomas Friese
 
