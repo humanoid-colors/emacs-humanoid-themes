@@ -1,4 +1,4 @@
-;;; humanoid-common.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
+;;; humanoid-theme.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018-2019 Thomas Friese
 
@@ -1115,10 +1115,10 @@ to 'auto, tags may not be properly aligned."
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'humanoid-common)
+(provide 'humanoid-theme)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; humanoid-common.el ends here
+;;; humanoid-theme.el ends here

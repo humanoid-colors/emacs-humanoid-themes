@@ -3,7 +3,7 @@
 ;;;
 ;;; Code:
 
-(require 'humanoid-common)
+(require 'humanoid-theme)
 
 (deftheme humanoid-light "Humanoid theme, the light version")
 
