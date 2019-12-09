@@ -7,7 +7,7 @@
 
 (deftheme humanoid-light "Humanoid theme, the light version")
 
-(create-humanoid-theme 'light 'humanoid-light)
+(humanoid-theme-create 'light 'humanoid-light)
 
 (provide 'humanoid-light-theme)
 

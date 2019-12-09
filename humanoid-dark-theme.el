@@ -7,7 +7,7 @@
 
 (deftheme humanoid-dark "Humanoid theme, the dark version")
 
-(create-humanoid-theme 'dark 'humanoid-dark)
+(humanoid-theme-create 'dark 'humanoid-dark)
 
 (provide-theme 'humanoid-dark)
 
