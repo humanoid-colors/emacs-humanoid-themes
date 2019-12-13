@@ -46,49 +46,49 @@ Some of the supported modes are:
 
 The theme has some options that can be tweaked via `M-x customize`:
 
-* `humanoid-theme-comment-bg`:
+* `humanoid-comment-bg`:
 
 This toggles a background color for the comment lines.
 
-* `humanoid-theme-comment-italic`:
+* `humanoid-comment-italic`:
 
-This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `humanoid-theme-comment-bg` if you turn this option on for better contrast.
+This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `humanoid-comment-bg` if you turn this option on for better contrast.
 
-* `humanoid-theme-keyword-italic`:
+* `humanoid-keyword-italic`:
 
 This toggles italics for keywords.
 
-* `humanoid-theme-org-agenda-height`:
+* `humanoid-org-agenda-height`:
 
 This toggles the use of varying org agenda heights.
 
-* `humanoid-theme-org-bold`:
+* `humanoid-org-bold`:
 
 This toggles bold text for org headings.
 
-* `humanoid-theme-org-height`:
+* `humanoid-org-height`:
 
 This toggles the use of varying org headings heights.
 
-* `humanoid-theme-org-highlight`:
+* `humanoid-org-highlight`:
 
 This toggles highlighting of org headings.
 
-* `humanoid-theme-org-priority-bold`:
+* `humanoid-org-priority-bold`:
 
 This toggles bold text for priority items in agenda view.
 
-* `humanoid-theme-custom-colors`:
+* `humanoid-custom-colors`:
 
 This allows for specifying a list of custom colors to override humanoid theme colors. More details in the next section.
 
-* `humanoid-theme-underline-parens`:
+* `humanoid-underline-parens`:
 
 This toggles the underline of matching parens when using `show-paren-mode` or similar.
 
 ### Override theme's colors
 
-The theme can be customized by overriding one of the theme local variables by setting a list in the `humanoid-theme-custom-colors` variable.
+The theme can be customized by overriding one of the theme local variables by setting a list in the `humanoid-custom-colors` variable.
 Here's a list of all the local variables and roles:
 
 | var           | role                                                                                              |
@@ -109,12 +109,12 @@ Here's a list of all the local variables and roles:
 | cursor        | The cursor/point color.                                                                           |
 | const         | A constant.                                                                                       |
 | comment       | A comment.                                                                                        |
-| comment-bg    | The background color of a comment. To disable this, `customize` `humanoid-theme-comment-bg`.     |
+| comment-bg    | The background color of a comment. To disable this, `customize` `humanoid-comment-bg`.     |
 | comp          | A complementary color.                                                                            |
 | err           | errors.                                                                                           |
 | func          | functions.                                                                                        |
 | head1         | Level 1 of a heading. Used in org's headings.                                                     |
-| head1-bg      | The background of level 2 headings. To disable this, `customize` `humanoid-theme-org-highlight`. |
+| head1-bg      | The background of level 2 headings. To disable this, `customize` `humanoid-org-highlight`. |
 | head2         | Level 2 headings.                                                                                 |
 | head2-bg      | Level 2 headings background.                                                                      |
 | head3         | Level 3 headings.                                                                                 |
@@ -161,7 +161,7 @@ The `green-bg-s`, `red-bg-s`, and `blue-bg-s` are a stronger version and are use
 If you are using [humanoid](https://github.com/syl20bnr/humanoid), you can put this snippet in your `dothumanoid/user-init` to override these colors:
 
 ```elisp
-  (custom-set-variables '(humanoid-theme-custom-colors
+  (custom-set-variables '(humanoid-custom-colors
                           '((act1 . "#ff0000")
                             (act2 . "#0000ff")
                             (base . "#ffffff"))))
