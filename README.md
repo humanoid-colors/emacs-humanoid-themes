@@ -4,7 +4,7 @@ Modiefied theme with completely diffferent colors.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Humanoid theme is an Emacs color theme that started as a theme for [spacemacs](https://github.com/syl20bnr/humanoid).
+Humanoid theme is an Emacs color theme that started as a theme for [spacemacs](https://github.com/syl20bnr/spacemacs).
 The theme comes with dark and light variants and it should work well with 256 color terminals.
 
 ## Screenshots
@@ -158,7 +158,7 @@ There is also explicit colors variables that can be customized:
 The `green` and `red` colors have two background versions. The `green-bg` and  `red-bg` are normal light background colors.
 The `green-bg-s`, `red-bg-s`, and `blue-bg-s` are a stronger version and are used in `ediff` and places were text is added, deleted or changed.
 
-If you are using [humanoid](https://github.com/syl20bnr/humanoid), you can put this snippet in your `dothumanoid/user-init` to override these colors:
+If you are using [spacemacs](https://github.com/syl20bnr/spacemacs), you can put this snippet in your `dotspacemacs/user-init` to override these colors:
 
 ```elisp
   (custom-set-variables '(humanoid-custom-colors
