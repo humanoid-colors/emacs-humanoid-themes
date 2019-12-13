@@ -9,6 +9,6 @@
 
 (humanoid-create 'light 'humanoid-light)
 
-(provide 'humanoid-light-theme)
+(provide-theme 'humanoid-light)
 
 ;;; humanoid-light-theme.el ends here
