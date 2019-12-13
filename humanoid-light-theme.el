@@ -3,11 +3,11 @@
 ;;;
 ;;; Code:
 
-(require 'humanoid-theme)
+(require 'humanoid)
 
 (deftheme humanoid-light "Humanoid theme, the light version")
 
-(humanoid-theme-create 'light 'humanoid-light)
+(humanoid-create 'light 'humanoid-light)
 
 (provide 'humanoid-light-theme)
 

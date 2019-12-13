@@ -1,4 +1,4 @@
-;;; humanoid-theme.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
+;;; humanoid.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018-2019 Thomas Friese
 
@@ -34,25 +34,25 @@
 ;;; Code:
 
 (defgroup humanoid-theme nil
-  "Humanoid-theme options."
+  "humanoid theme options."
   :group 'faces)
 
-(defcustom humanoid-theme-comment-bg nil
+(defcustom humanoid-comment-bg nil
   "Use a background for comment lines."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-comment-italic nil
+(defcustom humanoid-comment-italic nil
   "Enable italics for comments and also disable background."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-keyword-italic nil
+(defcustom humanoid-keyword-italic nil
   "Enable italics for keywords."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-org-agenda-height nil
+(defcustom humanoid-org-agenda-height nil
   "If non-nil, use varying text heights for agenda items.
 
 Note that if you change this to a non-nil value, you may want to
@@ -61,117 +61,117 @@ to 'auto, tags may not be properly aligned."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-org-height t
+(defcustom humanoid-org-height t
   "Use varying text heights for org headings."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-org-bold t
+(defcustom humanoid-org-bold t
   "Inherit text bold for org headings."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-org-priority-bold t
+(defcustom humanoid-org-priority-bold t
   "Inherit text bold for priority items in agenda view."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-org-highlight nil
+(defcustom humanoid-org-highlight nil
   "Highlight org headings."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-custom-colors nil
+(defcustom humanoid-custom-colors nil
   "Specify a list of custom colors."
   :type 'alist
   :group 'humanoid-theme)
 
-(defcustom humanoid-theme-underline-parens t
+(defcustom humanoid-underline-parens t
   "If non-nil, underline matching parens when using command `show-paren-mode' or similar."
   :type 'boolean
   :group 'humanoid-theme)
 
-(defun humanoid-theme-true-color ()
+(defun humanoid-true-color ()
   "Ask if true colors."
   (or
    (display-graphic-p)
    (= (tty-display-color-cells) 16777216)))
 
-(defun humanoid-theme-create (variant theme-name)
+(defun humanoid-create (variant theme-name)
   "Define colors with VARIANT and THEME-NAME."
   (let ((class '((class color) (min-colors 89))) ;;                            ~~ Dark ~~                                                   ~~ Light ~~
         ;;                                                                    GUI       TER                                                GUI       TER
         ;; colors
-        (black         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#070708" "gray4")           (if (humanoid-theme-true-color) "#070708" "gray4")))
-        (red           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#f11235" "red2")            (if (humanoid-theme-true-color) "#b0151a" "firebrick3")))
-        (red-bg        (if (eq variant 'dark) (if (humanoid-theme-true-color) "#5e1818" "OrangeRed4")      (if (humanoid-theme-true-color) "#ffc9c9" "pink")))
-        (red-bg-s      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#490d0d" "DarkRed")         (if (humanoid-theme-true-color) "#ffdddd" "MistyRose")))
-        (green         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#02d849" "chartreuse3")     (if (humanoid-theme-true-color) "#388e3c" "SpringGreen4")))
-        (green-bg      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#0d5124" "DarkOliveGreen")  (if (humanoid-theme-true-color) "#c8f4c8" "DarkSeaGreen1")))
-        (green-bg-s    (if (eq variant 'dark) (if (humanoid-theme-true-color) "#29422d" "DarkGreen")       (if (humanoid-theme-true-color) "#ddffdd" "honeydew2")))
-        (yellow        (if (eq variant 'dark) (if (humanoid-theme-true-color) "#ffb627" "goldenrod1")      (if (humanoid-theme-true-color) "#ffb627" "goldenrod1")))
-        (yellow-bg     (if (eq variant 'dark) (if (humanoid-theme-true-color) "#32322c" "wheat4")          (if (humanoid-theme-true-color) "#f6f1e0" "linen")))
-        (orange        (if (eq variant 'dark) (if (humanoid-theme-true-color) "#ff9505" "DarkOrange")      (if (humanoid-theme-true-color) "#ff3d00" "OrangeRed")))
-        (blue          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#00a6fb" "DeepSkyBlue2")    (if (humanoid-theme-true-color) "#0082c9" "DodgerBlue3")))
-        (blue-bg       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#445566" "RoyalBlue4")      (if (humanoid-theme-true-color) "#b5e6ff" "LightSkyBlue1")))
-        (blue-bg-s     (if (eq variant 'dark) (if (humanoid-theme-true-color) "#2d4252" "DodgerBlue4")     (if (humanoid-theme-true-color) "#ddeeff" "azure2")))
-        (magenta       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#df6ee3" "magenta1")        (if (humanoid-theme-true-color) "#630f87" "purple3")))
-        (purple        (if (eq variant 'dark) (if (humanoid-theme-true-color) "#811cac" "purple3")         (if (humanoid-theme-true-color) "#ff60ee" "magenta2")))
-        (aqua          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#0ed1d1" "turquoise2")      (if (humanoid-theme-true-color) "#008e8e" "cyan4")))
-        (aqua-bg       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#061413" "DarkSlateGrey")   (if (humanoid-theme-true-color) "#ebf9f9" "azure1")))
-        (cyan          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#1de9b6" "aquamarine2")     (if (humanoid-theme-true-color) "#00bfa5" "aquamarine3")))
-        (white         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#fcfcfc" "grey99")          (if (humanoid-theme-true-color) "#fcfcfc" "gray99")))
-        (gray          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#c0c0bd" "gray64")          (if (humanoid-theme-true-color) "#60615d" "gray42")))
+        (black         (if (eq variant 'dark) (if (humanoid-true-color) "#070708" "gray4")           (if (humanoid-true-color) "#070708" "gray4")))
+        (red           (if (eq variant 'dark) (if (humanoid-true-color) "#f11235" "red2")            (if (humanoid-true-color) "#b0151a" "firebrick3")))
+        (red-bg        (if (eq variant 'dark) (if (humanoid-true-color) "#5e1818" "OrangeRed4")      (if (humanoid-true-color) "#ffc9c9" "pink")))
+        (red-bg-s      (if (eq variant 'dark) (if (humanoid-true-color) "#490d0d" "DarkRed")         (if (humanoid-true-color) "#ffdddd" "MistyRose")))
+        (green         (if (eq variant 'dark) (if (humanoid-true-color) "#02d849" "chartreuse3")     (if (humanoid-true-color) "#388e3c" "SpringGreen4")))
+        (green-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#0d5124" "DarkOliveGreen")  (if (humanoid-true-color) "#c8f4c8" "DarkSeaGreen1")))
+        (green-bg-s    (if (eq variant 'dark) (if (humanoid-true-color) "#29422d" "DarkGreen")       (if (humanoid-true-color) "#ddffdd" "honeydew2")))
+        (yellow        (if (eq variant 'dark) (if (humanoid-true-color) "#ffb627" "goldenrod1")      (if (humanoid-true-color) "#ffb627" "goldenrod1")))
+        (yellow-bg     (if (eq variant 'dark) (if (humanoid-true-color) "#32322c" "wheat4")          (if (humanoid-true-color) "#f6f1e0" "linen")))
+        (orange        (if (eq variant 'dark) (if (humanoid-true-color) "#ff9505" "DarkOrange")      (if (humanoid-true-color) "#ff3d00" "OrangeRed")))
+        (blue          (if (eq variant 'dark) (if (humanoid-true-color) "#00a6fb" "DeepSkyBlue2")    (if (humanoid-true-color) "#0082c9" "DodgerBlue3")))
+        (blue-bg       (if (eq variant 'dark) (if (humanoid-true-color) "#445566" "RoyalBlue4")      (if (humanoid-true-color) "#b5e6ff" "LightSkyBlue1")))
+        (blue-bg-s     (if (eq variant 'dark) (if (humanoid-true-color) "#2d4252" "DodgerBlue4")     (if (humanoid-true-color) "#ddeeff" "azure2")))
+        (magenta       (if (eq variant 'dark) (if (humanoid-true-color) "#df6ee3" "magenta1")        (if (humanoid-true-color) "#630f87" "purple3")))
+        (purple        (if (eq variant 'dark) (if (humanoid-true-color) "#811cac" "purple3")         (if (humanoid-true-color) "#ff60ee" "magenta2")))
+        (aqua          (if (eq variant 'dark) (if (humanoid-true-color) "#0ed1d1" "turquoise2")      (if (humanoid-true-color) "#008e8e" "cyan4")))
+        (aqua-bg       (if (eq variant 'dark) (if (humanoid-true-color) "#061413" "DarkSlateGrey")   (if (humanoid-true-color) "#ebf9f9" "azure1")))
+        (cyan          (if (eq variant 'dark) (if (humanoid-true-color) "#1de9b6" "aquamarine2")     (if (humanoid-true-color) "#00bfa5" "aquamarine3")))
+        (white         (if (eq variant 'dark) (if (humanoid-true-color) "#fcfcfc" "grey99")          (if (humanoid-true-color) "#fcfcfc" "gray99")))
+        (gray          (if (eq variant 'dark) (if (humanoid-true-color) "#c0c0bd" "gray64")          (if (humanoid-true-color) "#60615d" "gray42")))
         ;; generic
-        (act1          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#3b4045" "gray28")          (if (humanoid-theme-true-color) "#e8e8e2" "gray89")))
-        (act2          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#484e54" "gray32")          (if (humanoid-theme-true-color) "#deded8" "gray83")))
-        (base          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#f8f8f2" "gray97")          (if (humanoid-theme-true-color) "#232629" "gray18")))
-        (base-dim      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#60615d" "gray42")          (if (humanoid-theme-true-color) "#c0c0bd" "gray64")))
-        (bg0           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#151718" "gray12")          (if (humanoid-theme-true-color) "#fcfcfc" "gray99")))
-        (bg1           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#232629" "gray18")          (if (humanoid-theme-true-color) "#f8f8f2" "gray96")))
-        (bg2           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#2f3337" "gray22")          (if (humanoid-theme-true-color) "#f4f4ee" "gray93")))
-        (bg3           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#3b4045" "gray28")          (if (humanoid-theme-true-color) "#efefe9" "gray90")))
-        (bg4           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#484e54" "gray32")          (if (humanoid-theme-true-color) "#e8e8e2" "gray87")))
-        (builtin       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#72ccf9" "LightSkyBlue")    (if (humanoid-theme-true-color) "#2196f3" "DodgerBlue3")))
-        (border        (if (eq variant 'dark) (if (humanoid-theme-true-color) "#31363b" "gray20")          (if (humanoid-theme-true-color) "#deded8" "gray83")))
-        (cblk          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#f4f4ee" "gray93")          (if (humanoid-theme-true-color) "#2f3337" "gray22")))
-        (cblk-bg       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#151718" "gray12")          (if (humanoid-theme-true-color) "#fcfcf6" "gray98")))
-        (cblk-ln       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#5d6658" "cornsilk4")       (if (humanoid-theme-true-color) "#98a890" "cornsilk4")))
-        (cblk-ln-bg    (if (eq variant 'dark) (if (humanoid-theme-true-color) "#2f3337" "gray22")          (if (humanoid-theme-true-color) "#efefe9" "gray90")))
-        (comment       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#6b7566" "LemonChiffon4")   (if (humanoid-theme-true-color) "#8b9985" "LemonChiffon4")))
-        (comment-bg    (if (eq variant 'dark) (if (humanoid-theme-true-color) "#232629" "gray18")          (if (humanoid-theme-true-color) "#f8f8f2" "gray96")))
-        (comment-light (if (eq variant 'dark) (if (humanoid-theme-true-color) "#75715e" "LightGoldenrod4") (if (humanoid-theme-true-color) "#6b7566" "LightYellow4")))
-        (comp          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#7ecb20" "YellowGreen")     (if (humanoid-theme-true-color) "#5f23a3" "purple4")))
-        (const         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#df6ee3" "magenta1")        (if (humanoid-theme-true-color) "#880e4f" "DarkRed")))
-        (cursor        (if (eq variant 'dark) (if (humanoid-theme-true-color) "#64dd17" "chartreuse2")     (if (humanoid-theme-true-color) "#64dd17" "chartreuse2")))
-        (err           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#f11235" "red2")            (if (humanoid-theme-true-color) "#b0151a" "firebrick3")))
-        (func          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#0ed1d1" "cyan3")           (if (humanoid-theme-true-color) "#ff3d00" "OrangeRed")))
-        (head1         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#42a5f5" "DeepSkyBlue1")    (if (humanoid-theme-true-color) "#2376ad" "DodgerBlue3")))
-        (head1-bg      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#293239" "gray17")          (if (humanoid-theme-true-color) "#efefe9" "gray97")))
-        (head2         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#29b6f6" "DeepSkyBlue2")    (if (humanoid-theme-true-color) "#2b6590" "DodgerBlue4")))
-        (head2-bg      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#293235" "gray18")          (if (humanoid-theme-true-color) "#efefe9" "gray97")))
-        (head3         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#26c6da" "cyan3")           (if (humanoid-theme-true-color) "#2d5475" "RoyalBlue4")))
-        (head3-bg      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#293235" "gray19")          (if (humanoid-theme-true-color) "#efefe9" "gray97")))
-        (head4         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#26a69a" "LightSeaGreen")   (if (humanoid-theme-true-color) "#2c445b" "SlateBlue4")))
-        (head4-bg      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#32322c" "gray20")          (if (humanoid-theme-true-color) "#efefe9" "gray97")))
-        (head5         (if (eq variant 'dark) (if (humanoid-theme-true-color) "#66bb6a" "PaleGreen3")      (if (humanoid-theme-true-color) "#293542" "DarkSlateBlue")))
-        (head5-bg      (if (eq variant 'dark) (if (humanoid-theme-true-color) "#32322c" "gray26")          (if (humanoid-theme-true-color) "#efefe9" "gray97")))
-        (highlight     (if (eq variant 'dark) (if (humanoid-theme-true-color) "#484e54" "gray30")          (if (humanoid-theme-true-color) "#e8e8e2" "gray89")))
-        (highlight-dim (if (eq variant 'dark) (if (humanoid-theme-true-color) "#545b62" "gray36")          (if (humanoid-theme-true-color) "#deded8" "gray85")))
-        (keyword       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#00a6fb" "DeepSkyBlue2")    (if (humanoid-theme-true-color) "#0069c0" "RoyalBlue")))
-        (lnum          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#5d6658" "SlateGrey")       (if (humanoid-theme-true-color) "#98a890" "SlateGrey")))
-        (mat           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#ffb627" "goldenrod1")      (if (humanoid-theme-true-color) "#29422d" "DarkSlateGrey")))
-        (meta          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#c0c0bd" "gray71")          (if (humanoid-theme-true-color) "#60615d" "gray20")))
-        (str           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#02d849" "green3")          (if (humanoid-theme-true-color) "#388e3c" "SpringGreen4")))
-        (suc           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#20bf55" "green4")          (if (humanoid-theme-true-color) "#5a9216" "OliveDrab")))
-        (ttip          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#75715e" "wheat4")          (if (humanoid-theme-true-color) "#232629" "gray15")))
-        (ttip-bg       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#484e54" "gray25")          (if (humanoid-theme-true-color) "#e8e8e2" "gray88")))
-        (ttip-sl       (if (eq variant 'dark) (if (humanoid-theme-true-color) "#545b62" "gray28")          (if (humanoid-theme-true-color) "#deded8" "gray84")))
-        (type          (if (eq variant 'dark) (if (humanoid-theme-true-color) "#0097a7" "cyan4")           (if (humanoid-theme-true-color) "#007c91" "cyan4")))
-        (var           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#c6ff00" "GreenYellow")     (if (humanoid-theme-true-color) "#0d47a1" "DeepSkyBlue4")))
-        (war           (if (eq variant 'dark) (if (humanoid-theme-true-color) "#ff9505" "DarkOrange")      (if (humanoid-theme-true-color) "#ff3d00" "OrangeRed"))))
+        (act1          (if (eq variant 'dark) (if (humanoid-true-color) "#3b4045" "gray28")          (if (humanoid-true-color) "#e8e8e2" "gray89")))
+        (act2          (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray32")          (if (humanoid-true-color) "#deded8" "gray83")))
+        (base          (if (eq variant 'dark) (if (humanoid-true-color) "#f8f8f2" "gray97")          (if (humanoid-true-color) "#232629" "gray18")))
+        (base-dim      (if (eq variant 'dark) (if (humanoid-true-color) "#60615d" "gray42")          (if (humanoid-true-color) "#c0c0bd" "gray64")))
+        (bg0           (if (eq variant 'dark) (if (humanoid-true-color) "#151718" "gray12")          (if (humanoid-true-color) "#fcfcfc" "gray99")))
+        (bg1           (if (eq variant 'dark) (if (humanoid-true-color) "#232629" "gray18")          (if (humanoid-true-color) "#f8f8f2" "gray96")))
+        (bg2           (if (eq variant 'dark) (if (humanoid-true-color) "#2f3337" "gray22")          (if (humanoid-true-color) "#f4f4ee" "gray93")))
+        (bg3           (if (eq variant 'dark) (if (humanoid-true-color) "#3b4045" "gray28")          (if (humanoid-true-color) "#efefe9" "gray90")))
+        (bg4           (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray32")          (if (humanoid-true-color) "#e8e8e2" "gray87")))
+        (builtin       (if (eq variant 'dark) (if (humanoid-true-color) "#72ccf9" "LightSkyBlue")    (if (humanoid-true-color) "#2196f3" "DodgerBlue3")))
+        (border        (if (eq variant 'dark) (if (humanoid-true-color) "#31363b" "gray20")          (if (humanoid-true-color) "#deded8" "gray83")))
+        (cblk          (if (eq variant 'dark) (if (humanoid-true-color) "#f4f4ee" "gray93")          (if (humanoid-true-color) "#2f3337" "gray22")))
+        (cblk-bg       (if (eq variant 'dark) (if (humanoid-true-color) "#151718" "gray12")          (if (humanoid-true-color) "#fcfcf6" "gray98")))
+        (cblk-ln       (if (eq variant 'dark) (if (humanoid-true-color) "#5d6658" "cornsilk4")       (if (humanoid-true-color) "#98a890" "cornsilk4")))
+        (cblk-ln-bg    (if (eq variant 'dark) (if (humanoid-true-color) "#2f3337" "gray22")          (if (humanoid-true-color) "#efefe9" "gray90")))
+        (comment       (if (eq variant 'dark) (if (humanoid-true-color) "#6b7566" "LemonChiffon4")   (if (humanoid-true-color) "#8b9985" "LemonChiffon4")))
+        (comment-bg    (if (eq variant 'dark) (if (humanoid-true-color) "#232629" "gray18")          (if (humanoid-true-color) "#f8f8f2" "gray96")))
+        (comment-light (if (eq variant 'dark) (if (humanoid-true-color) "#75715e" "LightGoldenrod4") (if (humanoid-true-color) "#6b7566" "LightYellow4")))
+        (comp          (if (eq variant 'dark) (if (humanoid-true-color) "#7ecb20" "YellowGreen")     (if (humanoid-true-color) "#5f23a3" "purple4")))
+        (const         (if (eq variant 'dark) (if (humanoid-true-color) "#df6ee3" "magenta1")        (if (humanoid-true-color) "#880e4f" "DarkRed")))
+        (cursor        (if (eq variant 'dark) (if (humanoid-true-color) "#64dd17" "chartreuse2")     (if (humanoid-true-color) "#64dd17" "chartreuse2")))
+        (err           (if (eq variant 'dark) (if (humanoid-true-color) "#f11235" "red2")            (if (humanoid-true-color) "#b0151a" "firebrick3")))
+        (func          (if (eq variant 'dark) (if (humanoid-true-color) "#0ed1d1" "cyan3")           (if (humanoid-true-color) "#ff3d00" "OrangeRed")))
+        (head1         (if (eq variant 'dark) (if (humanoid-true-color) "#42a5f5" "DeepSkyBlue1")    (if (humanoid-true-color) "#2376ad" "DodgerBlue3")))
+        (head1-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#293239" "gray17")          (if (humanoid-true-color) "#efefe9" "gray97")))
+        (head2         (if (eq variant 'dark) (if (humanoid-true-color) "#29b6f6" "DeepSkyBlue2")    (if (humanoid-true-color) "#2b6590" "DodgerBlue4")))
+        (head2-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#293235" "gray18")          (if (humanoid-true-color) "#efefe9" "gray97")))
+        (head3         (if (eq variant 'dark) (if (humanoid-true-color) "#26c6da" "cyan3")           (if (humanoid-true-color) "#2d5475" "RoyalBlue4")))
+        (head3-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#293235" "gray19")          (if (humanoid-true-color) "#efefe9" "gray97")))
+        (head4         (if (eq variant 'dark) (if (humanoid-true-color) "#26a69a" "LightSeaGreen")   (if (humanoid-true-color) "#2c445b" "SlateBlue4")))
+        (head4-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#32322c" "gray20")          (if (humanoid-true-color) "#efefe9" "gray97")))
+        (head5         (if (eq variant 'dark) (if (humanoid-true-color) "#66bb6a" "PaleGreen3")      (if (humanoid-true-color) "#293542" "DarkSlateBlue")))
+        (head5-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#32322c" "gray26")          (if (humanoid-true-color) "#efefe9" "gray97")))
+        (highlight     (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray30")          (if (humanoid-true-color) "#e8e8e2" "gray89")))
+        (highlight-dim (if (eq variant 'dark) (if (humanoid-true-color) "#545b62" "gray36")          (if (humanoid-true-color) "#deded8" "gray85")))
+        (keyword       (if (eq variant 'dark) (if (humanoid-true-color) "#00a6fb" "DeepSkyBlue2")    (if (humanoid-true-color) "#0069c0" "RoyalBlue")))
+        (lnum          (if (eq variant 'dark) (if (humanoid-true-color) "#5d6658" "SlateGrey")       (if (humanoid-true-color) "#98a890" "SlateGrey")))
+        (mat           (if (eq variant 'dark) (if (humanoid-true-color) "#ffb627" "goldenrod1")      (if (humanoid-true-color) "#29422d" "DarkSlateGrey")))
+        (meta          (if (eq variant 'dark) (if (humanoid-true-color) "#c0c0bd" "gray71")          (if (humanoid-true-color) "#60615d" "gray20")))
+        (str           (if (eq variant 'dark) (if (humanoid-true-color) "#02d849" "green3")          (if (humanoid-true-color) "#388e3c" "SpringGreen4")))
+        (suc           (if (eq variant 'dark) (if (humanoid-true-color) "#20bf55" "green4")          (if (humanoid-true-color) "#5a9216" "OliveDrab")))
+        (ttip          (if (eq variant 'dark) (if (humanoid-true-color) "#75715e" "wheat4")          (if (humanoid-true-color) "#232629" "gray15")))
+        (ttip-bg       (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray25")          (if (humanoid-true-color) "#e8e8e2" "gray88")))
+        (ttip-sl       (if (eq variant 'dark) (if (humanoid-true-color) "#545b62" "gray28")          (if (humanoid-true-color) "#deded8" "gray84")))
+        (type          (if (eq variant 'dark) (if (humanoid-true-color) "#0097a7" "cyan4")           (if (humanoid-true-color) "#007c91" "cyan4")))
+        (var           (if (eq variant 'dark) (if (humanoid-true-color) "#c6ff00" "GreenYellow")     (if (humanoid-true-color) "#0d47a1" "DeepSkyBlue4")))
+        (war           (if (eq variant 'dark) (if (humanoid-true-color) "#ff9505" "DarkOrange")      (if (humanoid-true-color) "#ff3d00" "OrangeRed"))))
 
-   (cl-loop for (var . val) in humanoid-theme-custom-colors
+   (cl-loop for (var . val) in humanoid-custom-colors
             do (set var val))
 
    (custom-theme-set-faces
@@ -200,9 +200,9 @@ to 'auto, tags may not be properly aligned."
     `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,bg1))))
     `(font-lock-builtin-face              ((,class (:foreground ,builtin))))
     `(font-lock-comment-face              ((,class (:foreground ,
-                                                    (if humanoid-theme-comment-italic comment-light comment) :background ,
-                                                    (when humanoid-theme-comment-bg comment-bg) :slant ,
-                                                    (if humanoid-theme-comment-italic 'italic 'normal)))))
+                                                    (if humanoid-comment-italic comment-light comment) :background ,
+                                                    (when humanoid-comment-bg comment-bg) :slant ,
+                                                    (if humanoid-comment-italic 'italic 'normal)))))
     `(font-lock-constant-face             ((,class (:foreground ,const))))
     `(font-lock-doc-face                  ((,class (:foreground ,comment-light))))
     `(font-lock-function-name-face        ((,class (:foreground ,func :bold nil))))
@@ -651,12 +651,12 @@ to 'auto, tags may not be properly aligned."
     `(font-latex-italic-face ((,class (:foreground ,keyword :italic t))))
     `(font-latex-match-reference-keywords ((,class (:foreground ,const))))
     `(font-latex-match-variable-keywords ((,class (:foreground ,var))))
-    `(font-latex-sectioning-0-face ((,class (:inherit bold :foreground ,head3 :height ,(if humanoid-theme-org-height 1.3 1.0) :background ,(when humanoid-theme-org-highlight head3-bg)))))
-    `(font-latex-sectioning-1-face ((,class (:inherit bold :foreground ,head4 :height ,(if humanoid-theme-org-height 1.3 1.0) :background ,(when humanoid-theme-org-highlight head4-bg)))))
-    `(font-latex-sectioning-2-face ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-theme-org-height 1.3 1.0) :background ,(when humanoid-theme-org-highlight head1-bg)))))
-    `(font-latex-sectioning-3-face ((,class (:inherit bold :foreground ,head2 :height ,(if humanoid-theme-org-height 1.2 1.0) :background ,(when humanoid-theme-org-highlight head2-bg)))))
-    `(font-latex-sectioning-4-face ((,class (:bold nil :foreground ,head3 :height ,(if humanoid-theme-org-height 1.1 1.0) :background ,(when humanoid-theme-org-highlight head3-bg)))))
-    `(font-latex-sectioning-5-face ((,class (:bold nil :foreground ,head4 :background ,(when humanoid-theme-org-highlight head4-bg)))))
+    `(font-latex-sectioning-0-face ((,class (:inherit bold :foreground ,head3 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head3-bg)))))
+    `(font-latex-sectioning-1-face ((,class (:inherit bold :foreground ,head4 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head4-bg)))))
+    `(font-latex-sectioning-2-face ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head1-bg)))))
+    `(font-latex-sectioning-3-face ((,class (:inherit bold :foreground ,head2 :height ,(if humanoid-org-height 1.2 1.0) :background ,(when humanoid-org-highlight head2-bg)))))
+    `(font-latex-sectioning-4-face ((,class (:bold nil :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0) :background ,(when humanoid-org-highlight head3-bg)))))
+    `(font-latex-sectioning-5-face ((,class (:bold nil :foreground ,head4 :background ,(when humanoid-org-highlight head4-bg)))))
     `(font-latex-string-face ((,class (:foreground ,str))))
     `(font-latex-warning-face ((,class (:foreground ,war))))
 
@@ -803,10 +803,10 @@ to 'auto, tags may not be properly aligned."
 
 ;;;;; org
     `(org-agenda-clocking ((,class (:background ,highlight :foreground ,comp))))
-    `(org-agenda-date ((,class (:foreground ,var :height ,(if humanoid-theme-org-agenda-height 1.1 1.0)))))
-    `(org-agenda-date-today ((,class (:foreground ,keyword :inherit bold :height ,(if humanoid-theme-org-agenda-height 1.3 1.0)))))
+    `(org-agenda-date ((,class (:foreground ,var :height ,(if humanoid-org-agenda-height 1.1 1.0)))))
+    `(org-agenda-date-today ((,class (:foreground ,keyword :inherit bold :height ,(if humanoid-org-agenda-height 1.3 1.0)))))
     `(org-agenda-date-weekend ((,class (:inherit bold :foreground ,var))))
-    `(org-agenda-done ((,class (:foreground ,suc :height ,(if humanoid-theme-org-agenda-height 1.2 1.0)))))
+    `(org-agenda-done ((,class (:foreground ,suc :height ,(if humanoid-org-agenda-height 1.2 1.0)))))
     `(org-agenda-structure ((,class (:inherit bold :foreground ,comp))))
     `(org-block ((,class (:background ,cblk-bg :foreground ,cblk))))
     `(org-block-begin-line ((,class (:background ,cblk-ln-bg :foreground ,cblk-ln))))
@@ -818,16 +818,16 @@ to 'auto, tags may not be properly aligned."
     `(org-date ((,class (:underline t :foreground ,var))))
     `(org-date-selected ((,class (:background ,func :foreground ,bg1))))
     `(org-document-info-keyword ((,class (:foreground ,meta))))
-    `(org-document-title ((,class (:foreground ,func :inherit bold :height ,(if humanoid-theme-org-height 1.4 1.0) :underline t))))
+    `(org-document-title ((,class (:foreground ,func :inherit bold :height ,(if humanoid-org-height 1.4 1.0) :underline t))))
     `(org-done ((,class (:foreground ,suc :inherit bold :background ,green-bg))))
     `(org-ellipsis ((,class (:foreground ,keyword))))
     `(org-footnote  ((,class (:underline t :foreground ,base))))
     `(org-hide ((,class (:foreground ,base))))
     `(org-kbd ((,class (:inherit region :foreground ,base :box (:line-width 1 :style released-button)))))
-    `(org-level-1 ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-theme-org-height 1.3 1.0) :background ,(when humanoid-theme-org-highlight head1-bg)))))
-    `(org-level-2 ((,class (:inherit bold :foreground ,head2 :height ,(if humanoid-theme-org-height 1.2 1.0) :background ,(when humanoid-theme-org-highlight head2-bg)))))
-    `(org-level-3 ((,class (:bold nil :foreground ,head3 :height ,(if humanoid-theme-org-height 1.1 1.0) :background ,(when humanoid-theme-org-highlight head3-bg)))))
-    `(org-level-4 ((,class (:bold nil :foreground ,head4 :background ,(when humanoid-theme-org-highlight head4-bg)))))
+    `(org-level-1 ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head1-bg)))))
+    `(org-level-2 ((,class (:inherit bold :foreground ,head2 :height ,(if humanoid-org-height 1.2 1.0) :background ,(when humanoid-org-highlight head2-bg)))))
+    `(org-level-3 ((,class (:bold nil :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0) :background ,(when humanoid-org-highlight head3-bg)))))
+    `(org-level-4 ((,class (:bold nil :foreground ,head4 :background ,(when humanoid-org-highlight head4-bg)))))
     `(org-level-5 ((,class (:bold nil :foreground ,head5))))
     `(org-level-6 ((,class (:bold nil :foreground ,head1))))
     `(org-level-7 ((,class (:bold nil :foreground ,head2))))
@@ -838,7 +838,7 @@ to 'auto, tags may not be properly aligned."
     `(org-priority ((,class (:foreground ,war :inherit bold))))
     `(org-quote ((,class (:inherit org-block :slant italic))))
     `(org-scheduled ((,class (:foreground ,comp))))
-    `(org-scheduled-today ((,class (:foreground ,func :height ,(if humanoid-theme-org-agenda-height 1.2 1.0)))))
+    `(org-scheduled-today ((,class (:foreground ,func :height ,(if humanoid-org-agenda-height 1.2 1.0)))))
     `(org-scheduled-previously ((,class (:foreground ,base :slant italic))))
     `(org-sexp-date ((,class (:foreground ,base))))
     `(org-special-keyword ((,class (:foreground ,func))))
@@ -928,13 +928,13 @@ to 'auto, tags may not be properly aligned."
     `(shm-quarantine-face ((,class (:background ,red-bg-s))))
 
 ;;;;; show-paren
-    `(show-paren-match ((,class (:foreground ,mat :inherit bold  :underline ,(when humanoid-theme-underline-parens t)))))
+    `(show-paren-match ((,class (:foreground ,mat :inherit bold  :underline ,(when humanoid-underline-parens t)))))
     `(show-paren-match-expression ((,class (:background ,green-bg-s))))
-    `(show-paren-mismatch ((,class (:foreground ,err :inherit bold :underline ,(when humanoid-theme-underline-parens t)))))
+    `(show-paren-mismatch ((,class (:foreground ,err :inherit bold :underline ,(when humanoid-underline-parens t)))))
 
 ;;;;; smartparens
     `(sp-pair-overlay-face ((,class (:background ,highlight :foreground nil))))
-    `(sp-show-pair-match-face ((,class (:foreground ,mat :inherit bold  :underline ,(when humanoid-theme-underline-parens t)))))
+    `(sp-show-pair-match-face ((,class (:foreground ,mat :inherit bold  :underline ,(when humanoid-underline-parens t)))))
 
 ;;;;; smerge
     `(smerge-base ((,class (:background ,yellow-bg))))
@@ -1115,10 +1115,10 @@ to 'auto, tags may not be properly aligned."
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'humanoid-theme)
+(provide 'humanoid)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; humanoid-theme.el ends here
+;;; humanoid.el ends here
