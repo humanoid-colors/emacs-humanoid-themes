@@ -1,9 +1,9 @@
-;;; humanoid.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
+;;; humanoid-themes.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018-2019 Thomas Friese
 
 ;; Author: Thomas Friese
-;; URL: https://github.com/humanoid-colors/emacs-humanoid-theme
+;; URL: https://github.com/humanoid-colors/emacs-humanoid-themes
 ;;
 ;; Version: 0.1
 ;; Keywords: faces, color, theme
@@ -1114,10 +1114,10 @@ to 'auto, tags may not be properly aligned."
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide 'humanoid)
+(provide 'humanoid-themes)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; humanoid.el ends here
+;;; humanoid-themes.el ends here
