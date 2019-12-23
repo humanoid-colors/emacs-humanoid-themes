@@ -33,24 +33,24 @@
 
 ;;; Code:
 
-(defgroup humanoid-theme nil
+(defgroup humanoid nil
   "humanoid theme options."
   :group 'faces)
 
 (defcustom humanoid-comment-bg nil
   "Use a background for comment lines."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-comment-italic nil
   "Enable italics for comments and also disable background."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-keyword-italic nil
   "Enable italics for keywords."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-org-agenda-height nil
   "If non-nil, use varying text heights for agenda items.
@@ -58,37 +58,37 @@ Note that if you change this to a non-nil value, you may want to
 also adjust the value of `org-agenda-tags-column'. If that is set
 to 'auto, tags may not be properly aligned."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-org-height t
   "Use varying text heights for org headings."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-org-bold t
   "Inherit text bold for org headings."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-org-priority-bold t
   "Inherit text bold for priority items in agenda view."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-org-highlight nil
   "Highlight org headings."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-custom-colors nil
   "Specify a list of custom colors."
   :type 'alist
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defcustom humanoid-underline-parens t
   "If non-nil, underline matching parens when using command `show-paren-mode' or similar."
   :type 'boolean
-  :group 'humanoid-theme)
+  :group 'humanoid)
 
 (defun humanoid-true-color ()
   "Ask if true colors."
