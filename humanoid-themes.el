@@ -195,8 +195,8 @@ to 'auto, tags may not be properly aligned."
     `(default                             ((,class (:background ,bg1 :foreground ,base))))
     `(default-italic                      ((,class (:italic t))))
     `(error                               ((,class (:foreground ,err))))
-    `(eval-sexp-fu-flash                  ((,class (:background ,suc :foreground ,bg1))))
-    `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,bg1))))
+    `(eval-sexp-fu-flash                  ((,class (:background ,suc :foreground ,act1))))
+    `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,act1))))
     `(font-lock-builtin-face              ((,class (:foreground ,builtin))))
     `(font-lock-comment-face              ((,class (:foreground ,
                                                     (if humanoid-comment-italic comment-light comment) :background ,
@@ -219,13 +219,13 @@ to 'auto, tags may not be properly aligned."
     `(header-line                         ((,class (:background ,bg2))))
     `(highlight                           ((,class (:foreground ,base :background ,highlight))))
     `(hl-line                             ((,class (:background ,bg3))))
-    `(isearch                             ((,class (:foreground ,bg1 :background ,mat))))
+    `(isearch                             ((,class (:foreground ,act1 :background ,mat))))
     `(lazy-highlight                      ((,class (:background ,highlight-dim :weight normal))))
     `(link                                ((,class (:foreground unspecified :underline t))))
     `(link-visited                        ((,class (:inherit link))))
     `(match                               ((,class (:background ,highlight :foreground ,mat))))
     `(minibuffer-prompt                   ((,class (:inherit bold :foreground ,keyword))))
-    `(mouse                               ((,class (:foreground ,bg1 :background ,base :inverse-video t))))
+    `(mouse                               ((,class (:foreground ,act1 :background ,base :inverse-video t))))
     `(page-break-lines                    ((,class (:foreground ,act2))))
     `(region                              ((,class (:background ,highlight))))
     `(secondary-selection                 ((,class (:background ,bg3))))
@@ -241,7 +241,7 @@ to 'auto, tags may not be properly aligned."
 
 ;;;;; ahs
     `(ahs-face ((,class (:background ,highlight))))
-    `(ahs-plugin-whole-buffer-face ((,class (:background ,mat :foreground ,bg1))))
+    `(ahs-plugin-whole-buffer-face ((,class (:background ,mat :foreground ,act1))))
 
 ;;;;; anzu-mode
     `(anzu-mode-line ((,class (:foreground ,yellow :inherit bold))))
@@ -295,13 +295,13 @@ to 'auto, tags may not be properly aligned."
     `(cider-enlightened-local   ((,class      (:foreground ,yellow))))
     `(cider-instrumented-face   ((,class      (:background nil :box (:color ,red :line-width -1 :style nil) :foreground ,red))))
     `(cider-result-overlay-face ((,class      (:background nil :box (:color ,blue :line-width -1 :style nil) :foreground ,blue))))
-    `(cider-test-error-face     ((,class      (:background ,war :foreground ,bg1))))
-    `(cider-test-failure-face   ((,class      (:background ,err :foreground ,bg1))))
-    `(cider-test-success-face   ((,class      (:background ,suc :foreground ,bg1))))
+    `(cider-test-error-face     ((,class      (:background ,war :foreground ,act1))))
+    `(cider-test-failure-face   ((,class      (:background ,err :foreground ,act1))))
+    `(cider-test-success-face   ((,class      (:background ,suc :foreground ,act1))))
     `(cider-traced-face         ((,class :box (:color ,cyan :line-width -1 :style nil))))
 
 ;;;;; company
-    `(company-echo-common              ((,class (:background ,base :foreground ,bg1))))
+    `(company-echo-common              ((,class (:background ,base :foreground ,act1))))
     `(company-preview                  ((,class (:background ,ttip-bg :foreground ,ttip))))
     `(company-preview-common           ((,class (:background ,ttip-bg :foreground ,base))))
     `(company-preview-search           ((,class (:inherit match))))
@@ -324,9 +324,9 @@ to 'auto, tags may not be properly aligned."
     `(diff-indicator-added   ((,class :background nil :foreground ,green)))
     `(diff-indicator-changed ((,class :background nil :foreground ,keyword)))
     `(diff-indicator-removed ((,class :background nil :foreground ,red)))
-    `(diff-refine-added      ((,class :background ,green-bg :foreground ,bg4)))
-    `(diff-refine-changed    ((,class :background ,keyword :foreground ,bg4)))
-    `(diff-refine-removed    ((,class :background ,red-bg :foreground ,bg4)))
+    `(diff-refine-added      ((,class :background ,green-bg :foreground ,act2)))
+    `(diff-refine-changed    ((,class :background ,keyword :foreground ,act2)))
+    `(diff-refine-removed    ((,class :background ,red-bg :foreground ,act2)))
     `(diff-removed           ((,class :background ,red-bg-s :foreground ,red)))
 
 ;;;;; diff-hl
@@ -437,7 +437,7 @@ to 'auto, tags may not be properly aligned."
     `(ess-r-signal-keyword-face ((,class (:foreground ,war))))
 
 ;;;;; evil
-    `(evil-ex-lazy-highlight ((,class (:background ,mat :foreground ,bg1))))
+    `(evil-ex-lazy-highlight ((,class (:background ,mat :foreground ,act1))))
     `(evil-ex-substitute-matches ((,class (:background ,red-bg :foreground ,red))))
     `(evil-ex-substitute-replacement ((,class (:background ,green-bg :foreground ,green))))
 
@@ -463,7 +463,7 @@ to 'auto, tags may not be properly aligned."
 
 ;;;;; evil-mc
     `(evil-mc-cursor-bar-face ((,class (:foreground ,aqua))))
-    `(evil-mc-cursor-default-face ((,class (:background ,aqua :foreground ,bg4))))
+    `(evil-mc-cursor-default-face ((,class (:background ,aqua :foreground ,act2))))
     `(evil-mc-cursor-hbar-face ((,class (:foreground ,aqua))))
     `(evil-mc-region-face ((,class (:inherit highlight))))
 
@@ -541,18 +541,18 @@ to 'auto, tags may not be properly aligned."
     `(gnus-cite-5 ((,class (:foreground ,cyan :background ,bg2))))
     `(gnus-cite-6 ((,class (:foreground ,orange :background ,bg2))))
     `(gnus-cite-7 ((,class (:foreground ,aqua :background ,bg2))))
-    `(gnus-emphasis-highlight-words ((,class (:background ,suc :foreground ,bg1))))
+    `(gnus-emphasis-highlight-words ((,class (:background ,suc :foreground ,act1))))
     `(gnus-header-content ((,class (:foreground ,str))))
     `(gnus-header-from ((,class (:foreground ,var))))
     `(gnus-header-name ((,class (:foreground ,comp))))
     `(gnus-header-subject ((,class (:foreground ,base :inherit bold))))
-    `(gnus-summary-cancelled ((,class (:background ,war :foreground ,bg1))))
+    `(gnus-summary-cancelled ((,class (:background ,war :foreground ,act1))))
     `(message-header-content ((,class (:foreground ,str))))
     `(message-header-from ((,class (:foreground ,var))))
     `(message-header-to ((,class (:foreground ,var))))
     `(message-header-name ((,class (:foreground ,comp))))
     `(message-header-subject ((,class (:foreground ,base :inherit bold))))
-    `(message-summary-cancelled ((,class (:background ,war :foreground ,bg1))))
+    `(message-summary-cancelled ((,class (:background ,war :foreground ,act1))))
     `(message-cited-text ((,class (:foreground ,green :background ,bg2))))
 
 ;;;;; guide-key
@@ -580,7 +580,7 @@ to 'auto, tags may not be properly aligned."
     `(helm-ff-executable ((,class (:foreground ,suc :background ,bg1 :weight normal))))
     `(helm-ff-file ((,class (:foreground ,base :background ,bg1 :weight normal))))
     `(helm-ff-invalid-symlink ((,class (:foreground ,err :background ,bg1 :inherit bold))))
-    `(helm-ff-prefix ((,class (:foreground ,bg1 :background ,keyword :weight normal))))
+    `(helm-ff-prefix ((,class (:foreground ,act1 :background ,keyword :weight normal))))
     `(helm-ff-symlink ((,class (:foreground ,var :background ,bg1 :inherit bold))))
     `(helm-grep-cmd-line ((,class (:foreground ,base :background ,bg1))))
     `(helm-grep-file ((,class (:foreground ,base :background ,bg1))))
@@ -595,7 +595,7 @@ to 'auto, tags may not be properly aligned."
     `(helm-selection ((,class (:background ,highlight))))
     `(helm-selection-line ((,class (:background ,bg3))))
     `(helm-separator ((,class (:foreground ,comp :background ,bg1))))
-    `(helm-source-header ((,class (:background ,head2 :foreground ,bg1 :inherit bold))))
+    `(helm-source-header ((,class (:background ,head2 :foreground ,act1 :inherit bold))))
     `(helm-time-zone-current ((,class (:foreground ,keyword :background ,bg1))))
     `(helm-time-zone-home ((,class (:foreground ,comp :background ,bg1))))
     `(helm-visible-mark ((,class (:foreground ,func :background ,bg3))))
@@ -705,11 +705,11 @@ to 'auto, tags may not be properly aligned."
     `(magit-hunk-heading-highlight ((,class (:background ,bg3))))
     `(magit-item-highlight ((,class :background ,bg2)))
     `(magit-log-author ((,class (:foreground ,func))))
-    `(magit-log-head-label-head ((,class (:background ,yellow :foreground ,bg1 :inherit bold))))
-    `(magit-log-head-label-local ((,class (:background ,keyword :foreground ,bg1 :inherit bold))))
-    `(magit-log-head-label-remote ((,class (:background ,suc :foreground ,bg1 :inherit bold))))
+    `(magit-log-head-label-head ((,class (:background ,yellow :foreground ,act1 :inherit bold))))
+    `(magit-log-head-label-local ((,class (:background ,keyword :foreground ,act1 :inherit bold))))
+    `(magit-log-head-label-remote ((,class (:background ,suc :foreground ,act1 :inherit bold))))
     `(magit-log-head-label-tags ((,class (:background ,magenta :foreground ,bg1 :inherit bold))))
-    `(magit-log-head-label-wip ((,class (:background ,cyan :foreground ,bg1 :inherit bold))))
+    `(magit-log-head-label-wip ((,class (:background ,cyan :foreground ,act1 :inherit bold))))
     `(magit-log-sha1 ((,class (:foreground ,str))))
     `(magit-process-ng ((,class (:foreground ,war :inherit bold))))
     `(magit-process-ok ((,class (:foreground ,func :inherit bold))))
@@ -815,7 +815,7 @@ to 'auto, tags may not be properly aligned."
     `(org-column ((,class (:background ,highlight))))
     `(org-column-title ((,class (:background ,highlight))))
     `(org-date ((,class (:underline t :foreground ,var))))
-    `(org-date-selected ((,class (:background ,func :foreground ,bg1))))
+    `(org-date-selected ((,class (:background ,func :foreground ,act1))))
     `(org-document-info-keyword ((,class (:foreground ,meta))))
     `(org-document-title ((,class (:foreground ,func :inherit bold :height ,(if humanoid-org-height 1.4 1.0) :underline t))))
     `(org-done ((,class (:foreground ,suc :inherit bold :background ,green-bg))))
@@ -915,7 +915,7 @@ to 'auto, tags may not be properly aligned."
     `(rcirc-dim-nick ((,class (:foreground ,base-dim))))
     `(rcirc-keyword ((,class (:background ,green-bg-s :foreground ,green))))
     `(rcirc-timestamp ((,class (:foreground ,keyword))))
-    `(rcirc-track-keyword ((,class (:background ,green :foreground ,bg1))))
+    `(rcirc-track-keyword ((,class (:background ,green :foreground ,act1))))
     `(rcirc-url ((,class (:inherit link))))
 
 ;;;;; shell script
@@ -961,19 +961,19 @@ to 'auto, tags may not be properly aligned."
     `(spaceline-flycheck-info   ((,class (:foreground ,keyword))))
     `(spaceline-flycheck-warning((,class (:foreground ,war))))
     `(spaceline-highlight-face ((,class (:foreground ,black :background ,yellow))))
-    `(spaceline-modified ((,class (:foreground ,bg1 :background ,keyword))))
+    `(spaceline-modified ((,class (:foreground ,act1 :background ,keyword))))
     `(spaceline-python-venv ((,class (:foreground ,comp))))
     `(spaceline-read-only ((,class (:background ,aqua))))
     `(spaceline-unmodified ((,class (:foreground ,base :background ,lnum))))
-    `(spacemacs-emacs-face ((,class (:foreground ,bg1 :background ,blue))))
-    `(spacemacs-evilified-face ((,class (:foreground ,bg1 :background ,type))))
-    `(spacemacs-hybrid-face ((,class (:foreground ,bg1 :background ,cyan))))
-    `(spacemacs-insert-face ((,class (:foreground ,bg1 :background ,green))))
-    `(spacemacs-lisp-face ((,class (:foreground ,bg1 :background ,magenta))))
-    `(spacemacs-motion-face ((,class (:foreground ,bg1 :background ,purple))))
+    `(spacemacs-emacs-face ((,class (:foreground ,act1 :background ,blue))))
+    `(spacemacs-evilified-face ((,class (:foreground ,act1 :background ,type))))
+    `(spacemacs-hybrid-face ((,class (:foreground ,act1 :background ,cyan))))
+    `(spacemacs-insert-face ((,class (:foreground ,act1 :background ,green))))
+    `(spacemacs-lisp-face ((,class (:foreground ,act1 :background ,magenta))))
+    `(spacemacs-motion-face ((,class (:foreground ,act1 :background ,purple))))
     `(spacemacs-normal-face ((,class (:foreground ,black :background ,yellow))))
-    `(spacemacs-replace-face ((,class (:foreground ,bg1 :background ,orange))))
-    `(spacemacs-visual-face ((,class (:foreground ,bg1 :background ,base-dim))))
+    `(spacemacs-replace-face ((,class (:foreground ,act1 :background ,orange))))
+    `(spacemacs-visual-face ((,class (:foreground ,act1 :background ,base-dim))))
 
 ;;;;; spacemacs-specific
     `(spacemacs-transient-state-title-face ((,class (:background nil :foreground ,comp :box nil :inherit bold))))
@@ -1038,7 +1038,7 @@ to 'auto, tags may not be properly aligned."
     `(which-key-group-description-face ((,class (:foreground ,keyword))))
     `(which-key-key-face ((,class (:foreground ,func :inherit bold))))
     `(which-key-separator-face ((,class (:background nil :foreground ,str))))
-    `(which-key-special-key-face ((,class (:background ,func :foreground ,bg1))))
+    `(which-key-special-key-face ((,class (:background ,func :foreground ,act1))))
 
 ;;;;; which-function-mode
     `(which-func ((,class (:foreground ,func))))
