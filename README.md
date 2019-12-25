@@ -1,11 +1,11 @@
-# Humanoid-theme
+# Humanoid-themes for Emacs
 
-Modiefied theme with completely diffferent colors.
+Emacs color schemes with bright colors.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-Humanoid theme is an Emacs color theme that started as a theme for [spacemacs](https://github.com/syl20bnr/spacemacs).
-The theme comes with dark and light variants and it should work well with 256 color terminals.
+Humanoid theme is an Emacs color theme package that started as a theme for [spacemacs](https://github.com/syl20bnr/spacemacs).
+The collection comes with a dark and a light variant and it should work well with true coloar and 256 color terminals.
 
 ## Screenshots
 

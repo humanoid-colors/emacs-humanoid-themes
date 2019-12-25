@@ -1,4 +1,4 @@
-;;; humanoid-themes.el --- Color theme with a dark and light versions -*- lexical-binding: t; -*-
+;;; humanoid-themes.el --- Color themes with a dark and light variant -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2018-2019 Thomas Friese
 
@@ -28,7 +28,7 @@
 
 ;;; Commentary:
 
-;; This is a color comes with two versions, dark and light and should work well
+;; This color scheme come with two variants - dark and light - and should work well
 ;; in a 256 color terminal.
 
 ;;; Code:
