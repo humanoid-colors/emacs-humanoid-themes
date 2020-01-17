@@ -297,8 +297,8 @@ to 'auto, tags may not be properly aligned."
      `(centaur-tabs-unselected-modified ((,class (:background ,bg2 :weight light
                                                               :foreground ,war))))
      `(centaur-tabs-active-bar-face ((,class (:background ,blue))))
-     `(centaur-tabs-modified-marker-selected ((,class (:inherit 'centaur-tabs-selected :foreground,keyword))))
-     `(centaur-tabs-modified-marker-unselected ((,class (:inherit 'centaur-tabs-unselected :foreground,keyword))))
+     `(centaur-tabs-modified-marker-selected ((,class (:inherit centaur-tabs-selected :foreground,keyword))))
+     `(centaur-tabs-modified-marker-unselected ((,class (:inherit centaur-tabs-unselected :foreground,keyword))))
 
 ;;;;; cider
      `(cider-enlightened         ((,class      (:background nil :box (:color ,yellow :line-width -1 :style nil) :foreground ,yellow))))
@@ -943,8 +943,8 @@ to 'auto, tags may not be properly aligned."
      `(smerge-refined-removed ((,class (:background ,red-bg-s :foreground ,red))))
 
 ;;;;; solaire-mode
-     `(solaire-default-face    ((,class (:inherit 'default :background ,bg1))))
-     `(solaire-hl-line-face    ((,class (:inherit 'hl-line :background ,bg3))))
+     `(solaire-default-face    ((,class (:inherit default :background ,bg1))))
+     `(solaire-hl-line-face    ((,class (:inherit hl-line :background ,bg3))))
      `(solaire-minibuffer-face ((,class (:inherit solaire-default-face :background ,bg3))))
      `(solaire-org-hide-face   ((,class (:foreground ,bg1))))
 
@@ -984,9 +984,9 @@ to 'auto, tags may not be properly aligned."
      `(swiper-match-face-4 ((,class (:foreground ,head3 :underline t))))
 
 ;;;;; tabbar
+     `(tabbar-default             ((,class (:background ,bg1 :foreground ,head1 :height 0.9))))
      `(tabbar-button              ((,class (:inherit tabbar-default))))
      `(tabbar-button-highlight    ((,class (:inherit tabbar-default))))
-     `(tabbar-default             ((,class (:background ,bg1 :foreground ,head1 :height 0.9))))
      `(tabbar-highlight           ((,class (:underline t))))
      `(tabbar-selected            ((,class (:inherit tabbar-default :foreground ,func :weight bold))))
      `(tabbar-selected-modified   ((,class (:inherit tabbar-default :foreground ,red :weight bold))))
@@ -1016,20 +1016,20 @@ to 'auto, tags may not be properly aligned."
      `(treemacs-git-untracked-face ((,class (:foreground ,aqua :background ,aqua-bg))))
 
 ;;;;; web-mode
-     `(web-mode-builtin-face                   ((,class (:inherit ,font-lock-builtin-face))))
-     `(web-mode-comment-face                   ((,class (:inherit ,font-lock-comment-face))))
-     `(web-mode-constant-face                  ((,class (:inherit ,font-lock-constant-face))))
+     `(web-mode-builtin-face                   ((,class (:inherit font-lock-builtin-face))))
+     `(web-mode-comment-face                   ((,class (:inherit font-lock-comment-face))))
+     `(web-mode-constant-face                  ((,class (:inherit font-lock-constant-face))))
      `(web-mode-current-element-highlight-face ((,class (:background ,bg3))))
-     `(web-mode-doctype-face                   ((,class (:inherit ,font-lock-comment-face))))
-     `(web-mode-function-name-face             ((,class (:inherit ,font-lock-function-name-face))))
+     `(web-mode-doctype-face                   ((,class (:inherit font-lock-comment-face))))
+     `(web-mode-function-name-face             ((,class (:inherit font-lock-function-name-face))))
      `(web-mode-html-attr-name-face            ((,class (:foreground ,func))))
      `(web-mode-html-attr-value-face           ((,class (:foreground ,keyword))))
      `(web-mode-html-tag-face                  ((,class (:foreground ,keyword))))
      `(web-mode-keyword-face                   ((,class (:foreground ,keyword))))
      `(web-mode-string-face                    ((,class (:foreground ,str))))
      `(web-mode-symbol-face                    ((,class (:foreground ,type))))
-     `(web-mode-type-face                      ((,class (:inherit ,font-lock-type-face))))
-     `(web-mode-warning-face                   ((,class (:inherit ,font-lock-warning-face))))
+     `(web-mode-type-face                      ((,class (:inherit font-lock-type-face))))
+     `(web-mode-warning-face                   ((,class (:inherit font-lock-warning-face))))
 
 ;;;;; which-key
      `(which-key-command-description-face ((,class (:foreground ,base))))
