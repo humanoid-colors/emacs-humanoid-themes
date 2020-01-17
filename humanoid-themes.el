@@ -236,6 +236,16 @@ to 'auto, tags may not be properly aligned."
      `(warning                             ((,class (:foreground ,war :imherit bold))))
      `(window-divider                      ((,class (:foreground ,border))))
 
+;;;;; outline
+     `(outline-1                     ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head1-bg)))))
+     `(outline-2                     ((,class (:inherit bold :foreground ,head2 :height ,(if humanoid-org-height 1.2 1.0) :background ,(when humanoid-org-highlight head2-bg)))))
+     `(outline-3                     ((,class (:bold nil :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0) :background ,(when humanoid-org-highlight head3-bg)))))
+     `(outline-4                     ((,class (:bold nil :foreground ,head4 :background ,(when humanoid-org-highlight head4-bg)))))
+     `(outline-5                     ((,class (:bold nil :foreground ,head5))))
+     `(outline-6                     ((,class (:bold nil :foreground ,head1))))
+     `(outline-7                     ((,class (:bold nil :foreground ,head2))))
+     `(outline-8                     ((,class (:bold nil :foreground ,head3))))
+
 ;;;;; ace-window
      `(aw-leading-char-face ((,class (:foreground ,func :weight bold :height 2.0 :box (:line-width 1 :color ,keyword :style released-button)))))
 
@@ -732,12 +742,12 @@ to 'auto, tags may not be properly aligned."
      `(Man-underline  ((,class (:foreground ,comp :underline t))))
 
 ;;;;; markdown
-     `(markdown-header-face-1   ((,class (:inherit org-level-1))))
-     `(markdown-header-face-2   ((,class (:inherit org-level-2))))
-     `(markdown-header-face-3   ((,class (:inherit org-level-3))))
-     `(markdown-header-face-4   ((,class (:inherit org-level-4))))
-     `(markdown-header-face-5   ((,class (:inherit org-level-5))))
-     `(markdown-header-face-6   ((,class (:inherit org-level-6))))
+     `(markdown-header-face-1   ((,class (:inherit outline-1))))
+     `(markdown-header-face-2   ((,class (:inherit outline-2))))
+     `(markdown-header-face-3   ((,class (:inherit outline-3))))
+     `(markdown-header-face-4   ((,class (:inherit outline-4))))
+     `(markdown-header-face-5   ((,class (:inherit outline-5))))
+     `(markdown-header-face-6   ((,class (:inherit outline-6))))
      `(markdown-table-face      ((,class (:inherit org-table))))
      `(mmm-default-submode-face ((,class (:background ,bg2))))
 
@@ -823,14 +833,6 @@ to 'auto, tags may not be properly aligned."
      `(org-footnote                  ((,class (:underline t :foreground ,base))))
      `(org-hide                      ((,class (:foreground ,base))))
      `(org-kbd                       ((,class (:inherit region :foreground ,base :box (:line-width 1 :style released-button)))))
-     `(org-level-1                   ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head1-bg)))))
-     `(org-level-2                   ((,class (:inherit bold :foreground ,head2 :height ,(if humanoid-org-height 1.2 1.0) :background ,(when humanoid-org-highlight head2-bg)))))
-     `(org-level-3                   ((,class (:bold nil :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0) :background ,(when humanoid-org-highlight head3-bg)))))
-     `(org-level-4                   ((,class (:bold nil :foreground ,head4 :background ,(when humanoid-org-highlight head4-bg)))))
-     `(org-level-5                   ((,class (:bold nil :foreground ,head5))))
-     `(org-level-6                   ((,class (:bold nil :foreground ,head1))))
-     `(org-level-7                   ((,class (:bold nil :foreground ,head2))))
-     `(org-level-8                   ((,class (:bold nil :foreground ,head3))))
      `(org-link                      ((,class (:inherit link))))
      `(org-meta-line                 ((,class (:foreground ,meta))))
      `(org-mode-line-clock-overrun   ((,class (:foreground ,err))))
@@ -850,16 +852,6 @@ to 'auto, tags may not be properly aligned."
      `(org-verbatim                  ((,class (:foreground ,keyword))))
      `(org-verse                     ((,class (:inherit org-block :slant italic))))
      `(org-warning                   ((,class (:foreground ,err :inherit org-priority))))
-
-;;;;; outline
-     `(outline-1 ((,class (:inherit org-level-1))))
-     `(outline-2 ((,class (:inherit org-level-2))))
-     `(outline-3 ((,class (:inherit org-level-3))))
-     `(outline-4 ((,class (:inherit org-level-4))))
-     `(outline-5 ((,class (:inherit org-level-5))))
-     `(outline-6 ((,class (:inherit org-level-6))))
-     `(outline-7 ((,class (:inherit org-level-7))))
-     `(outline-8 ((,class (:inherit org-level-8))))
 
 ;;;;; perspective
      `(persp-selected-face ((,class (:inherit bold :foreground ,func))))
