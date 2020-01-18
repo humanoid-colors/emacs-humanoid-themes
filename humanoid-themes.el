@@ -289,15 +289,13 @@ to 'auto, tags may not be properly aligned."
      `(cfw:face-toolbar-button-on   ((,class (:foreground ,base :weight bold))))
 
 ;;;;; centaur-tabs
-     `(centaur-tabs-default ((,class (:background ,bg1 :foreground ,bg1))))
-     `(centaur-tabs-selected ((,class (:background ,bg1 :foreground ,base :weight normal))))
-     `(centaur-tabs-unselected ((,class (:background ,bg2 :foreground ,base-dim :weight light))))
-     `(centaur-tabs-selected-modified ((,class (:background ,bg1
-                                                            :foreground ,war :weight normal))))
-     `(centaur-tabs-unselected-modified ((,class (:background ,bg2 :weight light
-                                                              :foreground ,war))))
-     `(centaur-tabs-active-bar-face ((,class (:background ,blue))))
-     `(centaur-tabs-modified-marker-selected ((,class (:inherit centaur-tabs-selected :foreground,keyword))))
+     `(centaur-tabs-default                    ((,class (:background ,bg1 :foreground ,bg1))))
+     `(centaur-tabs-selected                   ((,class (:background ,bg1 :foreground ,base :weight normal))))
+     `(centaur-tabs-unselected                 ((,class (:background ,bg2 :foreground ,base-dim :weight light))))
+     `(centaur-tabs-selected-modified          ((,class (:background ,bg1 :foreground ,war :weight normal))))
+     `(centaur-tabs-unselected-modified        ((,class (:background ,bg2 :weight light :foreground ,war))))
+     `(centaur-tabs-active-bar-face            ((,class (:background ,blue))))
+     `(centaur-tabs-modified-marker-selected   ((,class (:inherit centaur-tabs-selected :foreground,keyword))))
      `(centaur-tabs-modified-marker-unselected ((,class (:inherit centaur-tabs-unselected :foreground,keyword))))
 
 ;;;;; cider
