@@ -487,12 +487,12 @@ to 'auto, tags may not be properly aligned."
      `(flycheck-fringe-warning          ((,class (:foreground ,war :inherit bold))))
      `(flycheck-info
        ((,(append '((supports :underline (:style line))) class)
-         (:underline (:style line :color ,keyword)))
-        (,class (:foreground ,base :background ,keyword :inherit bold :underline t))))
+         (:underline (:style line :color ,comment)))
+        (,class (:foreground ,base :background ,comment :underline t))))
      `(flycheck-warning
        ((,(append '((supports :underline (:style line))) class)
-         (:underline (:style line :color ,war)))
-        (,class (:foreground ,base :background ,war :inherit bold :underline t))))
+         (:underline (:style line :color ,comment-light)))
+        (,class (:foreground ,base :background ,comment-light :underline t))))
 
 ;;;;; flymake
      `(flymake-error ((,(append '((supports :underline (:style line))) class)
