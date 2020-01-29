@@ -306,7 +306,7 @@ to 'auto, tags may not be properly aligned."
      `(cider-test-error-face     ((,class      (:background ,war :foreground ,act1))))
      `(cider-test-failure-face   ((,class      (:background ,err :foreground ,act1))))
      `(cider-test-success-face   ((,class      (:background ,suc :foreground ,act1))))
-     `(cider-traced-face         ((,class :box (:color ,cyan :line-width -1 :style nil))))
+     `(cider-traced-face         ((,class      (:box (:color ,cyan :line-width -1 :style nil)))))
 
 ;;;;; company
      `(company-echo-common              ((,class (:background ,base :foreground ,act1))))
@@ -685,19 +685,19 @@ to 'auto, tags may not be properly aligned."
      `(linum-relative-current-face ((,class (:foreground ,base))))
 
 ;;;;; magit
-     `(magit-bisect-bad                  ((,class :foreground ,war)))
-     `(magit-bisect-good                 ((,class :foreground ,suc)))
-     `(magit-bisect-skip                 ((,class :foreground ,yellow)))
-     `(magit-blame-culprit               ((,class :background ,yellow-bg :foreground ,yellow)))
-     `(magit-blame-date                  ((,class :background ,yellow-bg :foreground ,green)))
-     `(magit-blame-hash                  ((,class :background ,yellow-bg :foreground ,func)))
-     `(magit-blame-header                ((,class :background ,yellow-bg :foreground ,green)))
-     `(magit-blame-heading               ((,class :background ,yellow-bg :foreground ,green :extend t)))
-     `(magit-blame-name                  ((,class :background ,yellow-bg :foreground ,yellow)))
-     `(magit-blame-sha1                  ((,class :background ,yellow-bg :foreground ,func)))
-     `(magit-blame-subject               ((,class :background ,yellow-bg :foreground ,yellow)))
-     `(magit-blame-summary               ((,class :background ,yellow-bg :foreground ,yellow :extend t)))
-     `(magit-blame-time                  ((,class :background ,yellow-bg :foreground ,green)))
+     `(magit-bisect-bad                  ((,class (:foreground ,war))))
+     `(magit-bisect-good                 ((,class (:foreground ,suc))))
+     `(magit-bisect-skip                 ((,class (:foreground ,yellow))))
+     `(magit-blame-culprit               ((,class (:background ,yellow-bg :foreground ,yellow))))
+     `(magit-blame-date                  ((,class (:background ,yellow-bg :foreground ,green))))
+     `(magit-blame-hash                  ((,class (:background ,yellow-bg :foreground ,func))))
+     `(magit-blame-header                ((,class (:background ,yellow-bg :foreground ,green))))
+     `(magit-blame-heading               ((,class (:background ,yellow-bg :foreground ,green :extend t))))
+     `(magit-blame-name                  ((,class (:background ,yellow-bg :foreground ,yellow))))
+     `(magit-blame-sha1                  ((,class (:background ,yellow-bg :foreground ,func))))
+     `(magit-blame-subject               ((,class (:background ,yellow-bg :foreground ,yellow))))
+     `(magit-blame-summary               ((,class (:background ,yellow-bg :foreground ,yellow :extend t))))
+     `(magit-blame-time                  ((,class (:background ,yellow-bg :foreground ,green))))
      `(magit-branch                      ((,class (:foreground ,const :inherit bold))))
      `(magit-branch-current              ((,class (:background ,blue-bg :foreground ,blue :inherit bold :box t))))
      `(magit-branch-local                ((,class (:background ,blue-bg :foreground ,blue :inherit bold))))
@@ -928,8 +928,8 @@ to 'auto, tags may not be properly aligned."
      `(rainbow-delimiters-depth-10-face   ((,class (:foreground ,yellow))))
      `(rainbow-delimiters-depth-11-face   ((,class (:foreground ,blue))))
      `(rainbow-delimiters-depth-12-face   ((,class (:foreground ,magenta))))
-     `(rainbow-delimiters-mismatched-face ((,class :foreground ,err :overline t :inverse-video t)))
-     `(rainbow-delimiters-unmatched-face  ((,class :foreground ,err :overline t)))
+     `(rainbow-delimiters-mismatched-face ((,class (:foreground ,err :overline t :inverse-video t))))
+     `(rainbow-delimiters-unmatched-face  ((,class (:foreground ,err :overline t))))
 
 ;;;;; rcirc
      `(rcirc-bright-nick   ((,class (:background ,aqua-bg :foreground ,cyan))))
@@ -940,8 +940,8 @@ to 'auto, tags may not be properly aligned."
      `(rcirc-url           ((,class (:inherit link))))
 
 ;;;;; shell script
-     `(sh-quoted-exec ((,class :foreground ,comp)))
-     `(sh-heredoc     ((,class :foreground ,war)))
+     `(sh-quoted-exec ((,class (:foreground ,comp))))
+     `(sh-heredoc     ((,class (:foreground ,war))))
 
 ;;;;; shm
      `(shm-current-face    ((,class (:background ,green-bg-s))))
@@ -1081,7 +1081,7 @@ to 'auto, tags may not be properly aligned."
      `(escape-glyph-face                    ((,class (:foreground ,comment))))
      `(ffap                                 ((,class (:foreground ,base))))
      `(flx-highlight-face                   ((,class (:foreground ,comp :underline nil))))
-     `(icompletep-determined                ((,class :foreground ,keyword)))
+     `(icompletep-determined                ((,class (:foreground ,keyword))))
      `(js2-external-variable                ((,class (:foreground ,comp))))
      `(js2-function-param                   ((,class (:foreground ,const))))
      `(js2-jsdoc-html-tag-delimiter         ((,class (:foreground ,str))))
@@ -1096,11 +1096,11 @@ to 'auto, tags may not be properly aligned."
      `(js3-jsdoc-tag-face                   ((,class (:foreground ,keyword))))
      `(js3-warning-face                     ((,class (:underline ,keyword))))
      `(slime-repl-inputed-output-face       ((,class (:foreground ,comp))))
-     `(trailing-whitespace                  ((,class :foreground nil :background ,err)))
-     `(undo-tree-visualizer-current-face    ((,class :foreground ,keyword)))
-     `(undo-tree-visualizer-default-face    ((,class :foreground ,base)))
-     `(undo-tree-visualizer-register-face   ((,class :foreground ,comp)))
-     `(undo-tree-visualizer-unmodified-face ((,class :foreground ,var))))
+     `(trailing-whitespace                  ((,class (:foreground nil :background ,err))))
+     `(undo-tree-visualizer-current-face    ((,class (:foreground ,keyword))))
+     `(undo-tree-visualizer-default-face    ((,class (:foreground ,base))))
+     `(undo-tree-visualizer-register-face   ((,class (:foreground ,comp))))
+     `(undo-tree-visualizer-unmodified-face ((,class (:foreground ,var)))))
 
     (custom-theme-set-variables
      theme-name
