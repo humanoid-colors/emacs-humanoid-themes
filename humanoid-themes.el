@@ -1,6 +1,6 @@
 ;;; humanoid-themes.el --- Color themes with a dark and light variant -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2018-2019 Thomas Friese
+;; Copyright (C) 2018-2020 Thomas Friese
 
 ;; Author: Thomas Friese
 ;; URL: https://github.com/humanoid-colors/emacs-humanoid-themes
