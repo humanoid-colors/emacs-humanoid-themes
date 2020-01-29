@@ -170,8 +170,8 @@ to 'auto, tags may not be properly aligned."
         (var           (if (eq variant 'dark) (if (humanoid-true-color) "#c6ff00" "GreenYellow")     (if (humanoid-true-color) "#0d47a1" "DeepSkyBlue4")))
         (war           (if (eq variant 'dark) (if (humanoid-true-color) "#ff9505" "DarkOrange")      (if (humanoid-true-color) "#ff3d00" "OrangeRed"))))
 
-    (cl-loop for (var . val) in humanoid-custom-colors
-             do (set var val))
+    (cl-loop for (cvar . val) in humanoid-custom-colors
+             do (set cvar val))
 
     (custom-theme-set-faces
      theme-name
@@ -654,6 +654,9 @@ to 'auto, tags may not be properly aligned."
      `(ivy-minibuffer-match-face-4 ((,class (:foreground ,head3 :underline t))))
      `(ivy-remote                  ((,class (:foreground ,cyan))))
 
+;;;;; ivy-posframe
+     `(ivy-posframe ((,class (:background ,bg3))))
+
 ;;;;; latex
      `(font-latex-bold-face                ((,class (:foreground ,comp))))
      `(font-latex-italic-face              ((,class (:foreground ,keyword :italic t))))
@@ -1018,15 +1021,29 @@ to 'auto, tags may not be properly aligned."
      `(tabbar-unselected-modified ((,class (:inherit tabbar-unselected :background ,bg1 :foreground ,red))))
 
 ;;;;; term
-     `(term               ((,class (:foreground ,base :background ,bg1))))
-     `(term-color-black   ((,class (:foreground ,black))))
-     `(term-color-blue    ((,class (:foreground ,blue))))
-     `(term-color-cyan    ((,class (:foreground ,cyan))))
-     `(term-color-green   ((,class (:foreground ,green))))
-     `(term-color-magenta ((,class (:foreground ,magenta))))
-     `(term-color-red     ((,class (:foreground ,red))))
-     `(term-color-white   ((,class (:foreground ,white))))
-     `(term-color-yellow  ((,class (:foreground ,yellow))))
+     `(term               ((,class (:foreground ,base    :background ,bg1))))
+     `(term-color-black   ((,class (:foreground ,bg4     :background ,bg4))))
+     `(term-color-blue    ((,class (:foreground ,keyword :background ,keyword))))
+     `(term-color-cyan    ((,class (:foreground ,cyan    :background ,cyan))))
+     `(term-color-green   ((,class (:foreground ,green   :background ,green))))
+     `(term-color-magenta ((,class (:foreground ,magenta :background ,magenta))))
+     `(term-color-red     ((,class (:foreground ,red     :background ,red))))
+     `(term-color-white   ((,class (:foreground ,base    :background ,base))))
+     `(term-color-yellow  ((,class (:foreground ,yellow  :background ,yellow))))
+
+;;;;; vterm
+     `(vterm-color-default ((,class (:foreground ,base :background ,bg1))))
+     ;; vterm-color-black used to render black color code.
+     ;; The foreground color is used as ANSI color 0 and the background
+     ;; color is used as ANSI color 8.
+     `(vterm-color-black   ((,class (:foreground ,bg4     :background ,bg4))))
+     `(vterm-color-blue    ((,class (:foreground ,blue    :background ,blue))))
+     `(vterm-color-cyan    ((,class (:foreground ,cyan    :background ,cyan))))
+     `(vterm-color-green   ((,class (:foreground ,green   :background ,green))))
+     `(vterm-color-magenta ((,class (:foreground ,magenta :background ,magenta))))
+     `(vterm-color-red     ((,class (:foreground ,red     :background ,red))))
+     `(vterm-color-white   ((,class (:foreground ,base    :background ,base))))
+     `(vterm-color-yellow  ((,class (:foreground ,yellow  :background ,yellow))))
 
 ;;;;; tide
      `(tide-hl-identifier-face ((,class (:foreground ,yellow :background ,yellow-bg))))
