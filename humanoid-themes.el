@@ -1160,8 +1160,4 @@ to 'auto, tags may not be properly aligned."
 
 (provide 'humanoid-themes)
 
-;; Local Variables:
-;; no-byte-compile: t
-;; End:
-
 ;;; humanoid-themes.el ends here
