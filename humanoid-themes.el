@@ -610,7 +610,7 @@ to 'auto, tags may not be properly aligned."
      `(helm-selection                   ((,class (:background ,highlight))))
      `(helm-selection-line              ((,class (:background ,bg3))))
      `(helm-separator                   ((,class (:foreground ,comp :background ,bg1))))
-     `(helm-source-header               ((,class (:background ,head2 :foreground ,act1 :inherit bold))))
+     `(helm-source-header               ((,class (:background ,cblk-ln-bg :foreground ,cblk :inherit bold))))
      `(helm-time-zone-current           ((,class (:foreground ,keyword :background ,bg1))))
      `(helm-time-zone-home              ((,class (:foreground ,comp :background ,bg1))))
      `(helm-visible-mark                ((,class (:foreground ,func :background ,bg3))))
