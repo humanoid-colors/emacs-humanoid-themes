@@ -540,10 +540,23 @@ to 'auto, tags may not be properly aligned."
 ;;;;; git
      `(git-commit-summary ((,class (:foreground ,base :inherit bold))))
 
-;;;;; git-gutter-fr
-     `(git-gutter-fr:added    ((,class (:foreground ,green :inherit bold))))
-     `(git-gutter-fr:deleted  ((,class (:foreground ,war :inherit bold))))
-     `(git-gutter-fr:modified ((,class (:foreground ,keyword :inherit bold))))
+;;;;; git-gutter
+     `(git-gutter:added        ((,class (:foreground ,green :inherit bold))))
+     `(git-gutter:deleted      ((,class (:foreground ,red :inherit bold))))
+     `(git-gutter:modified     ((,class (:foreground ,purple :inherit bold))))
+     `(git-gutter:separator    ((,class (:foreground ,aqua :inherit bold))))
+     `(git-gutter:unchanged    ((,class (:background ,yellow))))
+     `(git-gutter+:added       ((,class (:inherit git-gutter:added))))
+     `(git-gutter+:deleted     ((,class (:inherit git-gutter:deleted))))
+     `(git-gutter+:modified    ((,class (:inherit git-gutter:modified))))
+     `(git-gutter+:separator   ((,class (:inherit git-gutter:separator))))
+     `(git-gutter+:unchanged   ((,class (:inherit git-gutter:unchanged))))
+     `(git-gutter-fr:added     ((,class (:inherit git-gutter:added))))
+     `(git-gutter-fr:deleted   ((,class (:inherit git-gutter:deleted))))
+     `(git-gutter-fr:modified  ((,class (:inherit git-gutter:modified))))
+     `(git-gutter-fr+:added    ((,class (:inherit git-gutter:added))))
+     `(git-gutter-fr+:deleted  ((,class (:inherit git-gutter:deleted))))
+     `(git-gutter-fr+:modified ((,class (:inherit git-gutter:modified))))
 
 ;;;;; git-timemachine
      `(git-timemachine-minibuffer-detail-face ((,class (:foreground ,blue :inherit bold :background ,blue-bg))))
