@@ -226,6 +226,7 @@ to 'auto, tags may not be properly aligned."
      `(highlight                           ((,class (:foreground ,base :background ,highlight))))
      `(hl-line                             ((,class (:background ,bg3 :extend t))))
      `(isearch                             ((,class (:foreground ,act1 :background ,mat))))
+     `(hl-todo                             ((,class (:foreground ,magenta))))
      `(lazy-highlight                      ((,class (:background ,highlight-dim :weight normal))))
      `(link                                ((,class (:foreground unspecified :underline t))))
      `(link-visited                        ((,class (:inherit link))))
@@ -273,6 +274,9 @@ to 'auto, tags may not be properly aligned."
 
 ;;;;; c
      `(c-annotation-face ((,class (:inherit font-lock-constant-face))))
+
+;;;;; calendar
+     `(holiday ((,class (:background ,war))))
 
 ;;;;; calfw
      `(cfw:face-title               ((,class (:foreground ,head1 :height 2.0 :weight bold :inherit variable-pitch))))
@@ -361,6 +365,7 @@ to 'auto, tags may not be properly aligned."
 
 ;;;;; doom-modeline
      `(doom-modeline-bar                ((,class (:background ,bg2))))
+     `(doom-modeline-bar-inactive       ((,class (:background ,comment))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
      `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
      `(doom-modeline-buffer-path        ((,class (:inherit font-lock-keyword-face))))
