@@ -695,14 +695,11 @@ to 'auto, tags may not be properly aligned."
      `(helm-swoop-target-word-face       ((,class (:background ,highlight :foreground ,mat))))
 
 ;;;;; highlights
-     `(hi-green  ((,class (:foreground ,green :background ,green-bg))))
-     `(hi-yellow ((,class (:foreground ,yellow :background ,yellow-bg))))
-
-;;;;; highlight-indentation
+     `(hi-green                   ((,class (:foreground ,green :background ,green-bg))))
+     `(hi-yellow                  ((,class (:foreground ,yellow :background ,yellow-bg))))
      `(highlight-indentation-face ((,class (:background ,comment-bg))))
-
-;;;;; highlight-symbol
-     `(highlight-symbol-face ((,class (:background ,bg2))))
+     `(highlight-numbers-number   ((,class (:foreground ,num))))
+     `(highlight-symbol-face      ((,class (:background ,bg2))))
 
 ;;;;; hydra
      `(hydra-face-blue ((,class (:foreground ,blue))))
