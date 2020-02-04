@@ -161,7 +161,7 @@ to 'auto, tags may not be properly aligned."
         (comment       (if (eq variant 'dark) (if (humanoid-true-color) "#6b7566" "LemonChiffon4")   (if (humanoid-true-color) "#8b9985" "LemonChiffon4")))
         (comment-bg    (if (eq variant 'dark) (if (humanoid-true-color) "#232629" "gray18")          (if (humanoid-true-color) "#f8f8f2" "gray96")))
         (comment-light (if (eq variant 'dark) (if (humanoid-true-color) "#75715e" "LightGoldenrod4") (if (humanoid-true-color) "#6b7566" "LightYellow4")))
-        (comp          (if (eq variant 'dark) (if (humanoid-true-color) "#b257fd" "purple2")         (if (humanoid-true-color) "#5f23a3" "purple4")))
+        (comp          (if (eq variant 'dark) (if (humanoid-true-color) "#b257fd" "purple2")         (if (humanoid-true-color) "#4d10a5" "magenta2")))
         (const         (if (eq variant 'dark) (if (humanoid-true-color) "#f15ee3" "magenta1")        (if (humanoid-true-color) "#880e4f" "DarkRed")))
         (cursor        (if (eq variant 'dark) (if (humanoid-true-color) "#64dd17" "chartreuse2")     (if (humanoid-true-color) "#64dd17" "chartreuse2")))
         (err           (if (eq variant 'dark) (if (humanoid-true-color) "#f11235" "red2")            (if (humanoid-true-color) "#b0151a" "firebrick3")))
