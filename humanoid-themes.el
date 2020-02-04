@@ -188,7 +188,7 @@ to 'auto, tags may not be properly aligned."
         (lnum          (if (eq variant 'dark) (if (humanoid-true-color) "#5d6658" "SlateGrey")       (if (humanoid-true-color) "#98a890" "SlateGrey")))
         (mat           (if (eq variant 'dark) (if (humanoid-true-color) "#ced8a2" "gray82")          (if (humanoid-true-color) "#29422d" "DarkSlateGrey")))
         (meta          (if (eq variant 'dark) (if (humanoid-true-color) "#c0c0bd" "gray71")          (if (humanoid-true-color) "#60615d" "gray20")))
-        (num           (if (eq variant 'dark) (if (humanoid-true-color) "#ffb627" "goldenrod1")      (if (humanoid-true-color) "#ed9725" "goldenrod1")))
+        (num           (if (eq variant 'dark) (if (humanoid-true-color) "#ffb627" "goldenrod1")      (if (humanoid-true-color) "#700f98" "purple3")))
         (str           (if (eq variant 'dark) (if (humanoid-true-color) "#02d849" "green3")          (if (humanoid-true-color) "#388e3c" "SpringGreen4")))
         (suc           (if (eq variant 'dark) (if (humanoid-true-color) "#20bf55" "green4")          (if (humanoid-true-color) "#5a9216" "OliveDrab")))
         (ttip          (if (eq variant 'dark) (if (humanoid-true-color) "#75715e" "wheat4")          (if (humanoid-true-color) "#6b7566" "LightYellow4")))
