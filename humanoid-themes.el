@@ -200,7 +200,7 @@ to 'auto, tags may not be properly aligned."
         (meta          (if (eq variant 'dark) (if (humanoid-true-color) "#c0c0bd" "gray71")          (if (humanoid-true-color) "#60615d" "gray20")))
         (num           (if (eq variant 'dark) (if (humanoid-true-color) "#ffb627" "goldenrod1")      (if (humanoid-true-color) "#811cac" "magenta4")))
         (str           (if (eq variant 'dark) (if (humanoid-true-color) "#02d849" "green2")          (if (humanoid-true-color) "#22a54e" "green4")))
-        (suc           (if (eq variant 'dark) (if (humanoid-true-color) "#22a54e" "green3")          (if (humanoid-true-color) "#02d849" "green3")))
+        (suc           (if (eq variant 'dark) (if (humanoid-true-color) "#3ee766" "green")           (if (humanoid-true-color) "#096b38" "DarkOliveGreen")))
         (ttip          (if (eq variant 'dark) (if (humanoid-true-color) "#75715e" "wheat4")          (if (humanoid-true-color) "#6b7566" "LightYellow4")))
         (ttip-bg       (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray25")          (if (humanoid-true-color) "#e8e8e2" "gray88")))
         (ttip-sl       (if (eq variant 'dark) (if (humanoid-true-color) "#545b62" "gray28")          (if (humanoid-true-color) "#deded8" "gray84")))
