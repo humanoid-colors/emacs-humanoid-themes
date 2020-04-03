@@ -882,6 +882,7 @@ to 'auto, tags may not be properly aligned."
      `(mu4e-contact-face              ((,class (:foreground ,str))))
      `(mu4e-draft-face                ((,class (:foreground ,comp))))
      `(mu4e-flagged-face              ((,class (:foreground ,keyword :inherit bold))))
+     `(mu4e-footer-face               ((,class (:inherit (font-lock-comment-face fixed-pitch)))))
      `(mu4e-forwarded-face            ((,class (:foreground ,const))))
      `(mu4e-header-highlight-face     ((,class (:background ,act2))))
      `(mu4e-header-key-face           ((,class (:foreground ,keyword :inherit bold))))
