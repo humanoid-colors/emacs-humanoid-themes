@@ -175,7 +175,7 @@ to 'auto, tags may not be properly aligned."
         (const         (if (eq variant 'dark) (if (humanoid-true-color) "#e834f9" "magenta1")        (if (humanoid-true-color) "#ba29eb" "magenta3")))
         (cursor        (if (eq variant 'dark) (if (humanoid-true-color) "#64dd17" "chartreuse2")     (if (humanoid-true-color) "#64dd17" "chartreuse2")))
         (err           (if (eq variant 'dark) (if (humanoid-true-color) "#f11235" "red2")            (if (humanoid-true-color) "#b0151a" "firebrick3")))
-        (func          (if (eq variant 'dark) (if (humanoid-true-color) "#b27701" "tan3")            (if (humanoid-true-color) "#b27701" "tan3")))
+        (func          (if (eq variant 'dark) (if (humanoid-true-color) "#ff9505" "DarkGoldenrod2")  (if (humanoid-true-color) "#fb6107" "DarkOrange2")))
         (head1         (if (eq variant 'dark) (if (humanoid-true-color) "#42a5f5" "DeepSkyBlue2")    (if (humanoid-true-color) "#2376ad" "DodgerBlue3")))
         (head1-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#293239" "gray17")          (if (humanoid-true-color) "#efefe9" "gray97")))
         (head2         (if (eq variant 'dark) (if (humanoid-true-color) "#42cde8" "DeepSkyBlue1")    (if (humanoid-true-color) "#2595ab" "DeepSkyBlue4")))
