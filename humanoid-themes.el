@@ -887,6 +887,10 @@ to 'auto, tags may not be properly aligned."
      `(markdown-table-face      ((,class (:inherit org-table))))
      `(mmm-default-submode-face ((,class (:background ,bg2))))
 
+;;;;; minimap
+     `(minimap-current-line-face :background selection)
+     `(minimap-active-region-background :background vertical-bar)
+
 ;;;;; mode-line
      `(mode-line           ((,class (:foreground ,base :background ,bg2 :box nil :underline nil))))
      `(mode-line-inactive  ((,class (:foreground ,base-dim :background ,bg2  :box nil :underline nil))))
