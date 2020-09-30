@@ -1053,6 +1053,10 @@ to 'auto, tags may not be properly aligned."
      `(rcirc-track-keyword ((,class (:background ,green :foreground ,act1))))
      `(rcirc-url           ((,class (:inherit link))))
 
+;;;;; rjsx-mode
+     `(rjsx-tag  :foreground ,type)
+     `(rjsx-attr :foreground ,str)
+
 ;;;;; shell script
      `(sh-quoted-exec ((,class (:foreground ,comp))))
      `(sh-heredoc     ((,class (:foreground ,war))))
@@ -1174,8 +1178,10 @@ to 'auto, tags may not be properly aligned."
      `(web-mode-doctype-face                   ((,class (:inherit font-lock-comment-face))))
      `(web-mode-function-name-face             ((,class (:inherit font-lock-function-name-face))))
      `(web-mode-html-attr-name-face            ((,class (:foreground ,func))))
-     `(web-mode-html-attr-value-face           ((,class (:foreground ,keyword))))
-     `(web-mode-html-tag-face                  ((,class (:foreground ,keyword))))
+     `(web-mode-html-attr-value-face           ((,class (:foreground ,type))))
+     `(web-mode-html-tag-face                  ((,class (:foreground ,var))))
+     `(web-mode-json-key-face                  ((,class (:foreground ,keyword))))
+     `(web-mode-json-context-face              ((,class (:foreground ,const))))
      `(web-mode-keyword-face                   ((,class (:foreground ,keyword))))
      `(web-mode-string-face                    ((,class (:foreground ,str))))
      `(web-mode-symbol-face                    ((,class (:foreground ,type))))
