@@ -774,6 +774,23 @@ to 'auto, tags may not be properly aligned."
 ;;;;; linum-relative
      `(linum-relative-current-face ((,class (:foreground ,base))))
 
+;;;;; lsp
+     `(lsp-face-highlight-read        :foreground ,base :distant-foreground ,bg2 :background ,blue-dark :weight 'bold)
+     `(lsp-face-highlight-textual     :inherit lsp-face-highlight-read)
+     `(lsp-face-highlight-write       :inherit lsp-face-highlight-read)
+     `(lsp-ui-doc-background          :inherit 'tooltip)
+     `(lsp-ui-peek-filename           :inherit 'mode-line-buffer-id)
+     `(lsp-ui-peek-header             :foreground ,base :background ,bg3 :bold bold)
+     `(lsp-ui-peek-highlight          :inherit 'lsp-ui-peek-header :foreground ,bg1 :background ,cblk-bg :box t)
+     `(lsp-ui-peek-line-number        :foreground ,suc)
+     `(lsp-ui-peek-list               :background ,bg4)
+     `(lsp-ui-peek-peek               :background (doom-darken bg 0.1))
+     `(lsp-ui-peek-selection          :foreground ,bg1 :background blue :bold bold)
+     `(lsp-ui-sideline-code-action    :foreground ,highlight-dim)
+     `(lsp-ui-sideline-current-symbol :inherit 'highlight)
+     `(lsp-ui-sideline-symbol-info    :foreground ,act2 :background ,bg0 :extend t)
+     `(lsp-headerline-breadcrumb-separator-face :foreground ,act1)
+
 ;;;;; magit
      `(magit-bisect-bad                  ((,class (:foreground ,war))))
      `(magit-bisect-good                 ((,class (:foreground ,suc))))
