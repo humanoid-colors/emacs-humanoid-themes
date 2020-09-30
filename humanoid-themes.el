@@ -364,10 +364,16 @@ to 'auto, tags may not be properly aligned."
      `(cfw:face-toolbar-button-off  ((,class (:foreground ,base :weight bold))))
      `(cfw:face-toolbar-button-on   ((,class (:foreground ,base :weight bold))))
 
+;;;;; tab-bar
+     `(tab-line             ((,class (:background ,bg1 :foreground ,base-dim))))
+     `(tab-bar              ((,class (:inherit tab-line))))
+     `(tab-bar-tab          ((,class (:background ,bg1 :foreground ,base :weight normal))))
+     `(tab-bar-tab-inactive ((,class (:background ,bg2 :foreground ,comment-light :weight light))))
+
 ;;;;; centaur-tabs
-     `(centaur-tabs-default                    ((,class (:background ,bg1 :foreground ,base-dim))))
-     `(centaur-tabs-selected                   ((,class (:background ,bg1 :foreground ,base :weight normal))))
-     `(centaur-tabs-unselected                 ((,class (:background ,bg2 :foreground ,comment-light :weight light))))
+     `(centaur-tabs-default                    ((,class (:inherit tab-bar))))
+     `(centaur-tabs-selected                   ((,class (:inherit tab-bar-tab))))
+     `(centaur-tabs-unselected                 ((,class (:inherit tab-bar-tab-interactive))))
      `(centaur-tabs-selected-modified          ((,class (:background ,bg1 :foreground ,war :weight normal))))
      `(centaur-tabs-unselected-modified        ((,class (:background ,bg2 :weight light :foreground ,war))))
      `(centaur-tabs-active-bar-face            ((,class (:background ,blue))))
