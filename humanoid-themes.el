@@ -572,9 +572,9 @@ to 'auto, tags may not be properly aligned."
          (:underline (:style line :color ,err)))
         (,class (:foreground ,base :background ,err :inherit bold :underline t))))
      `(flycheck-error-list-checker-name ((,class (:foreground ,keyword))))
-     `(flycheck-fringe-error            ((,class (:foreground ,err :inherit bold))))
-     `(flycheck-fringe-info             ((,class (:foreground ,keyword :inherit bold))))
-     `(flycheck-fringe-warning          ((,class (:foreground ,war :inherit bold))))
+     `(flycheck-fringe-error            ((,class (:inherit fringe :foreground ,err))))
+     `(flycheck-fringe-info             ((,class (:inherit fringe :foreground ,keyword))))
+     `(flycheck-fringe-warning          ((,class (:inherit fringe :foreground ,war))))
      `(flycheck-info
        ((,(append '((supports :underline (:style line))) class)
          (:underline (:style line :color ,comment)))
@@ -625,10 +625,10 @@ to 'auto, tags may not be properly aligned."
      `(git-commit-summary ((,class (:foreground ,base :inherit bold))))
 
 ;;;;; git-gutter
-     `(git-gutter:added        ((,class (:foreground ,green :inherit bold))))
-     `(git-gutter:deleted      ((,class (:foreground ,red :inherit bold))))
-     `(git-gutter:modified     ((,class (:foreground ,purple :inherit bold))))
-     `(git-gutter:separator    ((,class (:foreground ,aqua :inherit bold))))
+     `(git-gutter:added        ((,class (:inherit fringe :foreground ,green))))
+     `(git-gutter:deleted      ((,class (:inherit fringe :foreground ,red))))
+     `(git-gutter:modified     ((,class (:inherit fringe :foreground ,purple))))
+     `(git-gutter:separator    ((,class (:inherit fringe :foreground ,aqua))))
      `(git-gutter:unchanged    ((,class (:background ,yellow))))
      `(git-gutter+:added       ((,class (:inherit git-gutter:added))))
      `(git-gutter+:deleted     ((,class (:inherit git-gutter:deleted))))
