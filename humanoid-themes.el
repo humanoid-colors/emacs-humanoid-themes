@@ -285,6 +285,13 @@ to 'auto, tags may not be properly aligned."
      `(outline-7                     ((,class (:bold nil :foreground ,head7 :background ,(when humanoid-org-highlight head7-bg)))))
      `(outline-8                     ((,class (:bold nil :foreground ,head8 :background ,(when humanoid-org-highlight head8-bg)))))
 
+;;;;; mode-line
+     `(mode-line           ((,class (:foreground ,base :background ,bg2 :box nil :underline nil))))
+     `(mode-line-inactive  ((,class (:foreground ,base-dim :background ,bg2  :box nil :underline nil))))
+     `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
+     `(mode-line-highlight ((,class (:foreground ,base :background ,bg3 :box nil :underline nil))))
+     `(header-line         ((,class (:foreground ,base :background ,bg1 :distant-foreground ,bg1))))
+
 ;;;;; ace-window
      `(aw-leading-char-face ((,class (:foreground ,func :weight bold :height 2.0 :box (:line-width 1 :color ,keyword :style released-button)))))
 
@@ -890,12 +897,6 @@ to 'auto, tags may not be properly aligned."
 ;;;;; minimap
      `(minimap-current-line-face :background selection)
      `(minimap-active-region-background :background vertical-bar)
-
-;;;;; mode-line
-     `(mode-line           ((,class (:foreground ,base :background ,bg2 :box nil :underline nil))))
-     `(mode-line-inactive  ((,class (:foreground ,base-dim :background ,bg2  :box nil :underline nil))))
-     `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
-     `(mode-line-highlight ((,class (:foreground ,base :background ,bg3 :box nil :underline nil))))
 
 ;;;;; mu4e
      `(mu4e-attach-number-face        ((,class (:foreground ,var))))
