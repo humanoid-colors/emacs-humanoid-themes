@@ -47,6 +47,11 @@
   :type 'boolean
   :group 'humanoid)
 
+(defcustom humanoid-comment-light t
+  "Enable light weight for comments."
+  :type 'boolean
+  :group 'humanoid)
+
 (defcustom humanoid-keyword-italic nil
   "Enable italics for keywords."
   :type 'boolean
@@ -236,12 +241,12 @@ to 'auto, tags may not be properly aligned."
      `(eval-sexp-fu-flash                  ((,class (:background ,suc :foreground ,act1))))
      `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,act1))))
      `(font-lock-builtin-face              ((,class (:foreground ,builtin))))
-     `(font-lock-comment-face              ((,class (:foreground ,
-                                                     (if humanoid-comment-italic comment-light comment) :background ,
-                                                     (when humanoid-comment-bg comment-bg) :slant ,
-                                                     (if humanoid-comment-italic 'italic 'normal)))))
+     `(font-lock-comment-face              ((,class (:foreground , (if humanoid-comment-italic comment-light comment)
+                                                     :background , (when humanoid-comment-bg comment-bg)
+                                                     :slant , (if humanoid-comment-italic 'italic 'normal)
+                                                     :weight , (if humanoid-comment-light 'light 'normal)))))
      `(font-lock-constant-face             ((,class (:foreground ,const))))
-     `(font-lock-doc-face                  ((,class (:foreground ,comment-light))))
+     `(font-lock-doc-face                  ((,class (:inherit font-lock-comment-face))))
      `(font-lock-function-name-face        ((,class (:foreground ,func :bold nil))))
      `(font-lock-keyword-face              ((,class (:foreground ,keyword :bold nil))))
      `(font-lock-negation-char-face        ((,class (:foreground ,const))))
