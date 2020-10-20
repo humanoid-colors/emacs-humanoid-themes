@@ -262,7 +262,7 @@ to 'auto, tags may not be properly aligned."
      `(header-line                         ((,class (:background ,bg2))))
      `(highlight                           ((,class (:foreground ,base :background ,highlight))))
      `(hl-line                             ((,class (:background ,bg3 :extend t))))
-     `(hl-todo                             ((,class (:foreground ,magenta))))
+     `(hl-todo                             ((,class (:inherit bold :foreground ,magenta))))
      `(isearch                             ((,class (:foreground ,mat :background ,highlight))))
      `(lazy-highlight                      ((,class (:background ,highlight-dim :weight normal))))
      `(link                                ((,class (:foreground unspecified :underline t))))
