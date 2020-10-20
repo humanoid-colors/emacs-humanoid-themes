@@ -972,7 +972,7 @@ to 'auto, tags may not be properly aligned."
      `(org-clock-overlay             ((,class (:foreground ,comp))))
      `(org-code                      ((,class (:foreground ,cyan))))
      `(org-column                    ((,class (:background ,highlight))))
-     `(org-column-title              ((,class (:background ,highlight))))
+     `(org-column-title              ((,class (:inherit org-column))))
      `(org-date                      ((,class (:underline t :foreground ,var))))
      `(org-date-selected             ((,class (:background ,func :foreground ,act1))))
      `(org-document-info             ((,class (:foreground ,builtin))))
