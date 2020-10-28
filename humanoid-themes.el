@@ -173,7 +173,7 @@ to 'auto, tags may not be properly aligned."
         (cblk-ln       (if (eq variant 'dark) (if (humanoid-true-color) "#5d6658" "cornsilk4")       (if (humanoid-true-color) "#98a890" "cornsilk4")))
         (comment       (if (eq variant 'dark) (if (humanoid-true-color) "#6b7566" "LemonChiffon4")   (if (humanoid-true-color) "#8b9985" "LemonChiffon4")))
         (comment-bg    (if (eq variant 'dark) (if (humanoid-true-color) "#232629" "gray18")          (if (humanoid-true-color) "#f8f8f2" "gray96")))
-        (comment-light (if (eq variant 'dark) (if (humanoid-true-color) "#75715e" "LightGoldenrod4") (if (humanoid-true-color) "#6b7566" "LightYellow4")))
+        (comment-light (if (eq variant 'dark) (if (humanoid-true-color) "#899484" "LightGoldenrod4") (if (humanoid-true-color) "#6b7566" "LightYellow4")))
         (comp          (if (eq variant 'dark) (if (humanoid-true-color) "#3ee766" "green")           (if (humanoid-true-color) "#22a54e" "green4")))
         (const         (if (eq variant 'dark) (if (humanoid-true-color) "#a359fe" "MediumPurple3")   (if (humanoid-true-color) "#ba29eb" "magenta3")))
         (cursor        (if (eq variant 'dark) (if (humanoid-true-color) "#64dd17" "chartreuse2")     (if (humanoid-true-color) "#64dd17" "chartreuse2")))
@@ -780,12 +780,10 @@ to 'auto, tags may not be properly aligned."
      `(ledger-font-posting-date-face   ((,class (:foreground ,head1))))
      `(ledger-occur-xact-face          ((,class (:background ,bg2))))
 
-;;;;; linum-mode
-     `(linum ((,class (:foreground ,lnum :background ,bg2 :inherit default))))
-
 ;;;;; line-numbers
+     `(linum                    ((,class (:foreground ,lnum :background ,bg2 :inherit default))))
      `(line-number              ((,class (:foreground ,lnum :background ,bg2 :inherit default))))
-     `(line-number-current-line ((,class (:foreground ,comment :background ,bg0 :inherit line-number))))
+     `(line-number-current-line ((,class (:inherit line-number :foreground ,comment-light :background ,bg0))))
 
 ;;;;; linum-relative
      `(linum-relative-current-face ((,class (:foreground ,base))))
