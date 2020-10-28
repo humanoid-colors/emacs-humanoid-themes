@@ -912,7 +912,7 @@ to 'auto, tags may not be properly aligned."
      `(mu4e-cited-7-face              ((,class (:foreground ,red     :background ,bg2))))
      `(mu4e-contact-face              ((,class (:foreground ,str))))
      `(mu4e-draft-face                ((,class (:foreground ,comp))))
-     `(mu4e-flagged-face              ((,class (:inherit bold        :foreground ,war))))
+     `(mu4e-flagged-face              ((,class (:inherit bold        :foreground ,const))))
      `(mu4e-footer-face               ((,class (:inherit (font-lock-comment-face fixed-pitch)))))
      `(mu4e-forwarded-face            ((,class (:foreground ,const))))
      `(mu4e-header-highlight-face     ((,class (:background ,act2))))
