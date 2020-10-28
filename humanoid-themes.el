@@ -1005,6 +1005,15 @@ to 'auto, tags may not be properly aligned."
      `(org-warning                   ((,class (:foreground ,err :inherit org-priority))))
 
 ;;;;; perspective
+     `(parenthesis                 ((,class (:foreground ,base-dim))))
+     `(parinfer-pretty-parens:dim-paren-face ((,class (:foreground ,border))))
+     `(show-paren-match            ((,class (:foreground ,mat :inherit bold :underline ,(when humanoid-underline-parens t)))))
+     `(show-paren-match-expression ((,class (:background ,green-bg-s))))
+     `(show-paren-mismatch         ((,class (:foreground ,err :inherit bold :underline ,(when humanoid-underline-parens t)))))
+     `(sp-pair-overlay-face        ((,class (:background ,highlight :foreground nil))))
+     `(sp-show-pair-match-face     ((,class (:foreground ,mat :inherit bold :underline ,(when humanoid-underline-parens t)))))
+
+;;;;; perspective
      `(persp-selected-face ((,class (:inherit bold :foreground ,func))))
 
 ;;;;; popup
@@ -1072,15 +1081,6 @@ to 'auto, tags may not be properly aligned."
 ;;;;; shm
      `(shm-current-face    ((,class (:background ,green-bg-s))))
      `(shm-quarantine-face ((,class (:background ,red-bg-s))))
-
-;;;;; show-paren
-     `(show-paren-match            ((,class (:foreground ,mat :inherit bold  :underline ,(when humanoid-underline-parens t)))))
-     `(show-paren-match-expression ((,class (:background ,green-bg-s))))
-     `(show-paren-mismatch         ((,class (:foreground ,err :inherit bold :underline ,(when humanoid-underline-parens t)))))
-
-;;;;; smartparens
-     `(sp-pair-overlay-face    ((,class (:background ,highlight :foreground nil))))
-     `(sp-show-pair-match-face ((,class (:foreground ,mat :inherit bold  :underline ,(when humanoid-underline-parens t)))))
 
 ;;;;; smerge
      `(smerge-base            ((,class (:background ,yellow-bg :extend t))))
