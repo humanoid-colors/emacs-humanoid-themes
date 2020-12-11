@@ -1291,6 +1291,8 @@ to 'auto, tags may not be properly aligned."
                                ("HACK"       . ,purple)
                                ("TEMP"       . ,gray)
                                ("FIXME"      . ,magenta)
+                               ("DEPRECATED" . ,war)
+                               ("REVIEW"     . ,brown)
                                ("XXX"        . ,var)
                                ("XXXX"       . ,var)
                                ("\\?\\?\\?+" . ,var)))
