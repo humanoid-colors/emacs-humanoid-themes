@@ -5,9 +5,9 @@ The collection comes with a dark and a light variant and it should work well wit
 
 ## Screenshots
 
-[![light theme](screenshots/Screenshot_2019-11-10_15-56-41.png)](screenshots/Screenshot_2019-11-10_15-56-41.png)
+[![light theme](screenshots/humanoid-light.png)](screenshots/humanoid-light.png)
 
-[![dark theme](screenshots/Screenshot_2019-11-10_15-58-39.png)](screenshots/Screenshot_2019-11-10_15-58-39.png)
+[![dark theme](screenshots/humanoid-dark.png)](screenshots/humanoid-dark.png)
 
 ## Highlights
 
