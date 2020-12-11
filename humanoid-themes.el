@@ -276,7 +276,7 @@ to 'auto, tags may not be properly aligned."
      `(tooltip                             ((,class (:background ,ttip-sl :foreground ,base :bold nil :italic nil :underline nil))))
      `(vertical-border                     ((,class (:foreground ,border))))
      `(warning                             ((,class (:foreground ,war :imherit bold))))
-     `(window-divider                      ((,class (:foreground ,border))))
+     `(window-divider                      ((,class (:foreground ,bg2)))) ; foreground same like `mode-line' background
 
      ;;; outline
      `(outline-1                     ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head1-bg)))))
@@ -1120,8 +1120,8 @@ to 'auto, tags may not be properly aligned."
      `(solaire-default-face    ((,class (:inherit default :background ,bg1))))
      `(solaire-hl-line-face    ((,class (:inherit hl-line :background ,bg3 :extend t))))
      `(solaire-minibuffer-face ((,class (:inherit solaire-default-face :background ,bg3))))
-     `(solaire-mode-line-face  ((,class (:inherit solaire-default-face :distant-foreground ,bg1))))
-     `(solaire-mode-line-inactive-face ((,class (:foreground ,base-dim :background ,bg2 :distant-foreground ,base-dim))))
+     `(solaire-mode-line-face  ((,class (:inherit solaire-default-face :inherit mode-line :distant-foreground ,bg1))))
+     `(solaire-mode-line-inactive-face ((,class (:inherit mode-line-inactive :foreground ,base-dim :distant-foreground ,base-dim))))
      `(solaire-org-hide-face   ((,class (:foreground ,bg1))))
 
      ;;; spaceline
