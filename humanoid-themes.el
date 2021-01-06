@@ -107,8 +107,8 @@ to 'auto, tags may not be properly aligned."
         ;;                                                               GUI       TER                                          GUI       TER
         ;; colors
         (black         (if (eq variant 'dark) (if (humanoid-true-color) "#070708" "gray4")           (if (humanoid-true-color) "#070708" "gray4")))
-        (red-light     (if (eq variant 'dark) (if (humanoid-true-color) "#fc466a" "IndianRed1")      (if (humanoid-true-color) "#f11235" "firebrick1")))
-        (red           (if (eq variant 'dark) (if (humanoid-true-color) "#f11235" "firebrick1")      (if (humanoid-true-color) "#b0151a" "firebrick3")))
+        (red-light     (if (eq variant 'dark) (if (humanoid-true-color) "#fc466a" "IndianRed1")      (if (humanoid-true-color) "#f7143a" "firebrick1")))
+        (red           (if (eq variant 'dark) (if (humanoid-true-color) "#f7143a" "firebrick1")      (if (humanoid-true-color) "#b0151a" "firebrick3")))
         (red-dark      (if (eq variant 'dark) (if (humanoid-true-color) "#b0151a" "firebrick")       (if (humanoid-true-color) "#8c0303" "firebrick")))
         (red-fg        (if (eq variant 'dark) (if (humanoid-true-color) "#ffe0e1" "MistyRose")       (if (humanoid-true-color) "#461218" "firebrick4")))
         (red-bg-b      (if (eq variant 'dark) (if (humanoid-true-color) "#83212d" "OrangeRed3")      (if (humanoid-true-color) "#ff8a8c" "pink")))
@@ -135,8 +135,8 @@ to 'auto, tags may not be properly aligned."
         (blue-bg-b     (if (eq variant 'dark) (if (humanoid-true-color) "#1b6e94" "DeepSkyBlue4")    (if (humanoid-true-color) "#8dc7e6" "LightSkyBlue")))
         (blue-bg       (if (eq variant 'dark) (if (humanoid-true-color) "#134e69" "RoyalBlue4")      (if (humanoid-true-color) "#b7dcef" "LightSkyBlue1")))
         (blue-bg-s     (if (eq variant 'dark) (if (humanoid-true-color) "#0f3e53" "DodgerBlue4")     (if (humanoid-true-color) "#cce6f4" "azure2")))
-        (magenta-light (if (eq variant 'dark) (if (humanoid-true-color) "#fa8cff" "violet")          (if (humanoid-true-color) "#e834f9" "magenta1")))
-        (magenta       (if (eq variant 'dark) (if (humanoid-true-color) "#e834f9" "magenta1")        (if (humanoid-true-color) "#ba29eb" "magenta3")))
+        (magenta-light (if (eq variant 'dark) (if (humanoid-true-color) "#fa8cff" "violet")          (if (humanoid-true-color) "#ec44eb" "magenta1")))
+        (magenta       (if (eq variant 'dark) (if (humanoid-true-color) "#ec44eb" "magenta1")        (if (humanoid-true-color) "#ba29eb" "magenta3")))
         (magenta-dark  (if (eq variant 'dark) (if (humanoid-true-color) "#ba29eb" "magenta3")        (if (humanoid-true-color) "#811cac" "magenta4")))
         (purple-light  (if (eq variant 'dark) (if (humanoid-true-color) "#b787ff" "MediumPurple1")   (if (humanoid-true-color) "#7518c4" "purple")))
         (purple        (if (eq variant 'dark) (if (humanoid-true-color) "#a359fe" "MediumPurple3")   (if (humanoid-true-color) "#4d10a5" "purple3")))
@@ -177,7 +177,7 @@ to 'auto, tags may not be properly aligned."
         (comp          (if (eq variant 'dark) (if (humanoid-true-color) "#3ee766" "green")           (if (humanoid-true-color) "#096b38" "green4")))
         (const         (if (eq variant 'dark) (if (humanoid-true-color) "#a359fe" "MediumPurple3")   (if (humanoid-true-color) "#ba29eb" "magenta3")))
         (cursor        (if (eq variant 'dark) (if (humanoid-true-color) "#64dd17" "chartreuse2")     (if (humanoid-true-color) "#64dd17" "chartreuse2")))
-        (err           (if (eq variant 'dark) (if (humanoid-true-color) "#f11235" "red2")            (if (humanoid-true-color) "#b0151a" "firebrick3")))
+        (err           (if (eq variant 'dark) (if (humanoid-true-color) "#f7143a" "red2")            (if (humanoid-true-color) "#b0151a" "firebrick3")))
         (func          (if (eq variant 'dark) (if (humanoid-true-color) "#ff9505" "DarkGoldenrod2")  (if (humanoid-true-color) "#fb6107" "DarkOrange2")))
         (head1         (if (eq variant 'dark) (if (humanoid-true-color) "#42a5f5" "DeepSkyBlue2")    (if (humanoid-true-color) "#2376ad" "DodgerBlue3")))
         (head1-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#293239" "gray17")          (if (humanoid-true-color) "#efefe9" "gray97")))
@@ -208,7 +208,7 @@ to 'auto, tags may not be properly aligned."
         (ttip-bg       (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray25")          (if (humanoid-true-color) "#e8e8e2" "gray88")))
         (ttip-sl       (if (eq variant 'dark) (if (humanoid-true-color) "#545b62" "gray28")          (if (humanoid-true-color) "#deded8" "gray84")))
         (type          (if (eq variant 'dark) (if (humanoid-true-color) "#0ed1d1" "turquoise2")      (if (humanoid-true-color) "#08a7b3" "cyan4")))
-        (var           (if (eq variant 'dark) (if (humanoid-true-color) "#e834f9" "magenta1")        (if (humanoid-true-color) "#4d10a5" "purple3")))
+        (var           (if (eq variant 'dark) (if (humanoid-true-color) "#ec44eb" "magenta1")        (if (humanoid-true-color) "#4d10a5" "purple3")))
         (war           (if (eq variant 'dark) (if (humanoid-true-color) "#ff9505" "DarkOrange")      (if (humanoid-true-color) "#ff3d00" "OrangeRed"))))
 
     (cl-loop for (cvar . val) in humanoid-custom-colors
