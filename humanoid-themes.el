@@ -1013,7 +1013,7 @@ to 'auto, tags may not be properly aligned."
      `(org-kbd                       ((,class (:inherit region :foreground ,base :box (:line-width 1 :style released-button)))))
      `(org-latex-and-related         ((,class (:foreground ,mat))))
      `(org-link                      ((,class (:inherit link))))
-     `(org-meta-line                 ((,class (:foreground ,meta))))
+     `(org-meta-line                 ((,class (:inherit org-block-begin-line :foreground ,meta :slant , (if humanoid-comment-italic 'italic 'normal)))))
      `(org-mode-line-clock-overrun   ((,class (:foreground ,err))))
      `(org-priority                  ((,class (:foreground ,war :inherit bold))))
      `(org-quote                     ((,class (:inherit org-block :slant italic :extend t))))
