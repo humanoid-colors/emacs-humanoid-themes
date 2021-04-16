@@ -281,12 +281,12 @@ to 'auto, tags may not be properly aligned."
      ;;; outline
      `(outline-1                     ((,class (:inherit bold :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0) :background ,(when humanoid-org-highlight head1-bg)))))
      `(outline-2                     ((,class (:inherit bold :foreground ,head2 :height ,(if humanoid-org-height 1.2 1.0) :background ,(when humanoid-org-highlight head2-bg)))))
-     `(outline-3                     ((,class (:bold nil :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0) :background ,(when humanoid-org-highlight head3-bg)))))
-     `(outline-4                     ((,class (:bold nil :foreground ,head4 :background ,(when humanoid-org-highlight head4-bg)))))
-     `(outline-5                     ((,class (:bold nil :foreground ,head5 :background ,(when humanoid-org-highlight head5-bg)))))
-     `(outline-6                     ((,class (:bold nil :foreground ,head6 :background ,(when humanoid-org-highlight head6-bg)))))
-     `(outline-7                     ((,class (:bold nil :foreground ,head7 :background ,(when humanoid-org-highlight head7-bg)))))
-     `(outline-8                     ((,class (:bold nil :foreground ,head8 :background ,(when humanoid-org-highlight head8-bg)))))
+     `(outline-3                     ((,class (:inherit bold :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0) :background ,(when humanoid-org-highlight head3-bg)))))
+     `(outline-4                     ((,class (:inherit bold :foreground ,head4 :background ,(when humanoid-org-highlight head4-bg)))))
+     `(outline-5                     ((,class (:inherit bold :foreground ,head5 :background ,(when humanoid-org-highlight head5-bg)))))
+     `(outline-6                     ((,class (:inherit bold :foreground ,head6 :background ,(when humanoid-org-highlight head6-bg)))))
+     `(outline-7                     ((,class (:inherit bold :foreground ,head7 :background ,(when humanoid-org-highlight head7-bg)))))
+     `(outline-8                     ((,class (:inherit bold :foreground ,head8 :background ,(when humanoid-org-highlight head8-bg)))))
 
      ;;; mode-line
      `(mode-line           ((,class (:foreground ,base :background ,bg2 :box nil :underline nil))))
@@ -1013,7 +1013,7 @@ to 'auto, tags may not be properly aligned."
      `(org-kbd                       ((,class (:inherit region :foreground ,base :box (:line-width 1 :style released-button)))))
      `(org-latex-and-related         ((,class (:foreground ,mat))))
      `(org-link                      ((,class (:inherit link))))
-     `(org-meta-line                 ((,class (:foreground ,meta))))
+     `(org-meta-line                 ((,class (:inherit org-block-begin-line :foreground ,meta :slant , (if humanoid-comment-italic 'italic 'normal)))))
      `(org-mode-line-clock-overrun   ((,class (:foreground ,err))))
      `(org-priority                  ((,class (:foreground ,war :inherit bold))))
      `(org-quote                     ((,class (:inherit org-block :slant italic :extend t))))
