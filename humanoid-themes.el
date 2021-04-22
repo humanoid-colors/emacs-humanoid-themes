@@ -391,10 +391,10 @@ to 'auto, tags may not be properly aligned."
      `(centaur-tabs-modified-marker-unselected ((,class (:inherit centaur-tabs-unselected :foreground,keyword))))
 
      ;;; cider
-     `(cider-enlightened         ((,class      (:background nil :box (:color ,yellow :line-width -1 :style nil) :foreground ,yellow))))
+     `(cider-enlightened         ((,class      (:background unspecified :box (:color ,yellow :line-width -1 :style nil) :foreground ,yellow))))
      `(cider-enlightened-local   ((,class      (:foreground ,yellow))))
-     `(cider-instrumented-face   ((,class      (:background nil :box (:color ,red :line-width -1 :style nil) :foreground ,red))))
-     `(cider-result-overlay-face ((,class      (:background nil :box (:color ,blue :line-width -1 :style nil) :foreground ,blue))))
+     `(cider-instrumented-face   ((,class      (:background unspecified :box (:color ,red :line-width -1 :style nil) :foreground ,red))))
+     `(cider-result-overlay-face ((,class      (:background unspecified :box (:color ,blue :line-width -1 :style nil) :foreground ,blue))))
      `(cider-test-error-face     ((,class      (:background ,war :foreground ,act1))))
      `(cider-test-failure-face   ((,class      (:background ,err :foreground ,act1))))
      `(cider-test-success-face   ((,class      (:background ,suc :foreground ,act1))))
@@ -421,9 +421,9 @@ to 'auto, tags may not be properly aligned."
      `(diff-changed           ((,class (:background ,blue-bg-s  :foreground ,blue-fg  :extend t))))
      `(diff-header            ((,class (:background ,bg2        :foreground ,func     :extend t))))
      `(diff-file-header       ((,class (:background ,bg2        :foreground ,cblk     :extend t))))
-     `(diff-indicator-added   ((,class (:background nil         :foreground ,green    :extend t))))
-     `(diff-indicator-changed ((,class (:background nil         :foreground ,blue))))
-     `(diff-indicator-removed ((,class (:background nil         :foreground ,red))))
+     `(diff-indicator-added   ((,class (:background unspecified :foreground ,green    :extend t))))
+     `(diff-indicator-changed ((,class (:background unspecified :foreground ,blue))))
+     `(diff-indicator-removed ((,class (:background unspecified :foreground ,red))))
      `(diff-refine-added      ((,class (:background ,green-bg-b :foreground ,green-fg))))
      `(diff-refine-changed    ((,class (:background ,blue-bg-b  :foreground ,blue-fg))))
      `(diff-refine-removed    ((,class (:background ,red-bg-b   :foreground ,red-fg))))
@@ -728,7 +728,7 @@ to 'auto, tags may not be properly aligned."
      `(helm-grep-file                   ((,class (:foreground ,base :background ,bg1))))
      `(helm-grep-finish                 ((,class (:foreground ,base :background ,bg1))))
      `(helm-grep-lineno                 ((,class (:foreground ,type :background ,bg1 :inherit bold))))
-     `(helm-grep-match                  ((,class (:foreground nil :background nil :inherit helm-match))))
+     `(helm-grep-match                  ((,class (:foreground nil :background unspecified :inherit helm-match))))
      `(helm-header                      ((,class (:foreground ,base :background ,bg1 :underline nil :box nil))))
      `(helm-header-line-left-margin     ((,class (:foreground ,comp :background ,nil))))
      `(helm-match                       ((,class (:background ,head1-bg :foreground ,head1))))
@@ -769,7 +769,7 @@ to 'auto, tags may not be properly aligned."
      `(info-menu           ((,class (:foreground ,suc))))
      `(info-node           ((,class (:foreground ,func :inherit bold))))
      `(info-quoted-name    ((,class (:foreground ,keyword))))
-     `(info-reference-item ((,class (:background nil :underline t :inherit bold))))
+     `(info-reference-item ((,class (:background unspecified :underline t :inherit bold))))
      `(info-string         ((,class (:foreground ,str))))
      `(info-title-1        ((,class (:height 1.4 :inherit bold))))
      `(info-title-2        ((,class (:height 1.3 :inherit bold))))
@@ -1153,7 +1153,7 @@ to 'auto, tags may not be properly aligned."
      `(spacemacs-visual-face      ((,class (:foreground ,act1 :background ,base-dim))))
 
      ;;; spacemacs-specific
-     `(spacemacs-transient-state-title-face ((,class (:background nil :foreground ,comp :box nil :inherit bold))))
+     `(spacemacs-transient-state-title-face ((,class (:background unspecified :foreground ,comp :box nil :inherit bold))))
 
      ;;; swiper
      `(swiper-line-face    ((,class (:background ,highlight :inherit bold))))
@@ -1230,22 +1230,22 @@ to 'auto, tags may not be properly aligned."
      `(which-key-command-description-face ((,class (:foreground ,base))))
      `(which-key-group-description-face   ((,class (:foreground ,keyword))))
      `(which-key-key-face                 ((,class (:foreground ,func :inherit bold))))
-     `(which-key-separator-face           ((,class (:background nil :foreground ,str))))
+     `(which-key-separator-face           ((,class (:background unspecified :foreground ,str))))
      `(which-key-special-key-face         ((,class (:background ,func :foreground ,act1))))
 
      ;;; which-function-mode
      `(which-func ((,class (:foreground ,func))))
 
      ;;; whitespace-mode
-     `(whitespace-empty            ((,class (:background nil :foreground ,yellow))))
-     `(whitespace-indentation      ((,class (:background nil :foreground ,war))))
-     `(whitespace-line             ((,class (:background nil :foreground ,comp))))
-     `(whitespace-newline          ((,class (:background nil :foreground ,comp))))
-     `(whitespace-space            ((,class (:background nil :foreground ,act2))))
-     `(whitespace-space-after-tab  ((,class (:background nil :foreground ,yellow))))
-     `(whitespace-space-before-tab ((,class (:background nil :foreground ,yellow))))
-     `(whitespace-tab              ((,class (:background nil :foreground ,act2))))
-     `(whitespace-trailing         ((,class (:background ,red-bg-s :foreground ,war))))
+     `(whitespace-empty            ((,class (:background unspecified :foreground ,yellow))))
+     `(whitespace-indentation      ((,class (:background unspecified :foreground ,war))))
+     `(whitespace-line             ((,class (:background unspecified :foreground ,comp))))
+     `(whitespace-newline          ((,class (:background unspecified :foreground ,comp))))
+     `(whitespace-space            ((,class (:background unspecified :foreground ,act2))))
+     `(whitespace-space-after-tab  ((,class (:background unspecified :foreground ,yellow))))
+     `(whitespace-space-before-tab ((,class (:background unspecified :foreground ,yellow))))
+     `(whitespace-tab              ((,class (:background unspecified :foreground ,act2))))
+     `(whitespace-trailing         ((,class (:background ,red-bg-s   :foreground ,war))))
 
      ;;; other, need more work
      `(ac-completion-face                   ((,class (:underline t :foreground ,keyword))))
