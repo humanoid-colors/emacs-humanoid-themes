@@ -162,7 +162,7 @@ to 'auto, tags may not be properly aligned."
         (act2          (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray32")          (if (humanoid-true-color) "#deded8" "gray83")))
         (base          (if (eq variant 'dark) (if (humanoid-true-color) "#f8f8f2" "WhiteSmoke")      (if (humanoid-true-color) "#232629" "gray18")))
         (base-dim      (if (eq variant 'dark) (if (humanoid-true-color) "#60615d" "gray42")          (if (humanoid-true-color) "#c0c0bd" "gray64")))
-        (bg0           (if (eq variant 'dark) (if (humanoid-true-color) "#1C1E21" "gray12")          (if (humanoid-true-color) "#fefef8" "gray98")))
+        (bg0           (if (eq variant 'dark) (if (humanoid-true-color) "#1c1e21" "gray12")          (if (humanoid-true-color) "#fefef8" "gray98")))
         (bg1           (if (eq variant 'dark) (if (humanoid-true-color) "#232629" "gray18")          (if (humanoid-true-color) "#f8f8f2" "WhiteSmoke")))
         (bg2           (if (eq variant 'dark) (if (humanoid-true-color) "#2f3337" "gray22")          (if (humanoid-true-color) "#f4f4ee" "gray93")))
         (bg3           (if (eq variant 'dark) (if (humanoid-true-color) "#3b4045" "gray28")          (if (humanoid-true-color) "#efefe9" "gray90")))
