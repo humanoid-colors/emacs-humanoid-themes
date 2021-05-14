@@ -517,7 +517,7 @@ to 'auto, tags may not be properly aligned."
      `(eldoc-highlight-function-argument ((,class (:foreground ,mat :inherit bold))))
 
      ;;; elfeed
-     `(elfeed-search-date-face         ((,class (:foreground ,head2))))
+     `(elfeed-search-date-face         ((,class (:foreground ,var))))
      `(elfeed-search-feed-face         ((,class (:foreground ,blue))))
      `(elfeed-search-tag-face          ((,class (:foreground ,func))))
      `(elfeed-search-title-face        ((,class (:foreground ,var))))
@@ -804,7 +804,7 @@ to 'auto, tags may not be properly aligned."
      ;;; ledger-mode
      `(ledger-font-directive-face      ((,class (:foreground ,meta))))
      `(ledger-font-posting-amount-face ((,class (:foreground ,yellow))))
-     `(ledger-font-posting-date-face   ((,class (:foreground ,head1))))
+     `(ledger-font-posting-date-face   ((,class (:foreground ,war))))
      `(ledger-occur-xact-face          ((,class (:background ,bg2))))
 
      ;;; line-numbers
@@ -1044,7 +1044,7 @@ to 'auto, tags may not be properly aligned."
      `(org-scheduled                 ((,class (:foreground ,comp))))
      `(org-scheduled-today           ((,class (:foreground ,func :height ,(if humanoid-org-agenda-height 1.2 1.0)))))
      `(org-scheduled-previously      ((,class (:foreground ,base :slant italic))))
-     `(org-sexp-date                 ((,class (:foreground ,base))))
+     `(org-sexp-date                 ((,class (:foreground ,var))))
      `(org-special-keyword           ((,class (:foreground ,func))))
      `(org-table                     ((,class (:foreground ,base :background ,head1-bg))))
      `(org-tag                       ((,class (:foreground ,meta))))
