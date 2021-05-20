@@ -817,21 +817,21 @@ or similar."
      `(linum-relative-current-face ((,class (:foreground ,base))))
 
      ;;; lsp
-     `(lsp-face-highlight-read        :foreground ,base :distant-foreground ,bg2 :background ,blue-dark :weight 'bold)
-     `(lsp-face-highlight-textual     :inherit lsp-face-highlight-read)
-     `(lsp-face-highlight-write       :inherit lsp-face-highlight-read)
-     `(lsp-ui-doc-background          :inherit 'tooltip)
-     `(lsp-ui-peek-filename           :inherit 'mode-line-buffer-id)
-     `(lsp-ui-peek-header             :foreground ,base :background ,bg3 :bold bold)
-     `(lsp-ui-peek-highlight          :inherit 'lsp-ui-peek-header :foreground ,bg1 :background ,bg0 :box t)
-     `(lsp-ui-peek-line-number        :foreground ,suc)
-     `(lsp-ui-peek-list               :background ,bg4)
-     `(lsp-ui-peek-peek               :background (doom-darken bg 0.1))
-     `(lsp-ui-peek-selection          :foreground ,bg1 :background blue :bold bold)
-     `(lsp-ui-sideline-code-action    :foreground ,highlight-dim)
-     `(lsp-ui-sideline-current-symbol :inherit 'highlight)
-     `(lsp-ui-sideline-symbol-info    :foreground ,act2 :background ,bg0 :extend t)
-     `(lsp-headerline-breadcrumb-separator-face :foreground ,act1)
+     `(lsp-face-highlight-read        ((,class (:background ,blue-dark :distant-foreground ,bg2 :weight 'bold))))
+     `(lsp-face-highlight-textual     ((,class (:inherit lsp-face-highlight-read))))
+     `(lsp-face-highlight-write       ((,class (:inherit lsp-face-highlight-read))))
+     `(lsp-ui-doc-background          ((,class (:inherit 'tooltip))))
+     `(lsp-ui-peek-filename           ((,class (:inherit 'mode-line-buffer-id))))
+     `(lsp-ui-peek-header             ((,class (:background ,bg3 :foreground ,base :bold bold))))
+     `(lsp-ui-peek-highlight          ((,class (:inherit 'lsp-ui-peek-header :background ,bg0 :foreground ,bg1 :box t))))
+     `(lsp-ui-peek-line-number        ((,class (:foreground ,suc))))
+     `(lsp-ui-peek-list               ((,class (:background ,bg4))))
+     `(lsp-ui-peek-peek               ((,class (:background ,blue-bg-s))))
+     `(lsp-ui-peek-selection          ((,class (:background blue :foreground ,bg1 :bold bold))))
+     `(lsp-ui-sideline-code-action    ((,class (:foreground ,highlight-dim))))
+     `(lsp-ui-sideline-current-symbol ((,class (:inherit 'highlight))))
+     `(lsp-ui-sideline-symbol-info    ((,class (:background ,bg0 :foreground ,act2 :extend t))))
+     `(lsp-headerline-breadcrumb-separator-face ((,class (:foreground ,act1))))
 
      ;;; magit
      `(magit-bisect-bad                  ((,class (:foreground ,war))))
@@ -1130,8 +1130,8 @@ or similar."
      `(rcirc-url           ((,class (:inherit link))))
 
      ;;; rjsx-mode
-     `(rjsx-tag  :foreground ,type)
-     `(rjsx-attr :foreground ,str)
+     `(rjsx-tag  ,((class (:foreground ,type))))
+     `(rjsx-attr ,((class (:foreground ,str))))
 
      ;;; shell script
      `(sh-quoted-exec ((,class (:foreground ,comp))))
