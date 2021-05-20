@@ -91,7 +91,8 @@ to 'auto, tags may not be properly aligned."
   :group 'humanoid)
 
 (defcustom humanoid-underline-parens t
-  "If non-nil, underline matching parens when using command `show-paren-mode' or similar."
+  "If non-nil, underline matching parens when using command `show-paren-mode'
+or similar."
   :type 'boolean
   :group 'humanoid)
 
@@ -161,7 +162,7 @@ to 'auto, tags may not be properly aligned."
         (act1          (if (eq variant 'dark) (if (humanoid-true-color) "#3b4045" "gray28")          (if (humanoid-true-color) "#e8e8e2" "gray89")))
         (act2          (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray32")          (if (humanoid-true-color) "#deded8" "gray83")))
         (base          (if (eq variant 'dark) (if (humanoid-true-color) "#f8f8f2" "WhiteSmoke")      (if (humanoid-true-color) "#232629" "gray18")))
-        (base-dim      (if (eq variant 'dark) (if (humanoid-true-color) "#60615d" "gray42")          (if (humanoid-true-color) "#c0c0bd" "gray64")))
+        (base-dim      (if (eq variant 'dark) (if (humanoid-true-color) "#efefe9" "gray42")          (if (humanoid-true-color) "#3b4035" "gray64")))
         (bg0           (if (eq variant 'dark) (if (humanoid-true-color) "#1c1e21" "gray12")          (if (humanoid-true-color) "#fefef8" "gray98")))
         (bg1           (if (eq variant 'dark) (if (humanoid-true-color) "#232629" "gray18")          (if (humanoid-true-color) "#f8f8f2" "WhiteSmoke")))
         (bg2           (if (eq variant 'dark) (if (humanoid-true-color) "#2f3337" "gray22")          (if (humanoid-true-color) "#f4f4ee" "gray93")))
@@ -957,30 +958,30 @@ to 'auto, tags may not be properly aligned."
      `(mu4e-maildirs-extension-maildir-hl-face ((,class (:foreground ,head1 :inherit bold))))
 
      ;;; notmuch
-     `(notmuch-crypto-decryption     ((,class :background ,bg3)))
-     `(notmuch-crypto-part-header    ((,class :foreground ,green-fg)))
-     `(notmuch-crypto-signature-bad  ((,class :foreground ,err)))
-     `(notmuch-crypto-signature-good ((,class :inherit success)))
-     `(notmuch-crypto-signature-good-key ((,class :foreground ,aqua)))
-     `(notmuch-crypto-signature-unknown ((,class :foreground ,war)))
+     `(notmuch-crypto-decryption     ((,class (:background ,bg3))))
+     `(notmuch-crypto-part-header    ((,class (:foreground ,green-fg))))
+     `(notmuch-crypto-signature-bad  ((,class (:foreground ,err))))
+     `(notmuch-crypto-signature-good ((,class (:inherit success))))
+     `(notmuch-crypto-signature-good-key ((,class (:foreground ,aqua))))
+     `(notmuch-crypto-signature-unknown ((,class (:foreground ,war))))
      `(notmuch-hello-logo-background ((,class (:background ,bg1))))
-     `(notmuch-message-summary-face  ((,class :inherit default)))
-     `(notmuch-search-count          ((,class :foreground ,num)))
+     `(notmuch-message-summary-face  ((,class (:inherit default))))
+     `(notmuch-search-count          ((,class (:foreground ,num))))
      `(notmuch-search-date           ((,class (:foreground ,var))))
      `(notmuch-search-flagged-face   ((,class (:foreground unspecified :underline nil))))
-     `(notmuch-search-matching-authors ((,class :foreground ,str :slant italic)))
-     `(notmuch-search-non-matching-authors ((,class :foreground ,war)))
-     `(notmuch-search-subject        ((,class :inherit default)))
+     `(notmuch-search-matching-authors ((,class (:foreground ,str :slant italic))))
+     `(notmuch-search-non-matching-authors ((,class (:inherit notmuch-search-matching-authors :foreground ,base-dim))))
+     `(notmuch-search-subject        ((,class (:inherit default))))
      `(notmuch-search-unread-face    ((,class (:inherit bold
                                                :background ,brown-bg-s
                                                :underline ,brown-bg
                                                :overline ,brown-bg))))
-     `(notmuch-tag-added             ((,class :underline ,blue)))
+     `(notmuch-tag-added             ((,class (:underline ,blue))))
      `(notmuch-tag-aqua              ((,class (:foreground ,aqua))))
      `(notmuch-tag-blue              ((,class (:foreground ,blue))))
      `(notmuch-tag-cyan              ((,class (:foreground ,cyan))))
-     `(notmuch-tag-deleted           ((,class :strike-through ,red)))
-     `(notmuch-tag-face              ((,class (:foreground ,gray))))
+     `(notmuch-tag-deleted           ((,class (:strike-through ,red))))
+     `(notmuch-tag-face              ((,class (:foreground ,blue-fg))))
      `(notmuch-tag-flagged           ((,class (:inherit bold :foreground ,war))))
      `(notmuch-tag-gray              ((,class (:foreground ,base-dim))))
      `(notmuch-tag-green             ((,class (:foreground ,green))))
@@ -989,14 +990,20 @@ to 'auto, tags may not be properly aligned."
      `(notmuch-tag-red               ((,class (:foreground ,red))))
      `(notmuch-tag-unread            ((,class (:foreground ,func))))
      `(notmuch-tag-yellow            ((,class (:foreground ,yellow))))
-     `(notmuch-tree-match-author-face ((,class :foreground ,aqua)))
-     `(notmuch-tree-match-date-face  ((,class :inherit notmuch-search-date)))
-     `(notmuch-tree-match-face       ((,class :foreground ,suc)))
-     `(notmuch-tree-match-tag-face   ((,class :inherit bold :foreground ,blue-fg)))
-     `(notmuch-tree-no-match-date-face ((,class :foreground ,base-dim)))
-     `(notmuch-tree-no-match-face    ((,class :foreground ,base-dim)))
-     `(notmuch-wash-cited-text       ((,class :foreground ,blue-fg)))
-     `(notmuch-wash-toggle-button    ((,class :background ,bg3)))
+     `(notmuch-tree-match-author-face ((,class (:inherit notmuch-search-matching-authors))))
+     `(notmuch-tree-match-date-face  ((,class (:inherit notmuch-search-date))))
+     `(notmuch-tree-match-face       ((,class (:foreground unspecified))))
+     `(notmuch-tree-match-subject-face ((,class (:foreground ,suc))))
+     `(notmuch-tree-match-tag-face   ((,class (:inherit notmuch-tag-face :weight bold))))
+     `(notmuch-tree-match-tree-face  ((,class (:weight bold))))
+     `(notmuch-tree-no-match-author-face ((,class (:inherit notmuch-search-non-matching-authors))))
+     `(notmuch-tree-no-match-date-face ((,class (:inherit notmuch-tree-match-date-face))))
+     `(notmuch-tree-no-match-face    ((,class (:foreground ,base-dim))))
+     `(notmuch-tree-no-match-subject-face ((,class (:foreground ,base-dim))))
+     `(notmuch-tree-no-match-tag-face ((,class (:inherit notmuch-tag-face :weight normal))))
+     `(notmuch-tree-no-match-tree-face ((,class (:foreground unspecified))))
+     `(notmuch-wash-cited-text       ((,class (:foreground ,blue-fg))))
+     `(notmuch-wash-toggle-button    ((,class (:background ,bg3))))
 
      ;;; neotree
      `(neo-dir-link-face   ((,class (:foreground ,var :inherit bold))))
