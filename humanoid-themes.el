@@ -232,7 +232,7 @@ or similar."
      `(custom-gray                         ((,class (:foreground ,base-dim))))
 
      ;;; basics
-     `(cursor                              ((,class (:background ,cursor))))
+     `(cursor                              ((,class (:background ,cursor :distant-foreground ,bg0))))
      `(custom-button                       ((,class (:background ,bg2 :foreground ,base :box (:line-width 2 :style released-button)))))
      `(default                             ((,class (:background ,bg1 :foreground ,base))))
      `(default-italic                      ((,class (:italic t))))
@@ -258,20 +258,20 @@ or similar."
      `(font-lock-variable-name-face        ((,class (:foreground ,var))))
      `(font-lock-warning-face              ((,class (:foreground ,war :background ,bg1))))
      `(fringe                              ((,class (:background ,bg1 :foreground ,lnum))))
-     `(header-line                         ((,class (:background ,bg2))))
-     `(highlight                           ((,class (:foreground ,base :background ,highlight))))
+     `(header-line                         ((,class (:background ,bg2 :distant-foreground ,base))))
+     `(highlight                           ((,class (:background ,highlight :distant-foreground ,base))))
      `(hl-line                             ((,class (:background ,bg3 :distant-foreground ,base :extend t))))
      `(hl-todo                             ((,class (:inherit bold :foreground ,magenta))))
      `(isearch                             ((,class (:foreground ,mat :background ,highlight))))
-     `(lazy-highlight                      ((,class (:background ,highlight-dim :weight normal))))
+     `(lazy-highlight                      ((,class (:background ,highlight-dim :distant-foreground ,base :weight normal))))
      `(link                                ((,class (:foreground unspecified :underline t))))
      `(link-visited                        ((,class (:inherit link))))
      `(match                               ((,class (:background ,highlight :foreground ,mat))))
      `(minibuffer-prompt                   ((,class (:inherit bold :foreground ,keyword))))
      `(mouse                               ((,class (:foreground ,act1 :background ,base :inverse-video t))))
      `(page-break-lines                    ((,class (:foreground ,act2))))
-     `(region                              ((,class (:background ,highlight-dim :extend t))))
-     `(secondary-selection                 ((,class (:background ,bg3 :extend t))))
+     `(region                              ((,class (:background ,highlight-dim :distant-foreground ,base :extend t))))
+     `(secondary-selection                 ((,class (:background ,bg3 :distant-foreground ,base :extend t))))
      `(shadow                              ((,class (:foreground ,base-dim))))
      `(success                             ((,class (:foreground ,suc :inherit bold))))
      `(tooltip                             ((,class (:background ,ttip-sl :foreground ,base :bold nil :italic nil :underline nil))))
@@ -300,7 +300,7 @@ or similar."
      `(aw-leading-char-face ((,class (:foreground ,func :weight bold :height 2.0 :box (:line-width 1 :color ,keyword :style released-button)))))
 
      ;;; ahs
-     `(ahs-face                     ((,class (:background ,highlight))))
+     `(ahs-face                     ((,class (:background ,highlight :distant-foreground ,base))))
      `(ahs-plugin-whole-buffer-face ((,class (:background ,mat :foreground ,act1))))
 
      ;;; all-the-icons
@@ -353,7 +353,7 @@ or similar."
      `(c-annotation-face ((,class (:inherit font-lock-constant-face))))
 
      ;;; calendar
-     `(holiday ((,class (:background ,war))))
+     `(holiday ((,class (:background ,war :distant-foreground ,base))))
 
      ;;; calfw
      `(cfw:face-title               ((,class (:foreground ,head1 :height 2.0 :weight bold :inherit variable-pitch))))
@@ -474,8 +474,8 @@ or similar."
      `(diredfl-write-priv ((,class (:background ,green-bg-s))))
 
      ;;; doom-modeline
-     `(doom-modeline-bar                ((,class (:background ,bg2))))
-     `(doom-modeline-bar-inactive       ((,class (:background ,comment))))
+     `(doom-modeline-bar                ((,class (:background ,bg2 :distant-foreground ,base))))
+     `(doom-modeline-bar-inactive       ((,class (:background ,comment :distant-foreground ,base-dim))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
      `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
      `(doom-modeline-buffer-path        ((,class (:inherit font-lock-keyword-face))))
@@ -490,25 +490,25 @@ or similar."
      `(doom-modeline-warning            ((,class (:inherit warning))))
 
      ;;; ediff
-     `(ediff-current-diff-A        ((,class (:background ,red-bg-s   :extend t))))
-     `(ediff-current-diff-Ancestor ((,class (:background ,blue-bg-s  :extend t))))
-     `(ediff-current-diff-B        ((,class (:background ,green-bg-s :extend t))))
-     `(ediff-current-diff-C        ((,class (:background ,brown-bg-s :extend t))))
+     `(ediff-current-diff-A        ((,class (:background ,red-bg-s   :distant-foreground ,base :extend t))))
+     `(ediff-current-diff-Ancestor ((,class (:background ,blue-bg-s  :distant-foreground ,base :extend t))))
+     `(ediff-current-diff-B        ((,class (:background ,green-bg-s :distant-foreground ,base :extend t))))
+     `(ediff-current-diff-C        ((,class (:background ,brown-bg-s :distant-foreground ,base :extend t))))
      `(ediff-even-diff-A           ((,class (:background ,bg4        :extend t))))
      `(ediff-even-diff-Ancestor    ((,class (:background ,bg3        :extend t))))
      `(ediff-even-diff-B           ((,class (:background ,bg3        :extend t))))
      `(ediff-even-diff-C           ((,class (:background ,bg4        :extend t))))
-     `(ediff-fine-diff-A           ((,class (:background ,red-bg     :extend t))))
-     `(ediff-fine-diff-Ancestor    ((,class (:background ,blue-bg    :extend t))))
-     `(ediff-fine-diff-B           ((,class (:background ,green-bg   :extend t))))
-     `(ediff-fine-diff-C           ((,class (:background ,brown-bg   :extend t))))
+     `(ediff-fine-diff-A           ((,class (:background ,red-bg     :distant-foreground ,base :extend t))))
+     `(ediff-fine-diff-Ancestor    ((,class (:background ,blue-bg    :distant-foreground ,base :extend t))))
+     `(ediff-fine-diff-B           ((,class (:background ,green-bg   :distant-foreground ,base :extend t))))
+     `(ediff-fine-diff-C           ((,class (:background ,brown-bg   :distant-foreground ,base :extend t))))
      `(ediff-odd-diff-A            ((,class (:background ,bg3        :extend t))))
      `(ediff-odd-diff-Ancestor     ((,class (:background ,bg2        :extend t))))
      `(ediff-odd-diff-B            ((,class (:background ,bg4        :extend t))))
      `(ediff-odd-diff-C            ((,class (:background ,bg3        :extend t))))
 
      ;;; ein
-     `(ein:cell-input-area           ((,class (:background ,bg2))))
+     `(ein:cell-input-area           ((,class (:background ,bg2 :distant-foreground ,base))))
      `(ein:cell-input-prompt         ((,class (:foreground ,suc))))
      `(ein:cell-output-prompt        ((,class (:foreground ,err))))
      `(ein:notification-tab-normal   ((,class (:foreground ,keyword))))
@@ -601,7 +601,7 @@ or similar."
      `(flycheck-error
        ((,(append '((supports :underline (:style line))) class)
          (:underline (:style line :color ,err)))
-        (,class (:foreground ,base :background ,err :inherit bold :underline t))))
+        (,class (:inherit bold :background ,err :distant-foreground ,base :underline t))))
      `(flycheck-error-list-checker-name ((,class (:foreground ,keyword))))
      `(flycheck-fringe-error            ((,class (:inherit fringe :foreground ,err))))
      `(flycheck-fringe-info             ((,class (:inherit fringe :foreground ,keyword))))
@@ -609,30 +609,30 @@ or similar."
      `(flycheck-info
        ((,(append '((supports :underline (:style line))) class)
          (:underline (:style line :color ,comment)))
-        (,class (:foreground ,base :background ,comment :underline t))))
+        (,class (:background ,comment :distant-foreground ,base :underline t))))
      `(flycheck-warning
        ((,(append '((supports :underline (:style line))) class)
          (:underline (:style line :color ,comment-light)))
-        (,class (:foreground ,base :background ,comment-light :underline t))))
+        (,class (:background ,comment-light :distant-foreground ,base :underline t))))
 
      ;;; flymake
      `(flymake-error ((,(append '((supports :underline (:style line))) class)
                        (:underline (:style line :color ,err)))
-                      (,class (:foreground ,base :background ,err :inherit bold :underline t))))
+                      (,class (:inherit bold :background ,err :distant-foreground ,base :underline t))))
      `(flymake-note ((,(append '((supports :underline (:style line))) class)
                       (:underline (:style wave :color ,keyword)))
-                     (,class (:foreground ,base :background ,keyword :inherit bold :underline t))))
+                     (,class (:inherit bold :background ,keyword :distatnt-foreground ,base :underline t))))
      `(flymake-warning ((,(append '((supports :underline (:style line))) class)
                          (:underline (:style line :color ,war)))
-                        (,class (:foreground ,base :background ,war :inherit bold :underline t))))
+                        (,class (:inherit bold :background ,war :distant-foreground ,base :underline t))))
 
      ;;; flyspell
      `(flyspell-incorrect ((,(append '((supports :underline (:style line))) class)
                             (:underline (:style wave :color ,base-dim)))
-                           (,class (:foreground ,base :background ,base-dim :inherit bold :underline t))))
+                           (,class (:inherit bold :background ,base-dim :distant-foreground ,base :underline t))))
      `(flyspell-duplicate ((,(append '((supports :underline (:style line))) class)
                             (:underline (:style wave :color ,comment)))
-                           (,class (:foreground ,base :background ,comment :inherit bold :underline t))))
+                           (,class (:inherit bold :background ,comment :distant-foreground ,base :underline t))))
 
      ;;; jabber
      `(jabber-activity-face          ((,class (:inherit bold :foreground ,red))))
@@ -660,7 +660,7 @@ or similar."
      `(git-gutter:deleted      ((,class (:inherit fringe :foreground ,red))))
      `(git-gutter:modified     ((,class (:inherit fringe :foreground ,purple))))
      `(git-gutter:separator    ((,class (:inherit fringe :foreground ,aqua))))
-     `(git-gutter:unchanged    ((,class (:background ,yellow))))
+     `(git-gutter:unchanged    ((,class (:background ,yellow :distant-foreground ,base))))
      `(git-gutter+:added       ((,class (:inherit git-gutter:added))))
      `(git-gutter+:deleted     ((,class (:inherit git-gutter:deleted))))
      `(git-gutter+:modified    ((,class (:inherit git-gutter:modified))))
@@ -841,7 +841,7 @@ or similar."
      `(magit-blame-date                  ((,class (:background ,yellow-bg :foreground ,green))))
      `(magit-blame-hash                  ((,class (:background ,yellow-bg :foreground ,func))))
      `(magit-blame-heading               ((,class (:background ,yellow-bg :foreground ,green :extend t))))
-     `(magit-blame-highlight             ((,class (:background ,highlight-dim))))
+     `(magit-blame-highlight             ((,class (:background ,highlight-dim :distant-foreground ,base))))
      `(magit-blame-name                  ((,class (:background ,yellow-bg :foreground ,yellow))))
      `(magit-blame-sha1                  ((,class (:background ,yellow-bg :foreground ,func))))
      `(magit-blame-subject               ((,class (:background ,yellow-bg :foreground ,yellow))))
@@ -924,8 +924,8 @@ or similar."
      `(mmm-default-submode-face ((,class (:background ,bg2))))
 
      ;;; minimap
-     `(minimap-current-line-face :background selection)
-     `(minimap-active-region-background :background vertical-bar)
+     `(minimap-current-line-face        ((,class (:background selection :distant-foreground ,base))))
+     `(minimap-active-region-background ((,class (:background vertical-bar :distant-foreground ,base-dim))))
 
      ;;; mu4e
      `(mu4e-attach-number-face        ((,class (:foreground ,var))))
@@ -1025,7 +1025,7 @@ or similar."
      `(org-block-end-line            ((,class (:inherit org-block-begin-line))))
      `(org-clock-overlay             ((,class (:foreground ,comp))))
      `(org-code                      ((,class (:foreground ,cyan))))
-     `(org-column                    ((,class (:background ,highlight))))
+     `(org-column                    ((,class (:background ,highlight :distant-foreground ,base))))
      `(org-column-title              ((,class (:inherit org-column))))
      `(org-date                      ((,class (:underline t :foreground ,var))))
      `(org-date-selected             ((,class (:background ,func :foreground ,act1))))
@@ -1142,10 +1142,10 @@ or similar."
      `(shm-quarantine-face ((,class (:background ,red-bg-s))))
 
      ;;; smerge
-     `(smerge-base            ((,class (:background ,yellow-bg :extend t))))
+     `(smerge-base            ((,class (:background ,yellow-bg :distant-foreground ,base :extend t))))
      `(smerge-markers         ((,class (:background ,ttip-bg :foreground ,ttip :extend t))))
-     `(smerge-mine            ((,class (:background ,red-bg))))
-     `(smerge-other           ((,class (:background ,green-bg))))
+     `(smerge-mine            ((,class (:background ,red-bg :distant-foreground ,base))))
+     `(smerge-other           ((,class (:background ,green-bg :distant-foreground ,base))))
      `(smerge-refined-added   ((,class (:background ,green-bg-s :foreground ,green))))
      `(smerge-refined-changed ((,class (:background ,blue-bg-s :foreground ,blue))))
      `(smerge-refined-removed ((,class (:background ,red-bg-s :foreground ,red))))
@@ -1243,7 +1243,7 @@ or similar."
      `(web-mode-builtin-face                   ((,class (:inherit font-lock-builtin-face))))
      `(web-mode-comment-face                   ((,class (:inherit font-lock-comment-face))))
      `(web-mode-constant-face                  ((,class (:inherit font-lock-constant-face))))
-     `(web-mode-current-element-highlight-face ((,class (:background ,bg3))))
+     `(web-mode-current-element-highlight-face ((,class (:background ,bg3 :distant-foreground ,base))))
      `(web-mode-doctype-face                   ((,class (:inherit font-lock-comment-face))))
      `(web-mode-function-name-face             ((,class (:inherit font-lock-function-name-face))))
      `(web-mode-html-attr-name-face            ((,class (:foreground ,func))))
