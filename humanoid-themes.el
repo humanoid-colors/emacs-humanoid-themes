@@ -161,12 +161,12 @@ to 'auto, tags may not be properly aligned."
         (act1          (if (eq variant 'dark) (if (humanoid-true-color) "#3b4045" "gray28")          (if (humanoid-true-color) "#e8e8e2" "gray89")))
         (act2          (if (eq variant 'dark) (if (humanoid-true-color) "#484e54" "gray32")          (if (humanoid-true-color) "#deded8" "gray83")))
         (base          (if (eq variant 'dark) (if (humanoid-true-color) "#f8f8f2" "WhiteSmoke")      (if (humanoid-true-color) "#232629" "gray18")))
-        (base-dim      (if (eq variant 'dark) (if (humanoid-true-color) "#60615d" "gray42")          (if (humanoid-true-color) "#c0c0bd" "gray64")))
         (bg0           (if (eq variant 'dark) (if (humanoid-true-color) "#262a33" "gray12")          (if (humanoid-true-color) "#fefef8" "gray98")))
         (bg1           (if (eq variant 'dark) (if (humanoid-true-color) "#2f343f" "gray18")          (if (humanoid-true-color) "#f8f8f2" "WhiteSmoke")))
         (bg2           (if (eq variant 'dark) (if (humanoid-true-color) "#353945" "gray22")          (if (humanoid-true-color) "#f4f4ee" "gray93")))
         (bg3           (if (eq variant 'dark) (if (humanoid-true-color) "#393f4c" "gray28")          (if (humanoid-true-color) "#efefe9" "gray90")))
         (bg4           (if (eq variant 'dark) (if (humanoid-true-color) "#404552" "gray32")          (if (humanoid-true-color) "#e8e8e2" "gray87")))
+        (base-dim      (if (eq variant 'dark) (if (humanoid-true-color) "#efefe9" "gray42")          (if (humanoid-true-color) "#3b4035" "gray64")))
         (builtin       (if (eq variant 'dark) (if (humanoid-true-color) "#02c6fc" "DeepSkyBlue")     (if (humanoid-true-color) "#00a6fb" "DeepSkyBlue2")))
         (border        (if (eq variant 'dark) (if (humanoid-true-color) "#31363b" "gray20")          (if (humanoid-true-color) "#deded8" "gray83")))
         (cblk          (if (eq variant 'dark) (if (humanoid-true-color) "#f4f4ee" "gray93")          (if (humanoid-true-color) "#2f3337" "gray22")))
@@ -967,9 +967,9 @@ to 'auto, tags may not be properly aligned."
      `(notmuch-message-summary-face  ((,class (:inherit default))))
      `(notmuch-search-count          ((,class (:foreground ,num))))
      `(notmuch-search-date           ((,class (:foreground ,var))))
-     `(notmuch-search-flagged-face   ((,class (:foreground unspecified :underline nil))))
+     `(notmuch-search-flagged-face   ((,class (:foreground     ((,class :inherit default)))
      `(notmuch-search-matching-authors ((,class (:foreground ,str :slant italic))))
-     `(notmuch-search-non-matching-authors ((,class (:inherit notmuch-search-matching-authors :slant italic))))
+     `(notmuch-search-non-matching-authors ((,class (:inherit notmuch-search-matching-authors :foreground ,base-dim))))
      `(notmuch-search-subject        ((,class (:inherit default))))
      `(notmuch-search-unread-face    ((,class (:inherit bold
                                                :background ,brown-bg-s
@@ -993,7 +993,6 @@ to 'auto, tags may not be properly aligned."
      `(notmuch-tree-match-date-face  ((,class (:inherit notmuch-search-date))))
      `(notmuch-tree-match-face       ((,class (:foreground ,suc))))
      `(notmuch-tree-match-tag-face   ((,class (:inherit notmuch-tag-face :weight bold))))
-     `(notmuch-tree-no-match-face    ((,class (:inherit default))))
      `(notmuch-wash-cited-text       ((,class (:foreground ,blue-fg))))
      `(notmuch-wash-toggle-button    ((,class (:background ,bg3))))
 
