@@ -91,7 +91,8 @@ to 'auto, tags may not be properly aligned."
   :group 'humanoid)
 
 (defcustom humanoid-underline-parens t
-  "If non-nil, underline matching parens when using command `show-paren-mode' or similar."
+  "If non-nil, underline matching parens when using command `show-paren-mode'
+or similar."
   :type 'boolean
   :group 'humanoid)
 
@@ -967,7 +968,7 @@ to 'auto, tags may not be properly aligned."
      `(notmuch-message-summary-face  ((,class (:inherit default))))
      `(notmuch-search-count          ((,class (:foreground ,num))))
      `(notmuch-search-date           ((,class (:foreground ,var))))
-     `(notmuch-search-flagged-face   ((,class (:foreground     ((,class :inherit default)))
+     `(notmuch-search-flagged-face   ((,class (:foreground unspecified :underline nil))))
      `(notmuch-search-matching-authors ((,class (:foreground ,str :slant italic))))
      `(notmuch-search-non-matching-authors ((,class (:inherit notmuch-search-matching-authors :foreground ,base-dim))))
      `(notmuch-search-subject        ((,class (:inherit default))))
@@ -991,8 +992,16 @@ to 'auto, tags may not be properly aligned."
      `(notmuch-tag-yellow            ((,class (:foreground ,yellow))))
      `(notmuch-tree-match-author-face ((,class (:inherit notmuch-search-matching-authors))))
      `(notmuch-tree-match-date-face  ((,class (:inherit notmuch-search-date))))
-     `(notmuch-tree-match-face       ((,class (:foreground ,suc))))
+     `(notmuch-tree-match-face       ((,class (:foreground unspecified))))
+     `(notmuch-tree-match-subject-face ((,class (:foreground ,suc))))
      `(notmuch-tree-match-tag-face   ((,class (:inherit notmuch-tag-face :weight bold))))
+     `(notmuch-tree-match-tree-face  ((,class (:weight bold))))
+     `(notmuch-tree-no-match-author-face ((,class (:inherit notmuch-search-non-matching-authors))))
+     `(notmuch-tree-no-match-date-face ((,class (:inherit notmuch-tree-match-date-face))))
+     `(notmuch-tree-no-match-face    ((,class (:foreground ,base-dim))))
+     `(notmuch-tree-no-match-subject-face ((,class (:foreground ,base-dim))))
+     `(notmuch-tree-no-match-tag-face ((,class (:inherit notmuch-tag-face :weight normal))))
+     `(notmuch-tree-no-match-tree-face ((,class (:foreground unspecified))))
      `(notmuch-wash-cited-text       ((,class (:foreground ,blue-fg))))
      `(notmuch-wash-toggle-button    ((,class (:background ,bg3))))
 
