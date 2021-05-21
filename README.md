@@ -5,17 +5,31 @@ The collection comes with a dark and a light variant and it should work well wit
 
 ## Screenshots
 
-[![light theme](screenshots/humanoid-light.png)](screenshots/humanoid-light.png)
+[![light theme](https://github.com/humanoid-colors/emacs-humanoid-themes/wiki/assets/screenshots/org-mode-humanoid-light.png)](https://github.com/humanoid-colors/emacs-humanoid-themes/wiki/assets/screenshots/org-mode-humanoid-light.png)
 
-[![dark theme](screenshots/humanoid-dark.png)](screenshots/humanoid-dark.png)
+[![dark theme](https://github.com/humanoid-colors/emacs-humanoid-themes/wiki/assets/screenshots/org-mode-humanoid-dark.png)](https://github.com/humanoid-colors/emacs-humanoid-themes/wiki/assets/screenshots/org-mode-humanoid-dark.png)
 
 ## Highlights
 
 The theme has good support for org mode.
 
-## Installation
+## Installation and usage
 
-_todo_
+The recommended way to install the Humanoid themes is with [MELPA](https://melpa.org/#/getting-started):
+
+Install the Humanoid themes from the [MELPA repository](https://melpa.org/#/humanoid-themes). The version of `humanoid-themes` there will always be up-to-date.
+
+Enable the theme use either `humanoid-light` or `humanoid-dark`:
+
+```
+M-x load-theme RET humanoid-light 
+```
+
+Or add the following to your `init.el` or `.emacs` file to load the theme at start:
+
+```lisp
+(load-theme 'humanoid-light t) ;; Use "humanoid-dark" for the dark variant
+```
 
 ## Supported modes
 
