@@ -246,8 +246,8 @@ or similar."
                                                      :weight ,(if humanoid-comment-light 'light 'normal)))))
      `(font-lock-constant-face             ((,class (:foreground ,const))))
      `(font-lock-doc-face                  ((,class (:inherit font-lock-comment-face))))
-     `(font-lock-function-name-face        ((,class (:foreground ,func :bold nil))))
-     `(font-lock-keyword-face              ((,class (:foreground ,keyword :bold nil))))
+     `(font-lock-function-name-face        ((,class (:foreground ,func :weight unspecified))))
+     `(font-lock-keyword-face              ((,class (:foreground ,keyword :weight unspecified))))
      `(font-lock-negation-char-face        ((,class (:foreground ,const))))
      `(font-lock-preprocessor-face         ((,class (:foreground ,comp))))
      `(font-lock-reference-face            ((,class (:foreground ,const))))
@@ -274,7 +274,7 @@ or similar."
      `(secondary-selection                 ((,class (:background ,bg3 :distant-foreground ,base :extend t))))
      `(shadow                              ((,class (:foreground ,base-dim))))
      `(success                             ((,class (:inherit bold :foreground ,suc))))
-     `(tooltip                             ((,class (:background ,ttip-sl :foreground ,base :bold nil :italic nil :underline nil))))
+     `(tooltip                             ((,class (:background ,ttip-sl :foreground ,base :weight unspecified :slant unspecified :underline nil))))
      `(vertical-border                     ((,class (:foreground ,border))))
      `(warning                             ((,class (:foreground ,war :imherit bold))))
      `(window-divider                      ((,class (:foreground ,bg2)))) ; foreground same like `mode-line' background
@@ -475,7 +475,7 @@ or similar."
 
      ;;; doom-modeline
      `(doom-modeline-bar                ((,class (:background ,bg2 :distant-foreground ,base))))
-     `(doom-modeline-bar-inactive       ((,class (:background ,comment :distant-foreground ,base-dim))))
+     `(doom-modeline-bar-inactive       ((,class (:background ,comment :distant-foreground ,comment))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
      `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
      `(doom-modeline-buffer-path        ((,class (:inherit font-lock-keyword-face))))
@@ -809,13 +809,13 @@ or similar."
                                                      :background ,(when humanoid-org-highlight head2-bg)
                                                      :foreground ,head2
                                                      :height ,(if humanoid-org-height 1.2 1.0)))))
-     `(font-latex-sectioning-4-face        ((,class (:bold nil
-                                                     :background ,(when humanoid-org-highlight head3-bg)
+     `(font-latex-sectioning-4-face        ((,class (:background ,(when humanoid-org-highlight head3-bg)
                                                      :foreground ,head3
+                                                     :weight unspecified
                                                      :height ,(if humanoid-org-height 1.1 1.0)))))
-     `(font-latex-sectioning-5-face        ((,class (:bold nil
-                                                     :background ,(when humanoid-org-highlight head4-bg)
-                                                     :foreground ,head4))))
+     `(font-latex-sectioning-5-face        ((,class (:background ,(when humanoid-org-highlight head4-bg)
+                                                     :foreground ,head4
+                                                     :weight unspecified))))
      `(font-latex-string-face              ((,class (:foreground ,str))))
      `(font-latex-warning-face             ((,class (:foreground ,war))))
 
@@ -834,17 +834,17 @@ or similar."
      `(linum-relative-current-face ((,class (:foreground ,base))))
 
      ;;; lsp
-     `(lsp-face-highlight-read        ((,class (:background ,blue-dark :distant-foreground ,bg2 :weight 'bold))))
+     `(lsp-face-highlight-read        ((,class (:background ,blue-dark :distant-foreground ,bg2 :weight bold))))
      `(lsp-face-highlight-textual     ((,class (:inherit lsp-face-highlight-read))))
      `(lsp-face-highlight-write       ((,class (:inherit lsp-face-highlight-read))))
      `(lsp-ui-doc-background          ((,class (:inherit 'tooltip))))
      `(lsp-ui-peek-filename           ((,class (:inherit 'mode-line-buffer-id))))
-     `(lsp-ui-peek-header             ((,class (:background ,bg3 :foreground ,base :bold bold))))
+     `(lsp-ui-peek-header             ((,class (:background ,bg3 :foreground ,base :weight bold))))
      `(lsp-ui-peek-highlight          ((,class (:inherit 'lsp-ui-peek-header :background ,bg0 :foreground ,bg1 :box t))))
      `(lsp-ui-peek-line-number        ((,class (:foreground ,suc))))
      `(lsp-ui-peek-list               ((,class (:background ,bg4))))
      `(lsp-ui-peek-peek               ((,class (:background ,blue-bg-s))))
-     `(lsp-ui-peek-selection          ((,class (:background blue :foreground ,bg1 :bold bold))))
+     `(lsp-ui-peek-selection          ((,class (:background blue :foreground ,bg1 :weight bold))))
      `(lsp-ui-sideline-code-action    ((,class (:foreground ,highlight-dim))))
      `(lsp-ui-sideline-current-symbol ((,class (:inherit 'highlight))))
      `(lsp-ui-sideline-symbol-info    ((,class (:background ,bg0 :foreground ,act2 :extend t))))
@@ -1100,7 +1100,7 @@ or similar."
      `(popup-menu-mouse-face            ((,class (:inherit highlight))))
      `(popup-scroll-bar-background-face ((,class (:background ,bg2))))
      `(popup-scroll-bar-foreground-face ((,class (:background ,act2))))
-     `(popup-tip-face                   ((,class (:background ,ttip-sl :foreground ,base :bold nil :italic nil :underline nil))))
+     `(popup-tip-face                   ((,class (:background ,ttip-sl :foreground ,base :weight unspecified :slant unspecified :underline nil))))
 
      ;;; powerline
      `(powerline-active0   ((,class (:background ,bg1 :foreground ,base))))
@@ -1172,7 +1172,7 @@ or similar."
      `(solaire-hl-line-face            ((,class (:inherit hl-line :background ,bg3 :extend t))))
      `(solaire-minibuffer-face         ((,class (:inherit solaire-default-face :background ,bg3))))
      `(solaire-mode-line-face          ((,class (:inherit solaire-default-face :inherit mode-line :distant-foreground ,bg1))))
-     `(solaire-mode-line-inactive-face ((,class (:inherit mode-line-inactive :foreground ,base-dim :distant-foreground ,base))))
+     `(solaire-mode-line-inactive-face ((,class (:inherit mode-line-inactive :distant-foreground ,comment))))
      `(solaire-org-hide-face           ((,class (:foreground ,bg1))))
 
      ;;; spaceline
