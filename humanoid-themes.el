@@ -475,7 +475,7 @@ or similar."
 
      ;;; doom-modeline
      `(doom-modeline-bar                ((,class (:background ,bg2 :distant-foreground ,base))))
-     `(doom-modeline-bar-inactive       ((,class (:background ,comment :distant-foreground ,base-dim))))
+     `(doom-modeline-bar-inactive       ((,class (:background ,comment :distant-foreground ,comment))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
      `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
      `(doom-modeline-buffer-path        ((,class (:inherit font-lock-keyword-face))))
@@ -1172,7 +1172,7 @@ or similar."
      `(solaire-hl-line-face            ((,class (:inherit hl-line :background ,bg3 :extend t))))
      `(solaire-minibuffer-face         ((,class (:inherit solaire-default-face :background ,bg3))))
      `(solaire-mode-line-face          ((,class (:inherit solaire-default-face :inherit mode-line :distant-foreground ,bg1))))
-     `(solaire-mode-line-inactive-face ((,class (:inherit mode-line-inactive :foreground ,base-dim :distant-foreground ,base))))
+     `(solaire-mode-line-inactive-face ((,class (:inherit mode-line-inactive :distant-foreground ,comment))))
      `(solaire-org-hide-face           ((,class (:foreground ,bg1))))
 
      ;;; spaceline
