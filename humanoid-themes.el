@@ -291,7 +291,7 @@ or similar."
 
      ;;; mode-line
      `(mode-line           ((,class (:background ,bg2 :foreground ,base :box nil :underline nil))))
-     `(mode-line-inactive  ((,class (:background ,bg2 :foreground ,base-dim :box nil :underline nil))))
+     `(mode-line-inactive  ((,class (:background ,bg2 :foreground ,comment :box nil :underline nil))))
      `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
      `(mode-line-highlight ((,class (:background ,bg3 :foreground ,base :box nil :underline nil))))
      `(header-line         ((,class (:background ,bg1 :foreground ,base :distant-foreground ,bg1))))
@@ -475,7 +475,7 @@ or similar."
 
      ;;; doom-modeline
      `(doom-modeline-bar                ((,class (:background ,bg2 :distant-foreground ,base))))
-     `(doom-modeline-bar-inactive       ((,class (:background ,comment :distant-foreground ,comment))))
+     `(doom-modeline-bar-inactive       ((,class (:inherit mode-line-inactive))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
      `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
      `(doom-modeline-buffer-path        ((,class (:inherit font-lock-keyword-face))))
@@ -985,7 +985,7 @@ or similar."
      `(notmuch-message-summary-face        ((,class (:inherit default))))
      `(notmuch-search-count                ((,class (:foreground ,num))))
      `(notmuch-search-date                 ((,class (:foreground ,var))))
-     `(notmuch-search-flagged-face         ((,class (:foreground unspecified :underline nil))))
+     `(notmuch-search-flagged-face         ((,class (:background ,blue-bg-s :foreground unspecified :underline nil))))
      `(notmuch-search-matching-authors     ((,class (:foreground ,str :slant italic))))
      `(notmuch-search-non-matching-authors ((,class (:inherit notmuch-search-matching-authors :foreground ,base-dim))))
      `(notmuch-search-subject              ((,class (:inherit default))))
