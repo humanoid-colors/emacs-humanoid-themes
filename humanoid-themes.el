@@ -196,7 +196,7 @@ or similar."
         (head7-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#32322c" "gray20")          (if (humanoid-true-color) "#efefe9" "gray97")))
         (head8         (if (eq variant 'dark) (if (humanoid-true-color) "#ad4d4d" "IndianRed3")      (if (humanoid-true-color) "#9e5b2b" "SaddleBrown")))
         (head8-bg      (if (eq variant 'dark) (if (humanoid-true-color) "#32322c" "gray26")          (if (humanoid-true-color) "#efefe9" "gray97")))
-        (highlight     (if (eq variant 'dark) (if (humanoid-true-color) "#425051" "gray30")          (if (humanoid-true-color) "#b1bfbb" "gray89")))
+        (highlight     (if (eq variant 'dark) (if (humanoid-true-color) "#425051" "gray30")          (if (humanoid-true-color) "#d6dfdd" "gray89")))
         (highlight-dim (if (eq variant 'dark) (if (humanoid-true-color) "#333b3d" "gray36")          (if (humanoid-true-color) "#e9f0e5" "gray85")))
         (keyword       (if (eq variant 'dark) (if (humanoid-true-color) "#00a6fb" "DeepSkyBlue2")    (if (humanoid-true-color) "#006fd7" "DodgerBlue")))
         (lnum          (if (eq variant 'dark) (if (humanoid-true-color) "#5d6658" "SlateGrey")       (if (humanoid-true-color) "#98a890" "SlateGrey")))
