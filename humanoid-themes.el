@@ -280,14 +280,14 @@ or similar."
      `(window-divider                      ((,class (:foreground ,bg2)))) ; foreground same like `mode-line' background
 
      ;;; outline
-     `(outline-1                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head1-bg) :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0)))))
-     `(outline-2                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head2-bg) :foreground ,head2 :height ,(if humanoid-org-height 1.2 1.0)))))
-     `(outline-3                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head3-bg) :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0)))))
-     `(outline-4                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head4-bg) :foreground ,head4))))
-     `(outline-5                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head5-bg) :foreground ,head5))))
-     `(outline-6                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head6-bg) :foreground ,head6))))
-     `(outline-7                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head7-bg) :foreground ,head7))))
-     `(outline-8                     ((,class (:inherit bold :background ,(when humanoid-org-highlight head8-bg) :foreground ,head8))))
+     `(outline-1                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head1-bg) :foreground ,head1 :height ,(if humanoid-org-height 1.3 1.0)))))
+     `(outline-2                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head2-bg) :foreground ,head2 :height ,(if humanoid-org-height 1.2 1.0)))))
+     `(outline-3                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head3-bg) :foreground ,head3 :height ,(if humanoid-org-height 1.1 1.0)))))
+     `(outline-4                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head4-bg) :foreground ,head4))))
+     `(outline-5                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head5-bg) :foreground ,head5))))
+     `(outline-6                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head6-bg) :foreground ,head6))))
+     `(outline-7                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head7-bg) :foreground ,head7))))
+     `(outline-8                     ((,class (:inherit ,(if humanoid-org-bold 'bold 'default) :background ,(when humanoid-org-highlight head8-bg) :foreground ,head8))))
 
      ;;; mode-line
      `(mode-line           ((,class (:background ,bg2 :foreground ,base :box nil :underline nil))))
@@ -1063,7 +1063,7 @@ or similar."
      `(org-link                      ((,class (:inherit link))))
      `(org-meta-line                 ((,class (:inherit org-block-begin-line :foreground ,meta :slant ,(if humanoid-comment-italic 'italic 'normal)))))
      `(org-mode-line-clock-overrun   ((,class (:foreground ,err))))
-     `(org-priority                  ((,class (:inherit bold :foreground ,war))))
+     `(org-priority                  ((,class (:inherit ,(if humanoid-org-priority-bold 'bold 'default) :foreground ,war))))
      `(org-quote                     ((,class (:inherit org-block :slant italic :extend t))))
      `(org-scheduled                 ((,class (:foreground ,comp))))
      `(org-scheduled-today           ((,class (:foreground ,func :height ,(if humanoid-org-agenda-height 1.2 1.0)))))
