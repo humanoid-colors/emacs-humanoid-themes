@@ -249,7 +249,9 @@ or similar."
                                                      :slant ,(if humanoid-comment-italic 'italic 'normal)
                                                      :weight ,(if humanoid-comment-light 'light 'normal)))))
      `(font-lock-function-name-face        ((,class (:foreground ,func :weight unspecified))))
-     `(font-lock-keyword-face              ((,class (:foreground ,keyword :weight unspecified))))
+     `(font-lock-keyword-face              ((,class (:foreground ,keyword
+                                                     :slant ,(if humanoid-keyword-italic 'italic 'normal)
+                                                     :weight unspecified))))
      `(font-lock-negation-char-face        ((,class (:foreground ,const))))
      `(font-lock-preprocessor-face         ((,class (:foreground ,comp))))
      `(font-lock-reference-face            ((,class (:foreground ,const))))
@@ -480,7 +482,7 @@ or similar."
      `(doom-modeline-bar-inactive       ((,class (:inherit mode-line-inactive))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
      `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
-     `(doom-modeline-buffer-path        ((,class (:inherit font-lock-keyword-face))))
+     `(doom-modeline-buffer-path        ((,class (:foreground ,keyword))))
      `(doom-modeline-evil-emacs-state   ((,class (:foreground ,blue))))
      `(doom-modeline-evil-insert-state  ((,class (:foreground ,green))))
      `(doom-modeline-evil-motion-state  ((,class (:foreground ,magenta))))
@@ -488,7 +490,7 @@ or similar."
      `(doom-modeline-evil-replace-state ((,class (:foreground ,orange))))
      `(doom-modeline-evil-visual-state  ((,class (:foreground ,purple))))
      `(doom-modeline-info               ((,class (:inherit success))))
-     `(doom-modeline-project-dir        ((,class (:inherit font-lock-keyword-face))))
+     `(doom-modeline-project-dir        ((,class (:foreground ,keyword))))
      `(doom-modeline-warning            ((,class (:inherit warning))))
 
      ;;; ediff
