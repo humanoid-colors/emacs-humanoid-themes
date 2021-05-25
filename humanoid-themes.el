@@ -379,16 +379,10 @@ or similar."
      `(cfw:face-toolbar-button-off  ((,class (:foreground ,base :weight bold))))
      `(cfw:face-toolbar-button-on   ((,class (:foreground ,base :weight bold))))
 
-     ;;; tab-bar
-     `(tab-line             ((,class (:background ,bg1 :foreground ,base-dim))))
-     `(tab-bar              ((,class (:inherit tab-line))))
-     `(tab-bar-tab          ((,class (:background ,bg1 :foreground ,base :weight normal))))
-     `(tab-bar-tab-inactive ((,class (:background ,bg2 :foreground ,comment-light :weight light))))
-
      ;;; centaur-tabs
-     `(centaur-tabs-default                    ((,class (:inherit tab-bar))))
-     `(centaur-tabs-selected                   ((,class (:inherit tab-bar-tab))))
-     `(centaur-tabs-unselected                 ((,class (:inherit tab-bar-tab-interactive))))
+     `(centaur-tabs-default                    ((,class (:inherit variable-pitch :background ,bg0 :foreground ,base-dim))))
+     `(centaur-tabs-selected                   ((,class (:background ,bg1 :foreground ,base))))
+     `(centaur-tabs-unselected                 ((,class (:background ,bg0 :foreground ,comment-light))))
      `(centaur-tabs-selected-modified          ((,class (:background ,bg1 :foreground ,war :weight normal))))
      `(centaur-tabs-unselected-modified        ((,class (:background ,bg2 :foreground ,war :weight light))))
      `(centaur-tabs-active-bar-face            ((,class (:background ,blue))))
@@ -1213,6 +1207,38 @@ or similar."
      `(swiper-match-face-2 ((,class (:foreground ,head1 :underline t))))
      `(swiper-match-face-3 ((,class (:foreground ,head4 :underline t))))
      `(swiper-match-face-4 ((,class (:foreground ,head3 :underline t))))
+
+     ;;; tab-bar-groups
+     `(tab-bar-groups-tab-1 ((,class :inherit variable-pitch :foreground ,blue)))
+     `(tab-bar-groups-tab-2 ((,class :inherit variable-pitch :foreground ,red)))
+     `(tab-bar-groups-tab-3 ((,class :inherit variable-pitch :foreground ,green)))
+     `(tab-bar-groups-tab-4 ((,class :inherit variable-pitch :foreground ,orange)))
+     `(tab-bar-groups-tab-5 ((,class :inherit variable-pitch :foreground ,purple)))
+     `(tab-bar-groups-tab-6 ((,class :inherit variable-pitch :foreground ,cyan)))
+     `(tab-bar-groups-tab-7 ((,class :inherit variable-pitch :foreground ,yellow)))
+     `(tab-bar-groups-tab-8 ((,class :inherit variable-pitch :foreground ,magenta)))
+
+     ;;; tab-bar
+     `(tab-bar              ((,class :inherit variable-pitch
+                                     :background ,bg1 :foreground ,base-dim)))
+     `(tab-bar-tab          ((,class :inherit bold
+                                     :box (:line-width 2 :color ,bg0)
+                                     :background ,bg0 :foreground ,base)))
+     `(tab-bar-tab-inactive ((,class :box (:line-width 2 :color ,bg2)
+                                     :background ,bg2 :foreground ,comment-light)))
+
+     ;;; tab-line
+     `(tab-line                        ((,class :inherit variable-pitch
+                                                :height 0.95
+                                                :background ,bg1 :foreground ,base-dim)))
+     `(tab-line-close-highlight        ((,class :foreground ,red)))
+     `(tab-line-highlight              ((,class :background ,highlight :foreground ,base)))
+     `(tab-line-tab                    ((,class :inherit tab-bar-tab)))
+     `(tab-line-tab-current            ((,class :inherit tab-line-tab)))
+     `(tab-line-tab-inactive           ((,class :inherit tab-bar-tab-inactive)))
+     `(tab-line-tab-inactive-alternate ((,class :box (:line-width 2 :color ,bg2)
+                                                :background ,bg2
+                                                :foreground ,base-dim)))
 
      ;;; tabbar
      `(tabbar-default             ((,class (:background ,bg1 :foreground ,head1 :height 0.9))))
