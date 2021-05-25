@@ -173,7 +173,6 @@ or similar."
         (cblk          (if (eq variant 'dark) (if (humanoid-true-color) "#f4f4ee" "gray93")          (if (humanoid-true-color) "#2f3337" "gray22")))
         (cblk-ln       (if (eq variant 'dark) (if (humanoid-true-color) "#5d6658" "cornsilk4")       (if (humanoid-true-color) "#98a890" "cornsilk4")))
         (comment       (if (eq variant 'dark) (if (humanoid-true-color) "#6b7566" "LemonChiffon4")   (if (humanoid-true-color) "#8b9985" "LemonChiffon4")))
-        (comment-bg    (if (eq variant 'dark) (if (humanoid-true-color) "#232629" "gray18")          (if (humanoid-true-color) "#f8f8f2" "gray96")))
         (comment-light (if (eq variant 'dark) (if (humanoid-true-color) "#899484" "LightGoldenrod4") (if (humanoid-true-color) "#6b7566" "LightYellow4")))
         (comp          (if (eq variant 'dark) (if (humanoid-true-color) "#3ee766" "green")           (if (humanoid-true-color) "#096b38" "green4")))
         (const         (if (eq variant 'dark) (if (humanoid-true-color) "#a359fe" "MediumPurple3")   (if (humanoid-true-color) "#ba29eb" "magenta3")))
@@ -240,12 +239,15 @@ or similar."
      `(eval-sexp-fu-flash                  ((,class (:background ,suc :foreground ,act1))))
      `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,act1))))
      `(font-lock-builtin-face              ((,class (:foreground ,builtin))))
-     `(font-lock-comment-face              ((,class (:foreground ,(if humanoid-comment-italic comment-light comment)
-                                                     :background ,(when humanoid-comment-bg comment-bg)
+     `(font-lock-comment-face              ((,class (:foreground ,(if humanoid-comment-light comment-light comment)
+                                                     :background ,(when humanoid-comment-bg bg3)
                                                      :slant ,(if humanoid-comment-italic 'italic 'normal)
                                                      :weight ,(if humanoid-comment-light 'light 'normal)))))
      `(font-lock-constant-face             ((,class (:foreground ,const))))
-     `(font-lock-doc-face                  ((,class (:inherit font-lock-comment-face))))
+     `(font-lock-doc-face                  ((,class (:foreground ,base-dim
+                                                     :background ,(when humanoid-comment-bg bg3)
+                                                     :slant ,(if humanoid-comment-italic 'italic 'normal)
+                                                     :weight ,(if humanoid-comment-light 'light 'normal)))))
      `(font-lock-function-name-face        ((,class (:foreground ,func :weight unspecified))))
      `(font-lock-keyword-face              ((,class (:foreground ,keyword :weight unspecified))))
      `(font-lock-negation-char-face        ((,class (:foreground ,const))))
@@ -567,7 +569,7 @@ or similar."
      `(ess-r-signal-keyword-face       ((,class (:foreground ,war))))
 
      ;;; evil
-     `(evil-ex-lazy-highlight         ((,class (:background ,comment :foreground ,comment-bg))))
+     `(evil-ex-lazy-highlight         ((,class (:background ,comment :foreground ,bg3))))
      `(evil-ex-substitute-matches     ((,class (:background ,red-bg :foreground ,red))))
      `(evil-ex-substitute-replacement ((,class (:background ,green-bg :foreground ,green))))
 
@@ -751,7 +753,7 @@ or similar."
      ;;; highlights
      `(hi-green                   ((,class (:background ,green-bg :foreground ,green))))
      `(hi-yellow                  ((,class (:background ,yellow-bg :foreground ,yellow))))
-     `(highlight-indentation-face ((,class (:background ,comment-bg))))
+     `(highlight-indentation-face ((,class (:background ,bg3))))
      `(highlight-numbers-number   ((,class (:foreground ,num))))
      `(highlight-symbol-face      ((,class (:background ,bg2))))
 
