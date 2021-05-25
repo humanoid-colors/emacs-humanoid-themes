@@ -844,7 +844,7 @@ or similar."
      `(lsp-ui-peek-line-number        ((,class (:foreground ,suc))))
      `(lsp-ui-peek-list               ((,class (:background ,bg4))))
      `(lsp-ui-peek-peek               ((,class (:background ,blue-bg-s))))
-     `(lsp-ui-peek-selection          ((,class (:background blue :foreground ,bg1 :weight bold))))
+     `(lsp-ui-peek-selection          ((,class (:background ,blue :foreground ,bg1 :weight bold))))
      `(lsp-ui-sideline-code-action    ((,class (:foreground ,highlight-dim))))
      `(lsp-ui-sideline-current-symbol ((,class (:inherit 'highlight))))
      `(lsp-ui-sideline-symbol-info    ((,class (:background ,bg0 :foreground ,act2 :extend t))))
