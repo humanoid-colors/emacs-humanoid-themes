@@ -249,7 +249,9 @@ or similar."
                                                      :slant ,(if humanoid-comment-italic 'italic 'normal)
                                                      :weight ,(if humanoid-comment-light 'light 'normal)))))
      `(font-lock-function-name-face        ((,class (:foreground ,func :weight unspecified))))
-     `(font-lock-keyword-face              ((,class (:foreground ,keyword :weight unspecified))))
+     `(font-lock-keyword-face              ((,class (:foreground ,keyword
+                                                     :slant ,(if humanoid-keyword-italic 'italic 'normal)
+                                                     :weight unspecified))))
      `(font-lock-negation-char-face        ((,class (:foreground ,const))))
      `(font-lock-preprocessor-face         ((,class (:foreground ,comp))))
      `(font-lock-reference-face            ((,class (:foreground ,const))))
