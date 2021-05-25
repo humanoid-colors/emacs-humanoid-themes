@@ -983,14 +983,15 @@ or similar."
      `(notmuch-message-summary-face        ((,class (:inherit default))))
      `(notmuch-search-count                ((,class (:foreground ,num))))
      `(notmuch-search-date                 ((,class (:foreground ,var))))
-     `(notmuch-search-flagged-face         ((,class (:background ,blue-bg-s :foreground unspecified :underline nil))))
+     `(notmuch-search-flagged-face         ((,class (:background ,blue-bg-s :foreground unspecified :underline nil :extend t))))
      `(notmuch-search-matching-authors     ((,class (:foreground ,str :slant italic))))
      `(notmuch-search-non-matching-authors ((,class (:inherit notmuch-search-matching-authors :foreground ,base-dim))))
      `(notmuch-search-subject              ((,class (:inherit default))))
      `(notmuch-search-unread-face          ((,class (:inherit bold
                                                      :background ,brown-bg-s
                                                      :underline ,brown-bg
-                                                     :overline ,brown-bg))))
+                                                     :overline ,brown-bg
+                                                     :extend t))))
      `(notmuch-tag-added                   ((,class (:underline ,blue))))
      `(notmuch-tag-aqua                    ((,class (:foreground ,aqua))))
      `(notmuch-tag-blue                    ((,class (:foreground ,blue))))
