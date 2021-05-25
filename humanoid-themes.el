@@ -1171,7 +1171,7 @@ or similar."
      `(solaire-default-face            ((,class (:inherit default :background ,bg1))))
      `(solaire-hl-line-face            ((,class (:inherit hl-line :background ,bg3 :extend t))))
      `(solaire-minibuffer-face         ((,class (:inherit solaire-default-face :background ,bg3))))
-     `(solaire-mode-line-face          ((,class (:inherit solaire-default-face :inherit mode-line :distant-foreground ,bg1))))
+     `(solaire-mode-line-face          ((,class (:inherit (solaire-default-face mode-line) :distant-foreground ,bg1))))
      `(solaire-mode-line-inactive-face ((,class (:inherit mode-line-inactive :distant-foreground ,comment))))
      `(solaire-org-hide-face           ((,class (:foreground ,bg1))))
 
