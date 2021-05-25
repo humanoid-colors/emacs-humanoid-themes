@@ -482,7 +482,7 @@ or similar."
      `(doom-modeline-bar-inactive       ((,class (:inherit mode-line-inactive))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
      `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
-     `(doom-modeline-buffer-path        ((,class (:inherit font-lock-keyword-face))))
+     `(doom-modeline-buffer-path        ((,class (:foreground ,keyword))))
      `(doom-modeline-evil-emacs-state   ((,class (:foreground ,blue))))
      `(doom-modeline-evil-insert-state  ((,class (:foreground ,green))))
      `(doom-modeline-evil-motion-state  ((,class (:foreground ,magenta))))
@@ -490,7 +490,7 @@ or similar."
      `(doom-modeline-evil-replace-state ((,class (:foreground ,orange))))
      `(doom-modeline-evil-visual-state  ((,class (:foreground ,purple))))
      `(doom-modeline-info               ((,class (:inherit success))))
-     `(doom-modeline-project-dir        ((,class (:inherit font-lock-keyword-face))))
+     `(doom-modeline-project-dir        ((,class (:foreground ,keyword))))
      `(doom-modeline-warning            ((,class (:inherit warning))))
 
      ;;; ediff
