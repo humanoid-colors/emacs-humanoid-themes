@@ -688,13 +688,6 @@ or similar."
      `(gnus-header-name              ((,class (:foreground ,comp))))
      `(gnus-header-subject           ((,class (:inherit bold :foreground ,base))))
      `(gnus-summary-cancelled        ((,class (:background ,war :foreground ,act1))))
-     `(message-header-content        ((,class (:foreground ,str))))
-     `(message-header-from           ((,class (:foreground ,var))))
-     `(message-header-to             ((,class (:foreground ,var))))
-     `(message-header-name           ((,class (:foreground ,comp))))
-     `(message-header-subject        ((,class (:inherit bold :foreground ,base))))
-     `(message-summary-cancelled     ((,class (:background ,war :foreground ,act1))))
-     `(message-cited-text            ((,class (:background ,bg2 :foreground ,green))))
 
      ;;; guide-key
      `(guide-key/highlight-command-face ((,class (:foreground ,base))))
@@ -937,6 +930,25 @@ or similar."
      `(markdown-header-face-6   ((,class (:inherit outline-6))))
      `(markdown-table-face      ((,class (:inherit org-table))))
      `(mmm-default-submode-face ((,class (:background ,bg2))))
+
+     ;;; messages
+     `(message-cited-text            ((,class (:background ,bg2 :foreground ,green))))
+     `(message-cited-text-1          ((,class (:background ,bg2 :foreground ,green))))
+     `(message-cited-text-2          ((,class (:background ,bg2 :foreground ,blue))))
+     `(message-cited-text-3          ((,class (:background ,bg2 :foreground ,magenta))))
+     `(message-cited-text-4          ((,class (:background ,bg2 :foreground ,cyan))))
+     `(message-header-cc             ((,class (:foreground ,keyword))))
+     `(message-header-content        ((,class (:foreground ,str))))
+     `(message-header-from           ((,class (:foreground ,var))))
+     `(message-header-name           ((,class (:foreground ,comp))))
+     `(message-header-newsgroups     ((,class (:foreground ,num))))
+     `(message-header-other          ((,class (:foreground ,meta))))
+     `(message-header-subject        ((,class (:inherit bold :foreground ,base))))
+     `(message-header-to             ((,class (:foreground ,keyword :slant ,(if humanoid-comment-italic 'italic 'normal)))))
+     `(message-header-xheader        ((,class (:foreground ,const))))
+     `(message-mml                   ((,class (:foreground ,meta))))
+     `(message-separator             ((,class (:inherit wimdow-devider))))
+     `(message-summary-cancelled     ((,class (:background ,war :foreground ,act1))))
 
      ;;; minimap
      `(minimap-current-line-face        ((,class (:background selection :distant-foreground ,base))))
