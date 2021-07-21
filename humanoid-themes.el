@@ -1031,7 +1031,9 @@ or similar."
      `(org-default                   ((,class (:inherit 'variable-pitch))))
      `(org-agenda-clocking           ((,class (:background ,highlight :foreground ,comp))))
      `(org-agenda-date               ((,class (:foreground ,var :height ,(if humanoid-org-agenda-height 1.1 1.0)))))
-     `(org-agenda-date-today         ((,class (:inherit bold :foreground ,keyword :height ,(if humanoid-org-agenda-height 1.3 1.0)))))
+     `(org-agenda-date-today         ((,class (:inherit bold :foreground ,keyword
+                                               :height ,(if humanoid-org-agenda-height 1.3 1.0)
+                                               :underline ,(if humanoid-org-agenda-height nil t)))))
      `(org-agenda-date-weekend       ((,class (:inherit bold :foreground ,var))))
      `(org-agenda-dimmed-todo-face   ((,class (:foreground ,comment))))
      `(org-agenda-done               ((,class (:foreground ,suc :height ,(if humanoid-org-agenda-height 1.2 1.0)))))
