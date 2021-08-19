@@ -15,6 +15,8 @@ The theme has good support for org mode.
 
 ## Installation and usage
 
+[![MELPA](https://melpa.org/packages/humanoid-themes-badge.svg)](https://melpa.org/#/humanoid-themes)
+
 The recommended way to install the Humanoid themes is with [MELPA](https://melpa.org/#/getting-started):
 
 Install the Humanoid themes from the [MELPA repository](https://melpa.org/#/humanoid-themes). The version of `humanoid-themes` there will always be up-to-date.
