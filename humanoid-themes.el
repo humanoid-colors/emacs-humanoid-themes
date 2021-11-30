@@ -416,6 +416,10 @@ or similar."
      `(company-tooltip-search           ((,class (:inherit match))))
      `(company-tooltip-selection        ((,class (:background ,ttip-sl :foreground ,base))))
 
+     ;; dashboard
+     `(dashboard-text-banner-face ((,class (:foreground ,keyword))))
+     `(doom-dashboard-banner      ((,class (:foreground ,keyword))))
+
      ;;; diff
      `(diff-added               ((,class (:background ,green-bg-s :foreground ,green-fg :extend t))))
      `(diff-changed             ((,class (:background ,blue-bg-s  :foreground ,blue-fg  :extend t))))
