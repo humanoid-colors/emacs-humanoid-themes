@@ -5,7 +5,7 @@
 ;; Author: Thomas Friese
 ;; URL: https://github.com/humanoid-colors/emacs-humanoid-themes
 ;;
-;; Version: 0.2
+;; Version: 0.3
 ;; Keywords: faces, color, theme
 ;; Package-Requires: ((emacs "24.3"))
 
