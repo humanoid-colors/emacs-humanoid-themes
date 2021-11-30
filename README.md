@@ -9,10 +9,6 @@ The collection comes with a dark and a light variant and it should work well wit
 
 [![dark theme](https://github.com/humanoid-colors/emacs-humanoid-themes/wiki/assets/screenshots/org-mode-humanoid-dark.png)](https://github.com/humanoid-colors/emacs-humanoid-themes/wiki/assets/screenshots/org-mode-humanoid-dark.png)
 
-## Highlights
-
-The theme has good support for org mode.
-
 ## Installation and usage
 
 [![MELPA](https://melpa.org/packages/humanoid-themes-badge.svg)](https://melpa.org/#/humanoid-themes)
