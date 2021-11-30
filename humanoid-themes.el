@@ -740,6 +740,10 @@ or similar."
      `(helm-swoop-target-line-face       ((,class (:background ,highlight))))
      `(helm-swoop-target-word-face       ((,class (:background ,highlight :foreground ,mat))))
 
+     ;;; help
+     `(help-key-binding ((,class (:foreground ,blue-fg
+                                  :background ,blue-bg-s
+                                  :box (:line-width (1 . -1) :color ,blue-bg)))))
      ;;; highlights
      `(hi-green                   ((,class (:background ,green-bg :foreground ,green))))
      `(hi-yellow                  ((,class (:background ,yellow-bg :foreground ,yellow))))
