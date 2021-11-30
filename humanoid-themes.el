@@ -685,9 +685,11 @@ or similar."
      `(gnus-cite-6                   ((,class (:background ,bg2 :foreground ,orange))))
      `(gnus-cite-7                   ((,class (:background ,bg2 :foreground ,aqua))))
      `(gnus-emphasis-highlight-words ((,class (:background ,suc :foreground ,act1))))
+     `(gnus-header                   ((,class (:foreground ,meta))))
      `(gnus-header-content           ((,class (:foreground ,str))))
      `(gnus-header-from              ((,class (:foreground ,comp))))
      `(gnus-header-name              ((,class (:foreground ,type))))
+     `(gnus-header-newsgroups        ((,class (:inherit font-lock-keyword-face))))
      `(gnus-header-subject           ((,class (:inherit bold :foreground ,base))))
      `(gnus-summary-cancelled        ((,class (:background ,war :foreground ,act1))))
 
