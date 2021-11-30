@@ -58,49 +58,53 @@ Some of the supported modes are:
 
 The theme has some options that can be tweaked via `M-x customize`:
 
-* `humanoid-comment-bg`:
+* `humanoid-thmes-arc-bg`:
+
+Makes background colors suitable for Arc colored GUI themes.
+
+* `humanoid-thmes-comment-bg`:
 
 This toggles a background color for the comment lines.
 
-* `humanoid-comment-italic`:
+* `humanoid-thmes-comment-italic`:
 
-This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `humanoid-comment-bg` if you turn this option on for better contrast.
+This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `humanoid-thmes-comment-bg` if you turn this option on for better contrast.
 
-* `humanoid-keyword-italic`:
+* `humanoid-thmes-keyword-italic`:
 
 This toggles italics for keywords.
 
-* `humanoid-org-agenda-height`:
+* `humanoid-thmes-org-agenda-height`:
 
 This toggles the use of varying org agenda heights.
 
-* `humanoid-org-bold`:
+* `humanoid-thmes-org-bold`:
 
 This toggles bold text for org headings.
 
-* `humanoid-org-height`:
+* `humanoid-thmes-org-height`:
 
 This toggles the use of varying org headings heights.
 
-* `humanoid-org-highlight`:
+* `humanoid-thmes-org-highlight`:
 
 This toggles highlighting of org headings.
 
-* `humanoid-org-priority-bold`:
+* `humanoid-thmes-org-priority-bold`:
 
 This toggles bold text for priority items in agenda view.
 
-* `humanoid-custom-colors`:
+* `humanoid-thmes-custom-colors`:
 
 This allows for specifying a list of custom colors to override humanoid theme colors. More details in the next section.
 
-* `humanoid-underline-parens`:
+* `humanoid-thmes-underline-parens`:
 
 This toggles the underline of matching parens when using `show-paren-mode` or similar.
 
 ### Override theme's colors
 
-The theme can be customized by overriding one of the theme local variables by setting a list in the `humanoid-custom-colors` variable.
+The theme can be customized by overriding one of the theme local variables by setting a list in the `humanoid-thmes-custom-colors` variable.
 Here's a list of all the local variables and roles:
 
 | var           | role                                                                                              |
@@ -121,12 +125,12 @@ Here's a list of all the local variables and roles:
 | cursor        | The cursor/point color.                                                                           |
 | const         | A constant.                                                                                       |
 | comment       | A comment.                                                                                        |
-| comment-bg    | The background color of a comment. To disable this, `customize` `humanoid-comment-bg`.            |
+| comment-bg    | The background color of a comment. To disable this, `customize` `humanoid-thmes-comment-bg`.      |
 | comp          | A complementary color.                                                                            |
 | err           | errors.                                                                                           |
 | func          | functions.                                                                                        |
 | head1         | Level 1 of a heading. Used in org's headings.                                                     |
-| head1-bg      | The background of level 2 headings. To disable this, `customize` `humanoid-org-highlight`.        |
+| head1-bg      | The background of level 2 headings. To disable this, `customize` `humanoid-thmes-org-highlight`.  |
 | head2         | Level 2 headings.                                                                                 |
 | head2-bg      | Level 2 headings background.                                                                      |
 | head3         | Level 3 headings.                                                                                 |

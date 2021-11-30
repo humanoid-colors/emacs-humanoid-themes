@@ -37,6 +37,11 @@
   "humanoid theme options."
   :group 'faces)
 
+(defcustom humanoid-themes-arc-bg nil
+  "Use background colors from Arc theme."
+  :type 'boolean
+  :group 'humanoid-themes)
+
 (defcustom humanoid-themes-comment-bg nil
   "Use a background for comment lines."
   :type 'boolean
@@ -162,11 +167,11 @@ or similar."
         (act1          (if (eq variant 'dark) (if (humanoid-themes-tc) "#3b4045" "gray28")          (if (humanoid-themes-tc) "#e8e8e2" "gray89")))
         (act2          (if (eq variant 'dark) (if (humanoid-themes-tc) "#484e54" "gray32")          (if (humanoid-themes-tc) "#deded8" "gray83")))
         (base          (if (eq variant 'dark) (if (humanoid-themes-tc) "#f8f8f2" "WhiteSmoke")      (if (humanoid-themes-tc) "#232629" "gray18")))
-        (bg0           (if (eq variant 'dark) (if (humanoid-themes-tc) "#1c1e21" "gray12")          (if (humanoid-themes-tc) "#fefef8" "gray98")))
-        (bg1           (if (eq variant 'dark) (if (humanoid-themes-tc) "#232629" "gray18")          (if (humanoid-themes-tc) "#f8f8f2" "WhiteSmoke")))
-        (bg2           (if (eq variant 'dark) (if (humanoid-themes-tc) "#2f3337" "gray22")          (if (humanoid-themes-tc) "#f4f4ee" "gray93")))
+        (bg0           (if (eq variant 'dark) (if (humanoid-themes-tc) (if humanoid-themes-arc-bg "#262a33" "#1c1e21") "gray12") (if (humanoid-themes-tc) "#fefef8" "gray98")))
+        (bg1           (if (eq variant 'dark) (if (humanoid-themes-tc) (if humanoid-themes-arc-bg "#2f343f" "#232629") "gray18") (if (humanoid-themes-tc) "#f8f8f2" "WhiteSmoke")))
+        (bg2           (if (eq variant 'dark) (if (humanoid-themes-tc) (if humanoid-themes-arc-bg "#353945" "#2f3337") "gray22") (if (humanoid-themes-tc) "#f4f4ee" "gray93")))
         (bg3           (if (eq variant 'dark) (if (humanoid-themes-tc) "#393f4c" "gray28")          (if (humanoid-themes-tc) "#efefe9" "gray90")))
-        (bg4           (if (eq variant 'dark) (if (humanoid-themes-tc) "#484e54" "gray32")          (if (humanoid-themes-tc) "#e8e8e2" "gray87")))
+        (bg4           (if (eq variant 'dark) (if (humanoid-themes-tc) (if humanoid-themes-arc-bg "#404552" "#484e54") "gray32") (if (humanoid-themes-tc) "#e8e8e2" "gray87")))
         (base-dim      (if (eq variant 'dark) (if (humanoid-themes-tc) "#efefe9" "gray42")          (if (humanoid-themes-tc) "#3b4035" "gray64")))
         (builtin       (if (eq variant 'dark) (if (humanoid-themes-tc) "#02c6fc" "DeepSkyBlue")     (if (humanoid-themes-tc) "#00a6fb" "DeepSkyBlue2")))
         (border        (if (eq variant 'dark) (if (humanoid-themes-tc) "#31363b" "gray20")          (if (humanoid-themes-tc) "#deded8" "gray83")))
@@ -196,8 +201,8 @@ or similar."
         (head7-bg      (if (eq variant 'dark) (if (humanoid-themes-tc) "#32322c" "gray20")          (if (humanoid-themes-tc) "#efefe9" "gray97")))
         (head8         (if (eq variant 'dark) (if (humanoid-themes-tc) "#ad4d4d" "IndianRed3")      (if (humanoid-themes-tc) "#9e5b2b" "SaddleBrown")))
         (head8-bg      (if (eq variant 'dark) (if (humanoid-themes-tc) "#32322c" "gray26")          (if (humanoid-themes-tc) "#efefe9" "gray97")))
-        (highlight     (if (eq variant 'dark) (if (humanoid-themes-tc) "#40464c" "gray30")          (if (humanoid-themes-tc) "#d6dfdd" "gray89")))
-        (highlight-dim (if (eq variant 'dark) (if (humanoid-themes-tc) "#333b3d" "gray36")          (if (humanoid-themes-tc) "#e9f0e5" "gray85")))
+        (highlight     (if (eq variant 'dark) (if (humanoid-themes-tc) (if humanoid-themes-arc-bg "#393f4c" "#40464c") "gray30") (if (humanoid-themes-tc) "#d6dfdd" "gray89")))
+        (highlight-dim (if (eq variant 'dark) (if (humanoid-themes-tc) (if humanoid-themes-arc-bg "#383c4a" "#333b3d") "gray36") (if (humanoid-themes-tc) "#e9f0e5" "gray85")))
         (keyword       (if (eq variant 'dark) (if (humanoid-themes-tc) "#00a6fb" "DeepSkyBlue2")    (if (humanoid-themes-tc) "#006fd7" "DodgerBlue")))
         (lnum          (if (eq variant 'dark) (if (humanoid-themes-tc) "#5d6658" "SlateGrey")       (if (humanoid-themes-tc) "#98a890" "SlateGrey")))
         (mat           (if (eq variant 'dark) (if (humanoid-themes-tc) "#ced8a2" "gray82")          (if (humanoid-themes-tc) "#29422d" "DarkSlateGrey")))
@@ -571,7 +576,7 @@ or similar."
      `(ess-r-signal-keyword-face       ((,class (:foreground ,war))))
 
      ;;; evil
-     `(evil-ex-lazy-highlight         ((,class (:background ,comment :foreground ,bg3))))
+     `(evil-ex-lazy-highlight         ((,class (:background ,comment-br :foreground ,bg3))))
      `(evil-ex-substitute-matches     ((,class (:background ,red-bg :foreground ,red))))
      `(evil-ex-substitute-replacement ((,class (:background ,green-bg :foreground ,green))))
 
@@ -613,11 +618,11 @@ or similar."
      `(flycheck-info
        ((,(append '((supports :underline (:style line))) class)
          (:underline (:style line :color ,comment)))
-        (,class (:background ,comment :distant-foreground ,base :underline t))))
+        (,class (:background ,comment-dim :distant-foreground ,base :underline t))))
      `(flycheck-warning
        ((,(append '((supports :underline (:style line))) class)
          (:underline (:style line :color ,comment-br)))
-        (,class (:background ,comment-br :distant-foreground ,base :underline t))))
+        (,class (:background ,comment :distant-foreground ,base :underline t))))
 
      ;;; flymake
      `(flymake-error ((,(append '((supports :underline (:style line))) class)
@@ -636,7 +641,7 @@ or similar."
                            (,class (:inherit bold :background ,base-dim :distant-foreground ,base :underline t))))
      `(flyspell-duplicate ((,(append '((supports :underline (:style line))) class)
                             (:underline (:style wave :color ,comment)))
-                           (,class (:inherit bold :background ,comment :distant-foreground ,base :underline t))))
+                           (,class (:inherit bold :background ,comment-dim :distant-foreground ,base :underline t))))
 
      ;;; jabber
      `(jabber-activity-face          ((,class (:inherit bold :foreground ,red))))
