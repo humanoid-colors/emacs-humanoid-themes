@@ -240,7 +240,7 @@ or similar."
      `(eval-sexp-fu-flash                  ((,class (:background ,suc :foreground ,act1))))
      `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,act1))))
      `(font-lock-builtin-face              ((,class (:foreground ,builtin))))
-     `(font-lock-comment-face              ((,class (:foreground ,(if humanoid-comment-light comment-light comment)
+     `(font-lock-comment-face              ((,class (:foreground ,(if humanoid-comment-light comment-br comment)
                                                      :background ,(when humanoid-comment-bg bg3)
                                                      :slant ,(if humanoid-comment-italic 'italic 'normal)
                                                      :weight ,(if humanoid-comment-light 'light 'normal)))))
@@ -265,7 +265,7 @@ or similar."
      `(fringe                              ((,class (:background ,bg1 :foreground ,lnum))))
      `(header-line                         ((,class (:background ,bg2 :distant-foreground ,base))))
      `(highlight                           ((,class (:background ,highlight :distant-foreground ,base))))
-     `(hl-line                             ((,class (:background ,bg3 :distant-foreground ,base :extend t))))
+     `(hl-line                             ((,class (:background ,bg0 :distant-foreground ,base :extend t))))
      `(hl-todo                             ((,class (:inherit bold :foreground ,magenta))))
      `(isearch                             ((,class (:background ,highlight :foreground ,mat))))
      `(lazy-highlight                      ((,class (:background ,highlight-dim :distant-foreground ,base :weight normal))))
@@ -383,7 +383,7 @@ or similar."
      ;;; centaur-tabs
      `(centaur-tabs-default                    ((,class (:inherit variable-pitch :background ,bg0 :foreground ,base-dim))))
      `(centaur-tabs-selected                   ((,class (:background ,bg1 :foreground ,base))))
-     `(centaur-tabs-unselected                 ((,class (:background ,bg0 :foreground ,comment-light))))
+     `(centaur-tabs-unselected                 ((,class (:background ,bg0 :foreground ,comment-br))))
      `(centaur-tabs-selected-modified          ((,class (:background ,bg1 :foreground ,war :weight normal))))
      `(centaur-tabs-unselected-modified        ((,class (:background ,bg2 :foreground ,war :weight light))))
      `(centaur-tabs-active-bar-face            ((,class (:background ,blue))))
@@ -612,8 +612,8 @@ or similar."
         (,class (:background ,comment :distant-foreground ,base :underline t))))
      `(flycheck-warning
        ((,(append '((supports :underline (:style line))) class)
-         (:underline (:style line :color ,comment-light)))
-        (,class (:background ,comment-light :distant-foreground ,base :underline t))))
+         (:underline (:style line :color ,comment-br)))
+        (,class (:background ,comment-br :distant-foreground ,base :underline t))))
 
      ;;; flymake
      `(flymake-error ((,(append '((supports :underline (:style line))) class)
@@ -685,9 +685,9 @@ or similar."
      `(gnus-cite-6                   ((,class (:background ,bg2 :foreground ,orange))))
      `(gnus-cite-7                   ((,class (:background ,bg2 :foreground ,aqua))))
      `(gnus-emphasis-highlight-words ((,class (:background ,suc :foreground ,act1))))
-     `(gnus-header-content           ((,class (:foreground ,str))))
-     `(gnus-header-from              ((,class (:foreground ,var))))
-     `(gnus-header-name              ((,class (:foreground ,comp))))
+     `(gnus-header-content           ((,class (:foreground ,meta))))
+     `(gnus-header-from              ((,class (:foreground ,comp))))
+     `(gnus-header-name              ((,class (:foreground ,type))))
      `(gnus-header-subject           ((,class (:inherit bold :foreground ,base))))
      `(gnus-summary-cancelled        ((,class (:background ,war :foreground ,act1))))
 
@@ -821,7 +821,7 @@ or similar."
      ;;; line-numbers
      `(linum                    ((,class (:inherit default :background ,bg2 :foreground ,lnum))))
      `(line-number              ((,class (:inherit default :background ,bg2 :foreground ,lnum))))
-     `(line-number-current-line ((,class (:inherit line-number :background ,bg3 :foreground ,base-dim))))
+     `(line-number-current-line ((,class (:inherit line-number :background ,bg0 :foreground ,base-dim))))
 
      ;;; linum-relative
      `(linum-relative-current-face ((,class (:foreground ,base))))
@@ -868,8 +868,8 @@ or similar."
      `(magit-diff-base-highlight         ((,class (:background ,brown-bg   :foreground ,brown-fg :extend t))))
      `(magit-diff-removed                ((,class (:background ,red-bg-s   :foreground ,red-fg   :extend t))))
      `(magit-diff-removed-highlight      ((,class (:background ,red-bg     :foreground ,red-fg   :extend t))))
-     `(magit-diff-context                ((,class (:background ,bg1 :foreground ,base :extend t))))
-     `(magit-diff-context-highlight      ((,class (:background ,bg0 :foreground ,base))))
+     `(magit-diff-context                ((,class (:background ,bg1        :foreground ,base     :extend t))))
+     `(magit-diff-context-highlight      ((,class (:background ,cblk-bg    :foreground ,base))))
      `(magit-diff-file-heading-selection ((,class (:inherit magit-diff-file-heading-highlight :foreground ,meta :extend t))))
      `(magit-diff-hunk-heading           ((,class (:background ,ttip-bg :foreground ,cblk :extend t))))
      `(magit-diff-hunk-heading-highlight ((,class (:background ,ttip-sl :foreground ,base :extend t))))
@@ -1052,8 +1052,8 @@ or similar."
      `(org-agenda-dimmed-todo-face   ((,class (:foreground ,comment))))
      `(org-agenda-done               ((,class (:foreground ,suc :height ,(if humanoid-org-agenda-height 1.2 1.0)))))
      `(org-agenda-structure          ((,class (:inherit bold :foreground ,comp))))
-     `(org-block                     ((,class (:background ,bg0 :foreground ,cblk :extend t))))
-     `(org-block-begin-line          ((,class (:inherit font-lock-comment-face :background ,bg2 :foreground ,cblk-ln :extend t))))
+     `(org-block                     ((,class (:background ,cblk-bg :foreground ,cblk :extend t))))
+     `(org-block-begin-line          ((,class (:inherit font-lock-comment-face :background ,bg2 :extend t))))
      `(org-block-end-line            ((,class (:inherit org-block-begin-line))))
      `(org-clock-overlay             ((,class (:foreground ,comp))))
      `(org-code                      ((,class (:foreground ,cyan))))
@@ -1242,7 +1242,7 @@ or similar."
                                      :box (:line-width 2 :color ,bg0)
                                      :background ,bg0 :foreground ,base)))
      `(tab-bar-tab-inactive ((,class :box (:line-width 2 :color ,bg2)
-                                     :background ,bg2 :foreground ,comment-light)))
+                                     :background ,bg2 :foreground ,comment-br)))
 
      ;;; tab-line
      `(tab-line                        ((,class :inherit variable-pitch
