@@ -58,53 +58,53 @@ Some of the supported modes are:
 
 The theme has some options that can be tweaked via `M-x customize`:
 
-* `humanoid-thmes-arc-bg`:
+* `humanoid-themes-arc-bg`:
 
 Makes background colors suitable for Arc colored GUI themes.
 
-* `humanoid-thmes-comment-bg`:
+* `humanoid-themes-comment-bg`:
 
 This toggles a background color for the comment lines.
 
-* `humanoid-thmes-comment-italic`:
+* `humanoid-themes-comment-italic`:
 
-This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `humanoid-thmes-comment-bg` if you turn this option on for better contrast.
+This toggles italics for comments and will also add a lighter color to it. It is recommended to disable `humanoid-themes-comment-bg` if you turn this option on for better contrast.
 
-* `humanoid-thmes-keyword-italic`:
+* `humanoid-themes-keyword-italic`:
 
 This toggles italics for keywords.
 
-* `humanoid-thmes-org-agenda-height`:
+* `humanoid-themes-org-agenda-height`:
 
 This toggles the use of varying org agenda heights.
 
-* `humanoid-thmes-org-bold`:
+* `humanoid-themes-org-bold`:
 
 This toggles bold text for org headings.
 
-* `humanoid-thmes-org-height`:
+* `humanoid-themes-org-height`:
 
 This toggles the use of varying org headings heights.
 
-* `humanoid-thmes-org-highlight`:
+* `humanoid-themes-org-highlight`:
 
 This toggles highlighting of org headings.
 
-* `humanoid-thmes-org-priority-bold`:
+* `humanoid-themes-org-priority-bold`:
 
 This toggles bold text for priority items in agenda view.
 
-* `humanoid-thmes-custom-colors`:
+* `humanoid-themes-custom-colors`:
 
 This allows for specifying a list of custom colors to override humanoid theme colors. More details in the next section.
 
-* `humanoid-thmes-underline-parens`:
+* `humanoid-themes-underline-parens`:
 
 This toggles the underline of matching parens when using `show-paren-mode` or similar.
 
 ### Override theme's colors
 
-The theme can be customized by overriding one of the theme local variables by setting a list in the `humanoid-thmes-custom-colors` variable.
+The theme can be customized by overriding one of the theme local variables by setting a list in the `humanoid-themes-custom-colors` variable.
 Here's a list of all the local variables and roles:
 
 | var           | role                                                                                              |
@@ -125,12 +125,12 @@ Here's a list of all the local variables and roles:
 | cursor        | The cursor/point color.                                                                           |
 | const         | A constant.                                                                                       |
 | comment       | A comment.                                                                                        |
-| comment-bg    | The background color of a comment. To disable this, `customize` `humanoid-thmes-comment-bg`.      |
+| comment-bg    | The background color of a comment. To disable this, `customize` `humanoid-themes-comment-bg`.     |
 | comp          | A complementary color.                                                                            |
 | err           | errors.                                                                                           |
 | func          | functions.                                                                                        |
 | head1         | Level 1 of a heading. Used in org's headings.                                                     |
-| head1-bg      | The background of level 2 headings. To disable this, `customize` `humanoid-thmes-org-highlight`.  |
+| head1-bg      | The background of level 2 headings. To disable this, `customize` `humanoid-themes-org-highlight`. |
 | head2         | Level 2 headings.                                                                                 |
 | head2-bg      | Level 2 headings background.                                                                      |
 | head3         | Level 3 headings.                                                                                 |
