@@ -1057,6 +1057,12 @@ or similar."
      `(neo-file-link-face  ((,class (:foreground ,keyword))))
      `(neo-root-dir-face   ((,class (:inherit bold :foreground ,func))))
 
+     ;;; orderless
+     `(orderless-match-face-0 ((,class (:foreground, blue-light))))
+     `(orderless-match-face-1 ((,class (:foreground, orange-light))))
+     `(orderless-match-face-2 ((,class (:foreground ,green-light))))
+     `(orderless-match-face-3 ((,class (:foreground ,magenta-light))))
+
      ;;; org
      `(org-default                   ((,class (:inherit 'variable-pitch))))
      `(org-agenda-clocking           ((,class (:background ,highlight :foreground ,comp))))
