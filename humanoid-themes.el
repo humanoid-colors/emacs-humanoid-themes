@@ -268,7 +268,6 @@ or similar."
      `(font-lock-variable-name-face        ((,class (:foreground ,var))))
      `(font-lock-warning-face              ((,class (:background ,bg1 :foreground ,war))))
      `(fringe                              ((,class (:background ,bg1 :foreground ,lnum))))
-     `(header-line                         ((,class (:background ,bg2 :distant-foreground ,base))))
      `(highlight                           ((,class (:background ,highlight :distant-foreground ,base))))
      `(hl-line                             ((,class (:background ,bg0 :distant-foreground ,base :extend t))))
      `(hl-todo                             ((,class (:inherit bold :foreground ,magenta))))
@@ -300,12 +299,13 @@ or similar."
      `(outline-8                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head8-bg) :foreground ,head8))))
 
      ;;; mode-line
-     `(mode-line           ((,class (:background ,bg2 :foreground ,base :box nil :underline nil))))
-     `(mode-line-active    ((,class (:inherit mode-line :inherit variable-pitch :height 100))))
-     `(mode-line-inactive  ((,class (:background ,bg2 :foreground ,comment :box nil :underline nil))))
-     `(mode-line-buffer-id ((,class (:foreground ,base :weight normal))))
-     `(mode-line-highlight ((,class (:background ,bg3 :foreground ,base :box nil :underline nil))))
-     `(header-line         ((,class (:background ,bg1 :foreground ,base :distant-foreground ,bg1))))
+     `(mode-line             ((,class (:background ,bg2 :foreground ,base :box nil :underline nil))))
+     `(mode-line-active      ((,class (:inherit mode-line))))
+     `(mode-line-inactive    ((,class (:background ,bg2 :foreground ,comment :box nil :underline nil))))
+     `(mode-line-buffer-id   ((,class (:foreground ,base :weight normal))))
+     `(mode-line-highlight   ((,class (:background ,bg3 :foreground ,base :box nil :underline nil))))
+     `(header-line           ((,class (:background ,bg2 :foreground ,base))))
+     `(header-line-highlight ((,class (:background ,bg3 :foreground ,base))))
 
      ;;; ace-window
      `(aw-leading-char-face ((,class (:foreground ,func :weight bold :height 2.0 :box (:line-width 1 :color ,keyword :style released-button)))))
@@ -487,7 +487,7 @@ or similar."
      `(doom-modeline-bar                ((,class (:background ,bg2 :distant-foreground ,base))))
      `(doom-modeline-bar-inactive       ((,class (:inherit mode-line-inactive))))
      `(doom-modeline-buffer-major-mode  ((,class (:inherit font-lock-type-face))))
-     `(doom-modeline-buffer-modified    ((,class (:inherit warning))))
+     `(doom-modeline-buffer-modified    ((,class (:inherit warning :background nil))))
      `(doom-modeline-buffer-path        ((,class (:foreground ,keyword))))
      `(doom-modeline-evil-emacs-state   ((,class (:foreground ,blue))))
      `(doom-modeline-evil-insert-state  ((,class (:foreground ,green))))
