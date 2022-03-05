@@ -1397,28 +1397,35 @@ or similar."
      ;;; ansi-color-names
      `(ansi-color-names-vector [,bg4 ,red ,green ,yellow ,blue ,magenta ,cyan ,base])
 
-     ;;; hl-todo
-     `(hl-todo-keyword-faces '(("HOLD"       . ,brown-fg)
-                               ("TODO"       . ,magenta)
-                               ("NEXT"       . ,purple)
-                               ("THEM"       . ,aqua)
-                               ("PROG"       . ,cyan)
-                               ("OKAY"       . ,suc)
-                               ("DONT"       . ,war)
-                               ("FAIL"       . ,err)
-                               ("BUG"        . ,red)
-                               ("DONE"       . ,suc)
-                               ("NOTE"       . ,yellow)
-                               ("KLUDGE"     . ,orange)
-                               ("HACK"       . ,green-fg)
-                               ("TEMP"       . ,gray)
-                               ("FIXME"      . ,red-fg)
-                               ("XXX+"       . ,var)
-                               ("REVIEW"     . ,brown)
-                               ("DEPRECATED" . ,blue-fg)
-                               ("\\?\\?\\?+" . ,meta)))
+;;; hl-todo
+     `(hl-todo-keyword-faces
+       `,(let ((new-list '(("HOLD"       . ,brown-fg)
+			   ("TODO"       . ,magenta)
+			   ("NEXT"       . ,purple)
+			   ("THEM"       . ,aqua)
+			   ("PROG"       . ,cyan)
+			   ("OKAY"       . ,suc)
+			   ("DONT"       . ,war)
+			   ("FAIL"       . ,err)
+			   ("BUG"        . ,red)
+			   ("DONE"       . ,suc)
+			   ("NOTE"       . ,yellow)
+			   ("KLUDGE"     . ,orange)
+			   ("HACK"       . ,green-fg)
+			   ("TEMP"       . ,gray)
+			   ("FIXME"      . ,red-fg)
+			   ("XXX+"       . ,var)
+			   ("REVIEW"     . ,brown)
+			   ("DEPRECATED" . ,blue-fg)
+			   ("\\?\\?\\?+" . ,meta))))
+	   (mapcar (lambda (pair)
+		     (if-let* ((word (car pair))
+			       (hex (assoc-default word new-list)))
+			 (cons word hex)
+		       pair))
+		   hl-todo-keyword-faces)))
 
-     ;;; pdf-tools
+;;; pdf-tools
      `(pdf-view-midnight-colors '(,base . ,bg1)))))
 
 
