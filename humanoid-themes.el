@@ -149,7 +149,7 @@ or similar."
         (purple-dark   (if (eq variant 'dark) (if (humanoid-themes-tc) "#7d46c0" "purple3")         (if (humanoid-themes-tc) "#2f1086" "purple4")))
         (aqua-light    (if (eq variant 'dark) (if (humanoid-themes-tc) "#60e2e4" "turquoise1")      (if (humanoid-themes-tc) "#0ed1d1" "cyan3")))
         (aqua          (if (eq variant 'dark) (if (humanoid-themes-tc) "#0ed1d1" "turquoise2")      (if (humanoid-themes-tc) "#08a7b3" "cyan4")))
-        (aqua-dark     (if (eq variant 'dark) (if (humanoid-themes-tc) "#08a7b3" "turquoise3")      (if (humanoid-themes-tc) "#006873" "DarkSlateGray")))
+        (aqua-dark     (if (eq variant 'dark) (if (humanoid-themes-tc) "#08a7b3" "turquoise3")      (if (humanoid-themes-tc) "#007784" "DarkSlateGray")))
         (aqua-bg       (if (eq variant 'dark) (if (humanoid-themes-tc) "#054948" "DarkSlateGrey")   (if (humanoid-themes-tc) "#c4e5e5" "azure1")))
         (cyan          (if (eq variant 'dark) (if (humanoid-themes-tc) "#1de9b6" "aquamarine2")     (if (humanoid-themes-tc) "#00bfa5" "aquamarine3")))
         (brown-light   (if (eq variant 'dark) (if (humanoid-themes-tc) "#cb8802" "tan1")            (if (humanoid-themes-tc) "#cb8802" "tan1")))
