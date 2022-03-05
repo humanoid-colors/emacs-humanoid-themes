@@ -1392,42 +1392,44 @@ or similar."
      `(undo-tree-visualizer-register-face   ((,class (:foreground ,comp))))
      `(undo-tree-visualizer-unmodified-face ((,class (:foreground ,var)))))
 
-    (custom-theme-set-variables
-     theme-name
+      (custom-theme-set-variables
+          theme-name
 
-     ;;; ansi-color-names
-     `(ansi-color-names-vector [,bg4 ,red ,green ,yellow ,blue ,magenta ,cyan ,base])
+          ;;; ansi-color-names
+          `(ansi-color-names-vector [,bg4 ,red ,green ,yellow ,blue ,magenta ,cyan ,base])
 
-;;; hl-todo
-     `(hl-todo-keyword-faces
-       `,(let ((new-list '(("HOLD"       . ,brown-fg)
-			   ("TODO"       . ,magenta)
-			   ("NEXT"       . ,purple)
-			   ("THEM"       . ,aqua)
-			   ("PROG"       . ,cyan)
-			   ("OKAY"       . ,suc)
-			   ("DONT"       . ,war)
-			   ("FAIL"       . ,err)
-			   ("BUG"        . ,red)
-			   ("DONE"       . ,suc)
-			   ("NOTE"       . ,yellow)
-			   ("KLUDGE"     . ,orange)
-			   ("HACK"       . ,green-fg)
-			   ("TEMP"       . ,gray)
-			   ("FIXME"      . ,red-fg)
-			   ("XXX+"       . ,var)
-			   ("REVIEW"     . ,brown)
-			   ("DEPRECATED" . ,blue-fg)
-			   ("\\?\\?\\?+" . ,meta))))
-	   (mapcar (lambda (pair)
-		     (if-let* ((word (car pair))
-			       (hex (assoc-default word new-list)))
-			 (cons word hex)
-		       pair))
-		   hl-todo-keyword-faces)))
+          ;;; hl-todo
+          `(hl-todo-keyword-faces
+               `,(let ((new-list
+                           '(
+                                ("HOLD"       . (:inherit bold :foreground ,brown-fg))
+                                ("TODO"       . (:inherit bold :foreground ,magenta))
+                                ("NEXT"       . (:inherit bold :foreground ,purple))
+                                ("THEM"       . (:inherit bold :foreground ,aqua))
+                                ("PROG"       . (:inherit bold :foreground ,cyan))
+                                ("OKAY"       . (:inherit bold :foreground ,suc))
+                                ("DONT"       . (:inherit bold :foreground ,war))
+                                ("FAIL"       . (:inherit bold :foreground ,err))
+                                ("BUG"        . (:inherit bold :foreground ,red))
+                                ("DONE"       . (:inherit bold :foreground ,suc))
+                                ("NOTE"       . (:inherit bold :foreground ,yellow))
+                                ("KLUDGE"     . (:inherit bold :foreground ,orange))
+                                ("HACK"       . (:inherit bold :foreground ,green-fg))
+                                ("TEMP"       . (:inherit bold :foreground ,gray))
+                                ("FIXME"      . (:inherit bold :foreground ,red-fg))
+                                ("XXX+"       . (:inherit bold :foreground ,var))
+                                ("REVIEW"     . (:inherit bold :foreground ,brown))
+                                ("DEPRECATED" . (:inherit bold :foreground ,blue-fg))
+                                ("\\?\\?\\?+" . (:inherit bold :foreground ,meta)))))
+                     (mapcar (lambda (pair)
+                                 (if-let* ((word (car pair))
+                                              (hex (assoc-default word new-list)))
+                                     (cons word hex)
+                                     pair))
+                         hl-todo-keyword-faces)))
 
-;;; pdf-tools
-     `(pdf-view-midnight-colors '(,base . ,bg1)))))
+          ;;; pdf-tools
+          `(pdf-view-midnight-colors '(,base . ,bg1)))))
 
 
 ;;;###autoload
