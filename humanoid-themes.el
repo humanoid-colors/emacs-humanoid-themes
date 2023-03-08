@@ -1398,36 +1398,6 @@ or similar."
           ;;; ansi-color-names
           `(ansi-color-names-vector [,bg4 ,red ,green ,yellow ,blue ,magenta ,cyan ,base])
 
-          ;;; hl-todo
-          `(hl-todo-keyword-faces
-               `,(let ((new-list
-                           '(
-                                ("HOLD"       . (:inherit bold :foreground ,brown-fg))
-                                ("TODO"       . (:inherit bold :foreground ,magenta))
-                                ("NEXT"       . (:inherit bold :foreground ,purple))
-                                ("THEM"       . (:inherit bold :foreground ,aqua))
-                                ("PROG"       . (:inherit bold :foreground ,cyan))
-                                ("OKAY"       . (:inherit bold :foreground ,suc))
-                                ("DONT"       . (:inherit bold :foreground ,war))
-                                ("FAIL"       . (:inherit bold :foreground ,err))
-                                ("BUG"        . (:inherit bold :foreground ,red))
-                                ("DONE"       . (:inherit bold :foreground ,suc))
-                                ("NOTE"       . (:inherit bold :foreground ,yellow))
-                                ("KLUDGE"     . (:inherit bold :foreground ,orange))
-                                ("HACK"       . (:inherit bold :foreground ,green-fg))
-                                ("TEMP"       . (:inherit bold :foreground ,gray))
-                                ("FIXME"      . (:inherit bold :foreground ,red-fg))
-                                ("XXX+"       . (:inherit bold :foreground ,var))
-                                ("REVIEW"     . (:inherit bold :foreground ,brown))
-                                ("DEPRECATED" . (:inherit bold :foreground ,blue-fg))
-                                ("\\?\\?\\?+" . (:inherit bold :foreground ,meta)))))
-                     (mapcar (lambda (pair)
-                                 (if-let* ((word (car pair))
-                                              (hex (assoc-default word new-list)))
-                                     (cons word hex)
-                                     pair))
-                         hl-todo-keyword-faces)))
-
           ;;; pdf-tools
           `(pdf-view-midnight-colors '(,base . ,bg1)))))
 
