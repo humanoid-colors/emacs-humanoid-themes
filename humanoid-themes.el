@@ -246,12 +246,12 @@ or similar."
      `(eval-sexp-fu-flash-error            ((,class (:background ,err :foreground ,act1))))
      `(font-lock-builtin-face              ((,class (:foreground ,builtin))))
      `(font-lock-comment-face              ((,class (:foreground ,(if humanoid-themes-comment-light comment-br comment)
-                                                     :background ,(when humanoid-themes-comment-bg bg3)
+                                                     :background ,(if humanoid-themes-comment-bg bg3 'unspecified)
                                                      :slant ,(if humanoid-themes-comment-italic 'italic 'normal)
                                                      :weight ,(if humanoid-themes-comment-light 'light 'normal)))))
      `(font-lock-constant-face             ((,class (:foreground ,const))))
      `(font-lock-doc-face                  ((,class (:foreground ,base-dim
-                                                     :background ,(when humanoid-themes-comment-bg bg3)
+                                                     :background ,(if humanoid-themes-comment-bg bg3 'unspecified)
                                                      :slant ,(if humanoid-themes-comment-italic 'italic 'normal)
                                                      :weight ,(if humanoid-themes-comment-light 'light 'normal)))))
      `(font-lock-function-name-face        ((,class (:foreground ,func :weight unspecified))))
@@ -803,26 +803,26 @@ or similar."
      `(font-latex-match-reference-keywords ((,class (:foreground ,const))))
      `(font-latex-match-variable-keywords  ((,class (:foreground ,var))))
      `(font-latex-sectioning-0-face        ((,class (:inherit bold
-                                                     :background ,(when humanoid-themes-org-highlight head3-bg)
+                                                     :background ,(if humanoid-themes-org-highlight head3-bg 'unspecified)
                                                      :foreground ,head3
                                                      :height ,(if humanoid-themes-org-height 1.3 1.0)))))
      `(font-latex-sectioning-1-face        ((,class (:inherit bold
-                                                     :background ,(when humanoid-themes-org-highlight head4-bg)
+                                                     :background ,(if humanoid-themes-org-highlight head4-bg 'unspecified)
                                                      :foreground ,head4
                                                      :height ,(if humanoid-themes-org-height 1.3 1.0)))))
      `(font-latex-sectioning-2-face        ((,class (:inherit bold
-                                                     :background ,(when humanoid-themes-org-highlight head1-bg)
+                                                     :background ,(if humanoid-themes-org-highlight head1-bg 'unspecified)
                                                      :foreground ,head1
                                                      :height ,(if humanoid-themes-org-height 1.3 1.0)))))
      `(font-latex-sectioning-3-face        ((,class (:inherit bold
-                                                     :background ,(when humanoid-themes-org-highlight head2-bg)
+                                                     :background ,(if humanoid-themes-org-highlight head2-bg 'unspecified)
                                                      :foreground ,head2
                                                      :height ,(if humanoid-themes-org-height 1.2 1.0)))))
-     `(font-latex-sectioning-4-face        ((,class (:background ,(when humanoid-themes-org-highlight head3-bg)
+     `(font-latex-sectioning-4-face        ((,class (:background ,(if humanoid-themes-org-highlight head3-bg 'unspecified)
                                                      :foreground ,head3
                                                      :weight unspecified
                                                      :height ,(if humanoid-themes-org-height 1.1 1.0)))))
-     `(font-latex-sectioning-5-face        ((,class (:background ,(when humanoid-themes-org-highlight head4-bg)
+     `(font-latex-sectioning-5-face        ((,class (:background ,(if humanoid-themes-org-highlight head4-bg 'unspecified)
                                                      :foreground ,head4
                                                      :weight unspecified))))
      `(font-latex-string-face              ((,class (:foreground ,str))))
