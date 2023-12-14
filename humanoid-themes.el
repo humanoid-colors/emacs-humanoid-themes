@@ -289,14 +289,14 @@ or similar."
      `(window-divider                      ((,class (:foreground ,bg2)))) ; foreground same like `mode-line' background
 
      ;;; outline
-     `(outline-1                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head1-bg) :foreground ,head1 :height ,(if humanoid-themes-org-height 1.3 1.0)))))
-     `(outline-2                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head2-bg) :foreground ,head2 :height ,(if humanoid-themes-org-height 1.2 1.0)))))
-     `(outline-3                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head3-bg) :foreground ,head3 :height ,(if humanoid-themes-org-height 1.1 1.0)))))
-     `(outline-4                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head4-bg) :foreground ,head4))))
-     `(outline-5                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head5-bg) :foreground ,head5))))
-     `(outline-6                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head6-bg) :foreground ,head6))))
-     `(outline-7                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head7-bg) :foreground ,head7))))
-     `(outline-8                     ((,class (:inherit ,(if humanoid-themes-org-bold 'bold 'default) :background ,(when humanoid-themes-org-highlight head8-bg) :foreground ,head8))))
+     `(outline-1  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head1-bg 'unspecified) :foreground ,head1 :height ,(if humanoid-themes-org-height 1.3 1.0)))))
+     `(outline-2  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head2-bg 'unspecified) :foreground ,head2 :height ,(if humanoid-themes-org-height 1.2 1.0)))))
+     `(outline-3  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head3-bg 'unspecified) :foreground ,head3 :height ,(if humanoid-themes-org-height 1.1 1.0)))))
+     `(outline-4  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head4-bg 'unspecified) :foreground ,head4))))
+     `(outline-5  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head5-bg 'unspecified) :foreground ,head5))))
+     `(outline-6  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head6-bg 'unspecified) :foreground ,head6))))
+     `(outline-7  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head7-bg 'unspecified) :foreground ,head7))))
+     `(outline-8  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head8-bg 'unspecified) :foreground ,head8))))
 
      ;;; mode-line
      `(mode-line             ((,class (:background ,bg2 :foreground ,base :box nil :underline nil))))
