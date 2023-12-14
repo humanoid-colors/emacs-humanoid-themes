@@ -524,9 +524,6 @@ or similar."
      `(ein:notification-tab-normal   ((,class (:foreground ,keyword))))
      `(ein:notification-tab-selected ((,class (:inherit bold :foreground ,suc))))
 
-     ;;; eldoc
-     `(eldoc-highlight-function-argument ((,class (:inherit bold :foreground ,mat))))
-
      ;;; elfeed
      `(elfeed-search-date-face         ((,class (:foreground ,var))))
      `(elfeed-search-feed-face         ((,class (:foreground ,blue))))
