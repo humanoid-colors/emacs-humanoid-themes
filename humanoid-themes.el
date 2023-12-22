@@ -57,6 +57,11 @@
   :type 'boolean
   :group 'humanoid-themes)
 
+(defcustom humanoid-themes-headings-underline nil
+  "If non-nil, underline headings and important titles."
+  :type 'boolean
+  :group 'humanoid-themes)
+
 (defcustom humanoid-themes-keyword-italic nil
   "Enable italics for keywords."
   :type 'boolean
@@ -289,14 +294,14 @@ or similar."
      `(window-divider                      ((,class (:foreground ,bg2)))) ; foreground same like `mode-line' background
 
      ;;; outline
-     `(outline-1  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head1-bg 'unspecified) :foreground ,head1 :height ,(if humanoid-themes-org-height 1.3 1.0)))))
-     `(outline-2  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head2-bg 'unspecified) :foreground ,head2 :height ,(if humanoid-themes-org-height 1.2 1.0)))))
-     `(outline-3  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head3-bg 'unspecified) :foreground ,head3 :height ,(if humanoid-themes-org-height 1.1 1.0)))))
-     `(outline-4  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head4-bg 'unspecified) :foreground ,head4))))
-     `(outline-5  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head5-bg 'unspecified) :foreground ,head5))))
-     `(outline-6  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head6-bg 'unspecified) :foreground ,head6))))
-     `(outline-7  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head7-bg 'unspecified) :foreground ,head7))))
-     `(outline-8  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head8-bg 'unspecified) :foreground ,head8))))
+     `(outline-1  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head1-bg 'unspecified) :foreground ,head1 :height ,(if humanoid-themes-org-height 1.3 1.0) :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(outline-2  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head2-bg 'unspecified) :foreground ,head2 :height ,(if humanoid-themes-org-height 1.2 1.0) :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(outline-3  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head3-bg 'unspecified) :foreground ,head3 :height ,(if humanoid-themes-org-height 1.1 1.0) :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(outline-4  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head4-bg 'unspecified) :foreground ,head4 :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(outline-5  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head5-bg 'unspecified) :foreground ,head5 :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(outline-6  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head6-bg 'unspecified) :foreground ,head6 :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(outline-7  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head7-bg 'unspecified) :foreground ,head7 :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(outline-8  ((,class (:inherit variable-pitch :weight ,(if humanoid-themes-org-bold 'bold 'normal) :background ,(if humanoid-themes-org-highlight head8-bg 'unspecified) :foreground ,head8 :underline ,(if humanoid-themes-headings-underline t nil)))))
 
      ;;; mode-line
      `(mode-line             ((,class (:background ,bg2 :foreground ,base :box nil :underline nil))))
@@ -528,7 +533,7 @@ or similar."
      `(elfeed-search-date-face         ((,class (:foreground ,var))))
      `(elfeed-search-feed-face         ((,class (:foreground ,blue))))
      `(elfeed-search-tag-face          ((,class (:foreground ,func))))
-     `(elfeed-search-title-face        ((,class (:foreground ,var))))
+     `(elfeed-search-title-face        ((,class (:foreground ,var :underline ,(if humanoid-themes-headings-underline t nil)))))
      `(elfeed-search-unread-title-face ((,class (:foreground ,base))))
 
      ;;; enh-ruby
@@ -778,10 +783,10 @@ or similar."
      `(info-quoted-name    ((,class (:foreground ,keyword))))
      `(info-reference-item ((,class (:inherit bold :background unspecified :underline t))))
      `(info-string         ((,class (:foreground ,str))))
-     `(info-title-1        ((,class (:inherit bold :height 1.4))))
-     `(info-title-2        ((,class (:inherit bold :height 1.3))))
-     `(info-title-3        ((,class (:height 1.3))))
-     `(info-title-4        ((,class (:height 1.2))))
+     `(info-title-1        ((,class (:inherit bold :height 1.4 :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(info-title-2        ((,class (:inherit bold :height 1.3 :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(info-title-3        ((,class (:height 1.3               :underline ,(if humanoid-themes-headings-underline t nil)))))
+     `(info-title-4        ((,class (:height 1.2               :underline ,(if humanoid-themes-headings-underline t nil)))))
 
      ;;; ivy
      `(ivy-current-match           ((,class (:inherit bold :background ,highlight))))
@@ -917,7 +922,7 @@ or similar."
      `(magit-section-heading             ((,class (:inherit bold :foreground ,keyword :extend t))))
      `(magit-section-heading-selection   ((,class (:inherit magit-section-heading :foreground ,meta))))
      `(magit-section-highlight           ((,class (:background ,bg2 :extend t))))
-     `(magit-section-title               ((,class (:inherit bold :background ,bg1 :foreground ,keyword))))
+     `(magit-section-title               ((,class (:inherit bold :background ,bg1 :foreground ,keyword :underline ,(if humanoid-themes-headings-underline t nil)))))
      `(magit-sequence-drop               ((,class (:foreground ,war))))
      `(magit-sequence-head               ((,class (:foreground ,keyword))))
      `(magit-sequence-part               ((,class (:foreground ,type))))
@@ -986,13 +991,13 @@ or similar."
      `(mu4e-header-highlight-face     ((,class (:inherit hl-line))))
      `(mu4e-header-key-face           ((,class (:inherit bold    :foreground ,keyword))))
      `(mu4e-header-marks-face         ((,class (:foreground ,var))))
-     `(mu4e-header-title-face         ((,class (:inherit bold    :foreground ,base))))
+     `(mu4e-header-title-face         ((,class (:inherit bold    :foreground ,base :underline ,(if humanoid-themes-headings-underline t nil)))))
      `(mu4e-header-value-face         ((,class (:inherit bold    :foreground ,str))))
      `(mu4e-highlight-face            ((,class (:foreground ,comp))))
      `(mu4e-modeline-face             ((,class (:foreground ,base))))
      `(mu4e-replied-face              ((,class (:foreground ,green))))
      `(mu4e-special-header-value-face ((,class (:foreground ,mat))))
-     `(mu4e-title-face                ((,class (:inherit bold    :foreground ,head1))))
+     `(mu4e-title-face                ((,class (:inherit bold    :foreground ,head1 :underline ,(if humanoid-themes-headings-underline t nil)))))
      `(mu4e-unread-face               ((,class (:inherit bold    :foreground ,war))))
      `(mu4e-view-url-number-face      ((,class (:foreground ,comment))))
 
@@ -1083,7 +1088,7 @@ or similar."
      `(org-dispatcher-highlight      ((,class (:background ,blue-bg :foreground ,blue))))
      `(org-document-info             ((,class (:foreground ,builtin))))
      `(org-document-info-keyword     ((,class (:foreground ,meta))))
-     `(org-document-title            ((,class (:inherit bold :foreground ,func :height ,(if humanoid-themes-org-height 1.4 1.0) :underline t))))
+     `(org-document-title            ((,class (:inherit bold :foreground ,func :height ,(if humanoid-themes-org-height 1.4 1.0) :underline ,(if humanoid-themes-headings-underline t nil)))))
      `(org-done                      ((,class (:inherit bold :background ,green-bg-s :foreground ,suc))))
      `(org-drawer                    ((,class (:inherit org-block-begin-line))))
      `(org-ellipsis                  ((,class (:foreground ,keyword))))
