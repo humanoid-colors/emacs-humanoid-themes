@@ -5,9 +5,9 @@
 ;; Author: Thomas Friese
 ;; URL: https://github.com/humanoid-colors/emacs-humanoid-themes
 ;;
-;; Version: 0.3
+;; Version: 0.4
 ;; Keywords: faces, color, theme
-;; Package-Requires: ((emacs "24.3"))
+;; Package-Requires: ((emacs "27.1"))
 
 ;; Initially forked from Spacemacs Theme <https://github.com/nashamri/spacemacs-theme>.
 
