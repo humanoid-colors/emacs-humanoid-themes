@@ -360,7 +360,7 @@ or similar."
      `(mode-line-active      ((,class (:inherit mode-line))))
      `(mode-line-inactive    ((,class (:background ,bg2 :foreground ,comment :box nil :underline nil))))
      `(mode-line-buffer-id   ((,class (:foreground ,base :weight normal))))
-     `(mode-line-highlight   ((,class (:background ,bg3 :foreground ,base :box nil :underline nil))))
+     `(mode-line-highlight   ((,class (:background ,bg2 :foreground ,base :box nil :underline nil :weight bold))))
      `(header-line           ((,class (:background ,bg2 :foreground ,base))))
      `(header-line-highlight ((,class (:background ,bg3 :foreground ,base))))
 
